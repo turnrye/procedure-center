@@ -4,223 +4,95 @@
   "properties": {
     "hospitals": {
       "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "phone": {
-              "type": "string"
-            },
-            "address": {
-              "type": "string"
-            }
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
           }
         },
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "phone": {
-              "type": "string"
-            },
-            "address": {
-              "type": "string"
-            }
-          }
-        }
-      ]
+        "required": [
+          "name",
+          "phone",
+          "address"
+        ]
+      }
     },
     "protocolGroups": {
       "type": "array",
-      "items": [
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "id": {
-              "type": "string"
-            },
-            "keywords": {
-              "type": "array",
-              "items": [
-                {
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {}
+          },
+          "protocols": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
                   "type": "string"
                 },
-                {
+                "name": {
+                  "type": "string"
+                },
+                "standingOrders": {
+                  "type": "object",
+                  "properties": {
+                    "basic": {
+                      "type": "string"
+                    },
+                    "intermediate": {
+                      "type": "string"
+                    },
+                    "paramedic": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "basic",
+                    "intermediate",
+                    "paramedic"
+                  ]
+                },
+                "PEARLS": {
                   "type": "string"
                 }
+              },
+              "required": [
+                "id",
+                "name",
+                "standingOrders",
+                "PEARLS"
               ]
             }
           }
         },
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "id": {
-              "type": "string"
-            },
-            "keywords": {
-              "type": "array",
-              "items": []
-            },
-            "protocols": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "string"
-                  },
-                  "name": {
-                    "type": "string"
-                  },
-                  "standingOrders": {
-                    "type": "object",
-                    "properties": {
-                      "basic": {
-                        "type": "string"
-                      },
-                      "intermediate": {
-                        "type": "string"
-                      },
-                      "paramedic": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "PEARLS": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "id": {
-              "type": "string"
-            },
-            "keywords": {
-              "type": "array",
-              "items": []
-            }
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "id": {
-              "type": "string"
-            },
-            "keywords": {
-              "type": "array",
-              "items": []
-            }
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "id": {
-              "type": "string"
-            },
-            "keywords": {
-              "type": "array",
-              "items": []
-            }
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "id": {
-              "type": "string"
-            },
-            "keywords": {
-              "type": "array",
-              "items": []
-            }
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "id": {
-              "type": "string"
-            },
-            "keywords": {
-              "type": "array",
-              "items": []
-            }
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "id": {
-              "type": "string"
-            },
-            "keywords": {
-              "type": "array",
-              "items": []
-            }
-          }
-        },
-        {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "id": {
-              "type": "string"
-            },
-            "keywords": {
-              "type": "array",
-              "items": []
-            }
-          }
-        }
-      ]
-    },
-    "drugs": {
-      "type": "array",
-      "items": []
+        "required": [
+          "name",
+          "id",
+          "keywords",
+          "protocols"
+        ]
+      }
     }
   },
   "required": [
     "hospitals",
-    "protocolGroups",
-    "drugs"
+    "protocolGroups"
   ]
 }
