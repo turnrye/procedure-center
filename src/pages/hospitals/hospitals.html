@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Hospitals</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+ <ion-card *ngFor="let hospital of agency.data.hospitals">
+  <ion-card-header>
+    {{ hospital.name }}
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="call" item-left></ion-icon>
+      <a href="tel:{{ hospital.phone }}">{{ hospital.phone }}</a>
+    </button>
+
+    <button ion-item>
+      <ion-icon name="map" item-left></ion-icon>
+      <a href="geo:?daddr={{ hospital.address }}">{{ hospital.address }}</a>
+    </button>
+
+  </ion-list>
+</ion-card>
+</ion-content>
