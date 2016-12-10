@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Protocols</ion-title>
+    <ion-title>Protocol Groups</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,8 +11,8 @@
 <ion-content padding>
   <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <ion-list>
-    <ion-item *ngFor='let protocol of protocolGroup.protocols'>
-      <a (click)="protocolTapped($event, protocol)">{{ protocol.name }}</a>
+    <ion-item *ngFor='let protocolGroup of protocolGroups'>
+      <a (click)="protocolGroupTapped($event, protocolGroup)">{{ protocolGroup.name }}</a>
     </ion-item>
   </ion-list>
 

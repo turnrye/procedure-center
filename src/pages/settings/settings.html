@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="updateAgency()">
+    <ion-item>
+      <ion-label floating>Agency Definition</ion-label>
+      <ion-textarea [(ngModel)]="agencyDefinition.value" name="agencyDefinition"></ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" block>Update</button>
+  </form>
+</ion-content>

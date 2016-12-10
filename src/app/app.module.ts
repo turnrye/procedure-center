@@ -3,11 +3,15 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { ToolsPage } from '../pages/tools/tools';
 import { ProtocolsPage } from '../pages/protocols/protocols';
+import { ProtocolPage } from '../pages/protocol/protocol';
+import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
 import { HospitalsPage } from '../pages/hospitals/hospitals';
+import { SettingsPage } from '../pages/settings/settings';
 import { DrugsPage } from '../pages/drugs/drugs';
 import { LoginPage } from '../pages/login/login';
 import { Agency } from '../providers/agency';
-import { ValuesPipe } from '../pipes/values-pipe';
+import { Storage } from '@ionic/storage';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,10 @@ import { ValuesPipe } from '../pipes/values-pipe';
     ProtocolsPage,
     HospitalsPage,
     DrugsPage,
-    LoginPage
+    LoginPage,
+    ProtocolGroupsPage,
+    ProtocolPage,
+    SettingsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -28,8 +35,15 @@ import { ValuesPipe } from '../pipes/values-pipe';
     ProtocolsPage,
     HospitalsPage,
     DrugsPage,
-    LoginPage
+    LoginPage,
+    ProtocolGroupsPage,
+    ProtocolPage,
+    SettingsPage
   ],
-  providers: [Agency, {provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [
+    Agency,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Storage
+  ]
 })
 export class AppModule {}

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Protocol {{ protocol.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      EMT-B Standing Orders
+    </ion-card-header>
+    <ion-card-content [innerHTML]="protocol.standingOrders.basic"> </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      EMT-IV Standing Orders
+    </ion-card-header>
+    <ion-card-content [innerHTML]="protocol.standingOrders.intermediate"></ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      EMT-P Standing Orders
+    </ion-card-header>
+    <ion-card-content [innerHTML]="protocol.standingOrders.paramedic"></ion-card-content>
+  </ion-card>
+</ion-content>

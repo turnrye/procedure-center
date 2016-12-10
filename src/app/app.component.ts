@@ -5,8 +5,11 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { ToolsPage } from '../pages/tools/tools';
 import { HospitalsPage } from '../pages/hospitals/hospitals';
 import { ProtocolsPage } from '../pages/protocols/protocols';
+import { ProtocolPage } from '../pages/protocol/protocol';
+import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
 import { DrugsPage } from '../pages/drugs/drugs';
 import { LoginPage } from '../pages/login/login';
+import { SettingsPage } from '../pages/settings/settings';
 
 @Component({
   templateUrl: 'app.html'
@@ -14,7 +17,7 @@ import { LoginPage } from '../pages/login/login';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ProtocolsPage;
+  rootPage: any = ProtocolGroupsPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -23,10 +26,9 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Tools', component: ToolsPage },
-      { title: 'Drugs', component: DrugsPage },
+      { title: 'Protocol Groups', component: ProtocolGroupsPage },
       { title: 'Hospitals', component: HospitalsPage },
-      { title: 'Protocols', component: ProtocolsPage }
+      { title: 'Settings', component: SettingsPage }
     ];
 
   }
