@@ -54,7 +54,7 @@
       // Hook up the submit button to log to the console
       document.getElementById('submit').addEventListener('click',function() {
         // Get the value from the editor
-        window.location("data:text/csv;base64," + btoa(editor.getValue()));
+        window.location.href = "data:text/csv;base64," + btoa(editor.getValue());
       });
 
       // Hook up the Restore to Default button
