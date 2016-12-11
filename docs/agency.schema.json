@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "hospitals": {
+    "contacts": {
       "type": "array",
       "items": {
         "type": "object",
@@ -92,7 +92,7 @@
     }
   },
   "required": [
-    "hospitals",
+    "contacts",
     "protocolGroups"
   ]
 }

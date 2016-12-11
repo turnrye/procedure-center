@@ -5,7 +5,7 @@ import { ToolsPage } from '../pages/tools/tools';
 import { ProtocolsPage } from '../pages/protocols/protocols';
 import { ProtocolPage } from '../pages/protocol/protocol';
 import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
-import { HospitalsPage } from '../pages/hospitals/hospitals';
+import { ContactsPage } from '../pages/contacts/contacts';
 import { SettingsPage } from '../pages/settings/settings';
 import { DrugsPage } from '../pages/drugs/drugs';
 import { LoginPage } from '../pages/login/login';
@@ -18,7 +18,7 @@ import { Storage } from '@ionic/storage';
     MyApp,
     ToolsPage,
     ProtocolsPage,
-    HospitalsPage,
+    ContactsPage,
     DrugsPage,
     LoginPage,
     ProtocolGroupsPage,
@@ -33,7 +33,7 @@ import { Storage } from '@ionic/storage';
     MyApp,
     ToolsPage,
     ProtocolsPage,
-    HospitalsPage,
+    ContactsPage,
     DrugsPage,
     LoginPage,
     ProtocolGroupsPage,

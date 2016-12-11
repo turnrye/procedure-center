@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { ToolsPage } from '../pages/tools/tools';
-import { HospitalsPage } from '../pages/hospitals/hospitals';
+import { ContactsPage } from '../pages/contacts/contacts';
 import { ProtocolsPage } from '../pages/protocols/protocols';
 import { ProtocolPage } from '../pages/protocol/protocol';
 import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
@@ -27,7 +27,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Protocol Groups', component: ProtocolGroupsPage },
-      { title: 'Hospitals', component: HospitalsPage },
+      { title: 'Contacts', component: ContactsPage },
       { title: 'Settings', component: SettingsPage }
     ];
 
