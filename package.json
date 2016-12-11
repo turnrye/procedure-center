@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "procedure-center",
+  "author": "Ryan Turner",
+  "homepage": "http://procedure.center/",
   "private": true,
   "scripts": {
     "ionic:build": "ionic-app-scripts build",
@@ -39,5 +39,5 @@
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],
-  "description": "procedure-center: An Ionic project"
+  "description": ""
 }
