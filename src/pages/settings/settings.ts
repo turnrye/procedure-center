@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Agency } from '../../providers/agency';
+import { GoogleAnalytics } from 'ionic-native';
 
 /*
   Generated class for the Settings page.
@@ -18,17 +19,19 @@ export class SettingsPage {
 
   constructor(public navCtrl: NavController, public agency: Agency) {}
 
-  ionViewDidLoad() {
-    console.log('Hello SettingsPage Page');
+  ionViewDidEnter() {
+    GoogleAnalytics.trackView("settings");
   }
   updateAgency() {
     //console.log(this.agencyDefinition);
     if(!!this.agencyDefinition.url && !!this.agencyDefinition.url.length) {
       this.agency.getFromUrl(this.agencyDefinition.url);
       console.log('Got URL');
+      GoogleAnalytics.trackEvent("configuration", "changed_definition_using", "", "url", false);
     } else {
       this.agency.setData(this.agencyDefinition.value);
       console.log('Got raw data');
+      GoogleAnalytics.trackEvent("configuration", "changed_definition_using", "", "raw", false);
     }
   }
 

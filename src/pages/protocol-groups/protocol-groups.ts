@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Agency } from '../../providers/agency';
 import { ProtocolsPage } from '../protocols/protocols';
+import { GoogleAnalytics } from 'ionic-native';
 
 /*
   Generated class for the ProtocolGroups page.
@@ -25,6 +26,8 @@ searchQuery: string = '';
   });
  }
 
+ ionViewDidLoad() {
+ }
  getItems(ev: any) {
    // Reset items back to all of the items
    this.agency.load().then((data) => {
@@ -45,5 +48,8 @@ searchQuery: string = '';
      this.navCtrl.push(ProtocolsPage, {
        protocolGroup: protocolGroup
      });
+  }
+  ionViewDidEnter() {
+    GoogleAnalytics.trackView("protocol-groups");
   }
 }

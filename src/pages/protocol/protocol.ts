@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
 import { ProtocolsPage } from '../protocols/protocols';
+import { GoogleAnalytics } from 'ionic-native';
 
 /*
   Generated class for the Protocol page.
@@ -19,8 +20,8 @@ export class ProtocolPage {
     this.protocol = navParams.get('protocol');
   }
 
-  ionViewDidLoad() {
-    console.log('Hello ProtocolPage Page');
+  ionViewDidEnter() {
+    GoogleAnalytics.trackView("protocol");
   }
 
 }

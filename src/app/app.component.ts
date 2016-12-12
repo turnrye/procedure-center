@@ -10,6 +10,7 @@ import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
 import { DrugsPage } from '../pages/drugs/drugs';
 import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
+import { GoogleAnalytics } from 'ionic-native';
 
 @Component({
   templateUrl: 'app.html'
@@ -30,6 +31,11 @@ export class MyApp {
       { title: 'Contacts', component: ContactsPage },
       { title: 'Settings', component: SettingsPage }
     ];
+    this.platform.ready().then(() => {
+      GoogleAnalytics.debugMode();
+      GoogleAnalytics.startTrackerWithId("UA-88824090-1", 30);
+      console.log('Done loading');
+    });
 
   }
 

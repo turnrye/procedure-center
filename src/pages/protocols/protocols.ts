@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
 import { Agency } from '../../providers/agency';
 import { ProtocolPage } from '../protocol/protocol';
+import { GoogleAnalytics } from 'ionic-native';
 
 /*
   Generated class for the Protocols page.
