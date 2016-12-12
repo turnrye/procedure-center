@@ -34,9 +34,8 @@ export class Agency {
       this.http.get(url)
         .map(res => res.json())
         .subscribe(data => {
-          this.data = data;
-          this.originalData = JSON.parse(JSON.stringify(this.data));
-          resolve(data);
+          this.setData(JSON.stringify(data));
+          resolve(this.data);
         });
     });
   }
