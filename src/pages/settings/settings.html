@@ -11,8 +11,12 @@
 <ion-content padding>
   <form (ngSubmit)="updateAgency()">
     <ion-item>
-      <ion-label floating>Agency Definition</ion-label>
+      <ion-label floating>Raw Agency Definition</ion-label>
       <ion-textarea [(ngModel)]="agencyDefinition.value" name="agencyDefinition"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Agency Definition URL</ion-label>
+      <ion-input type="url" [(ngModel)]="agencyDefinition.url" name="agencyUrl"></ion-input>
     </ion-item>
     <button ion-button type="submit" block>Update</button>
   </form>

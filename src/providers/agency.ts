@@ -3,6 +3,8 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Storage } from '@ionic/storage';
 
+
+
 /*
   Generated class for the Agency provider.
 
@@ -25,6 +27,18 @@ export class Agency {
     this.storage.set('agencyData', parsedData);
     this.data = parsedData;
     this.originalData = JSON.parse(JSON.stringify(this.data));
+  }
+
+  getFromUrl(url: string) {
+    return new Promise(resolve => {
+      this.http.get(url)
+        .map(res => res.json())
+        .subscribe(data => {
+          this.data = data;
+          this.originalData = JSON.parse(JSON.stringify(this.data));
+          resolve(data);
+        });
+    });
   }
 
   load() {

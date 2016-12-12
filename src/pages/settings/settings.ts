@@ -23,7 +23,13 @@ export class SettingsPage {
   }
   updateAgency() {
     //console.log(this.agencyDefinition);
-    this.agency.setData(this.agencyDefinition.value);
+    if(!!this.agencyDefinition.url && !!this.agencyDefinition.url.length) {
+      this.agency.getFromUrl(this.agencyDefinition.url);
+      console.log('Got URL');
+    } else {
+      this.agency.setData(this.agencyDefinition.value);
+      console.log('Got raw data');
+    }
   }
 
 }
