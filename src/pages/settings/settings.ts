@@ -27,11 +27,11 @@ export class SettingsPage {
     if(!!this.agencyDefinition.url && !!this.agencyDefinition.url.length) {
       this.agency.getFromUrl(this.agencyDefinition.url);
       console.log('Got URL');
-      GoogleAnalytics.trackEvent("configuration", "changed_definition_using", "", "url", false);
+      GoogleAnalytics.trackEvent("configuration", "changed_definition_using_url", "", 1, false);
     } else {
       this.agency.setData(this.agencyDefinition.value);
       console.log('Got raw data');
-      GoogleAnalytics.trackEvent("configuration", "changed_definition_using", "", "raw", false);
+      GoogleAnalytics.trackEvent("configuration", "changed_definition_using_raw", "", 1, false);
     }
   }
 
