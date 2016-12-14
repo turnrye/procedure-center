@@ -11,7 +11,7 @@ import { DrugsPage } from '../pages/drugs/drugs';
 import { LoginPage } from '../pages/login/login';
 import { Agency } from '../providers/agency';
 import { Storage } from '@ionic/storage';
-
+import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { Storage } from '@ionic/storage';
     SettingsPage
   ],
   imports: [
+    MarkdownToHtmlModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
