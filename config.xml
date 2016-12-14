@@ -7,10 +7,10 @@
   <access origin="*"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
-  <allow-intent href="tel:*"/>
+  <allow-intent href="tel:*" launch-external="yes" />
   <allow-intent href="sms:*"/>
-  <allow-intent href="mailto:*"/>
-  <allow-intent href="geo:*"/>
+  <allow-intent href="mailto:*" launch-external="yes" />
+  <allow-intent href="geo:*" launch-external="yes" />
   <platform name="android">
     <allow-intent href="market:*"/>
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>

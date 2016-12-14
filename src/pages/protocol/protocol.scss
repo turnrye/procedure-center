@@ -1,3 +1,11 @@
 page-protocol {
 
 }
+ion-list-header.emt {
+  background-color: #42A5F5;
+  color: map-get($colors, light);
+}
+ion-list-header.paramedic {
+  background-color: #B39DDB;
+  color: map-get($colors, light);
+}
