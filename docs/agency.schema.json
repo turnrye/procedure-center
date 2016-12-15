@@ -50,6 +50,9 @@
                 "name": {
                   "type": "string"
                 },
+                "assessments": {
+                  "type": "string"
+                },
                 "standingOrders": {
                   "type": "object",
                   "properties": {
@@ -70,6 +73,9 @@
                   ]
                 },
                 "PEARLS": {
+                  "type": "string"
+                },
+                "notes": {
                   "type": "string"
                 }
               },

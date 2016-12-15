@@ -16,6 +16,7 @@ export class ToolsPage {
   constructor(public navCtrl: NavController) {}
 
   ionViewDidLoad() {
+    console.log('Hello ToolsPage Page');
   }
 
 }

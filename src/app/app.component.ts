@@ -29,7 +29,8 @@ export class MyApp {
     this.pages = [
       { title: 'Protocol Groups', component: ProtocolGroupsPage },
       { title: 'Contacts', component: ContactsPage },
-      { title: 'Settings', component: SettingsPage }
+      { title: 'Settings', component: SettingsPage },
+      { title: 'Tools', component: ToolsPage }
     ];
     this.platform.ready().then(() => {
       GoogleAnalytics.debugMode();
