@@ -8,16 +8,28 @@
 </ion-header>
 
 
-<ion-content padding>
-  <form (ngSubmit)="updateAgency()">
-    <ion-item>
-      <ion-label floating>Raw Agency Definition</ion-label>
-      <ion-textarea [(ngModel)]="agencyDefinition.value" name="agencyDefinition"></ion-textarea>
+<ion-content>
+  <ion-list inset>
+    <ion-item text-wrap>
+      Use this to set the content of the application. You can either manually paste the configuration in, or use a URL to download it from the web.
     </ion-item>
-    <ion-item>
-      <ion-label floating>Agency Definition URL</ion-label>
-      <ion-input type="url" [(ngModel)]="agencyDefinition.url" name="agencyUrl"></ion-input>
-    </ion-item>
-    <button ion-button type="submit" block>Update</button>
-  </form>
+    <form [formGroup]="webFetchForm" (ngSubmit)="getWebFetchForm()">
+      <ion-item>
+        <ion-label stacked>Configuration URL</ion-label>
+        <ion-input formControlName="definitionUrl" type="url" item-right></ion-input>
+      </ion-item>
+      <button ion-button type="submit" [disabled]="!agencyForm.valid" color="secondary">Fetch</button>
+    </form>
+    <form [formGroup]="agencyForm" (ngSubmit)="updateAgency()">
+      <ion-item>
+        <ion-label stacked>Raw Configuration</ion-label>
+        <ion-textarea formControlName="rawDefinition" (change)="calculateMd5()" rows="6"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Version</ion-label>
+        <ion-input type="text" disabled="true" value="{{ definitionMd5 }}"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" [disabled]="!agencyForm.valid" block>Save</button>
+    </form>
+  </ion-list>
 </ion-content>

@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Agency } from '../../providers/agency';
 import { GoogleAnalytics } from 'ionic-native';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Md5 } from 'ts-md5/dist/md5';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 /*
   Generated class for the Settings page.
@@ -14,25 +18,36 @@ import { GoogleAnalytics } from 'ionic-native';
   templateUrl: 'settings.html'
 })
 export class SettingsPage {
-
-  agencyDefinition: any = {};
-
-  constructor(public navCtrl: NavController, public agency: Agency) {}
-
+  agencyForm: FormGroup;
+  webFetchForm: FormGroup;
+  definitionMd5: any;
+  constructor(public navCtrl: NavController, public agency: Agency, private formBuilder: FormBuilder, public http: Http) {
+    this.agencyForm = this.formBuilder.group({
+      'rawDefinition': [JSON.stringify(this.agency.data)]
+    });
+    this.webFetchForm = this.formBuilder.group({
+      'definitionUrl': []
+    });
+    this.calculateMd5();
+  }
+  calculateMd5() {
+    this.definitionMd5 = String(Md5.hashAsciiStr(JSON.stringify(this.agencyForm.value.rawDefinition))).substring(0, 6);
+  }
   ionViewDidEnter() {
     GoogleAnalytics.trackView("settings");
   }
+
+  getWebFetchForm() {
+    this.http.get(this.webFetchForm.value.definitionUrl)
+      .subscribe(data => {
+        this.agencyForm.patchValue({rawDefinition: data});
+      });
+  }
+
   updateAgency() {
-    //console.log(this.agencyDefinition);
-    if(!!this.agencyDefinition.url && !!this.agencyDefinition.url.length) {
-      this.agency.getFromUrl(this.agencyDefinition.url);
-      console.log('Got URL');
-      GoogleAnalytics.trackEvent("configuration", "changed_definition_using_url", "", 1, false);
-    } else {
-      this.agency.setData(this.agencyDefinition.value);
-      console.log('Got raw data');
-      GoogleAnalytics.trackEvent("configuration", "changed_definition_using_raw", "", 1, false);
-    }
+    this.agency.setData(this.agencyForm.value.rawDefinition);
+    console.log('Got raw data');
+    GoogleAnalytics.trackEvent("configuration", "changed_definition_using_raw", "", 1, false);
   }
 
 }

@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
 import { Storage } from '@ionic/storage';
 
 
@@ -16,7 +14,7 @@ export class Agency {
   data: any; //example data is here: https://gist.githubusercontent.com/ryanturner/7db2dd7ec59ca0163812faa8f55cf6f5/raw/3a8ce0c9640868d2118a4388e803e0e2d1c2b22c/test.json
   originalData: any;
 
-  constructor(public http: Http, private storage: Storage) {
+  constructor(private storage: Storage) {
     console.log('Hello Agency Provider');
     this.data = null;
     this.load();
@@ -27,17 +25,6 @@ export class Agency {
     this.storage.set('agencyData', parsedData);
     this.data = parsedData;
     this.originalData = JSON.parse(JSON.stringify(this.data));
-  }
-
-  getFromUrl(url: string) {
-    return new Promise(resolve => {
-      this.http.get(url)
-        .map(res => res.json())
-        .subscribe(data => {
-          this.setData(JSON.stringify(data));
-          resolve(this.data);
-        });
-    });
   }
 
   load() {
