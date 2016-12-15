@@ -1,0 +1,158 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Glasgow Coma Scale</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Eye Opening
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col>Rating</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.eye = 4;updateGcsTotal();">
+        <ion-col>Open before stimulus</ion-col>
+        <ion-col>Spontaneous</ion-col>
+        <ion-col width-20>4</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.eye = 3;updateGcsTotal();">
+        <ion-col>After spoken or shouted request</ion-col>
+        <ion-col>To sound</ion-col>
+        <ion-col width-20>3</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.eye = 2;updateGcsTotal();">
+        <ion-col>After finger tip stimulus</ion-col>
+        <ion-col>To pressure</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.eye = 1;updateGcsTotal();">
+        <ion-col>No opening at any time, no interfering factor</ion-col>
+        <ion-col>None</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.eye = 0;updateGcsTotal();">
+        <ion-col>Closed by local factor</ion-col>
+        <ion-col>Non testable</ion-col>
+        <ion-col width-20>NT</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Verbal Response
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col>Rating</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.verbal = 5;updateGcsTotal();">
+        <ion-col>Correctly gives name, place and date</ion-col>
+        <ion-col>Orientated</ion-col>
+        <ion-col width-20>5</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.verbal = 4;updateGcsTotal();">
+        <ion-col>Not orientated but communication coherently</ion-col>
+        <ion-col>Confused</ion-col>
+        <ion-col width-20>4</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.verbal = 3;updateGcsTotal();">
+        <ion-col>Intelligible single words</ion-col>
+        <ion-col>Words</ion-col>
+        <ion-col width-20>3</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.verbal = 2;updateGcsTotal();">
+        <ion-col>Only moans/groans</ion-col>
+        <ion-col>Sounds</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.verbal = 1;updateGcsTotal();">
+        <ion-col>No audible response, no interfering factor</ion-col>
+        <ion-col>None</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.verbal = 0;updateGcsTotal();">
+        <ion-col>Factor interferring with communication</ion-col>
+        <ion-col>Non testable</ion-col>
+        <ion-col width-20>NT</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Best Motor Response
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col>Rating</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.motor = 6;updateGcsTotal();">
+        <ion-col>Obey 2-part request</ion-col>
+        <ion-col>Obeys commands</ion-col>
+        <ion-col width-20>6</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.motor = 5;updateGcsTotal();">
+        <ion-col>Brings hand above clavicle to stimulus on head neck</ion-col>
+        <ion-col>Localising</ion-col>
+        <ion-col width-20>5</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.motor = 4;updateGcsTotal();">
+        <ion-col>Bends arm at elbows rapidly but features not predominantly abnormal</ion-col>
+        <ion-col>Normal flexion</ion-col>
+        <ion-col width-20>4</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.motor = 3;updateGcsTotal();">
+        <ion-col>Bends arms at elbows, features sclearly predominantly abnormal</ion-col>
+        <ion-col>Abnormal flexion</ion-col>
+        <ion-col width-20>3</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.motor = 2;updateGcsTotal();">
+        <ion-col>Extends arms at elbows</ion-col>
+        <ion-col>Extension</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.motor = 1;updateGcsTotal();">
+        <ion-col>No movement in arms/legs, no interfering factor</ion-col>
+        <ion-col>None</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="gcsRating.motor = 0;updateGcsTotal();">
+        <ion-col>Paralysed or other limiting factor</ion-col>
+        <ion-col>Non testable</ion-col>
+        <ion-col width-20>NT</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Sites for Physical Stimulation
+    </ion-list-header>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/img/finger-tip-pressure.png" />
+      </ion-thumbnail>
+      <h2>Finger Tip Pressure</h2>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/img/supraorbital-notch.png" />
+      </ion-thumbnail>
+      <h2>Supraorbital Notch</h2>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-left>
+        <img src="assets/img/trapezius-pinch.png" />
+      </ion-thumbnail>
+      <h2>Trapezius Pinch</h2>
+    </ion-item>
+  </ion-list>
+  <p padding class="attribution">Based on design by sir Graham Teasdale for the Institute of Neurological Sciences NHS Greater Glasgow and Clyde</p>
+  <ion-fab right bottom>
+    <button ion-fab mini color="light" [innerHTML]="gcsTotal"></button>
+  </ion-fab>
+</ion-content>

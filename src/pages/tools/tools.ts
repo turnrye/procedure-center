@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-
+import { GlasgowComaScalePage } from '../glasgow-coma-scale/glasgow-coma-scale';
 /*
   Generated class for the Tools page.
 
@@ -12,11 +12,18 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'tools.html'
 })
 export class ToolsPage {
+  pages: Array<{title: string, component: any}>;
+  constructor(public navCtrl: NavController) {
+    this.pages = [
+      { title: 'Glasgow Coma Scale', component: GlasgowComaScalePage }
+    ];
 
-  constructor(public navCtrl: NavController) {}
-
+  }
   ionViewDidLoad() {
     console.log('Hello ToolsPage Page');
+  }
+  goToPage(event, page) {
+    this.navCtrl.push(page);
   }
 
 }

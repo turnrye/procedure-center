@@ -12,6 +12,7 @@ import { LoginPage } from '../pages/login/login';
 import { Agency } from '../providers/agency';
 import { Storage } from '@ionic/storage';
 import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
+import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
     LoginPage,
     ProtocolGroupsPage,
     ProtocolPage,
-    SettingsPage
+    SettingsPage,
+    GlasgowComaScalePage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -39,7 +41,8 @@ import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
     LoginPage,
     ProtocolGroupsPage,
     ProtocolPage,
-    SettingsPage
+    SettingsPage,
+    GlasgowComaScalePage
   ],
   providers: [
     Agency,

@@ -8,5 +8,10 @@
 </ion-header>
 
 <ion-content padding>
-  Glasgow Coma Scale
+  <ion-list>
+    <ion-item *ngFor='let page of pages'>
+      <a (click)="goToPage($event, page.component)">{{ page.title }}</a>
+    </ion-item>
+  </ion-list>
+
 </ion-content>
