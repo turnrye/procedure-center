@@ -39,8 +39,9 @@ export class SettingsPage {
 
   getWebFetchForm() {
     this.http.get(this.webFetchForm.value.definitionUrl)
+      .map(res => res.json())
       .subscribe(data => {
-        this.agencyForm.patchValue({rawDefinition: data});
+        this.agencyForm.patchValue({rawDefinition: JSON.stringify(data)});
       });
   }
 
