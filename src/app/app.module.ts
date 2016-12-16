@@ -13,6 +13,7 @@ import { Agency } from '../providers/agency';
 import { Storage } from '@ionic/storage';
 import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
+import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-s
     ProtocolGroupsPage,
     ProtocolPage,
     SettingsPage,
-    GlasgowComaScalePage
+    GlasgowComaScalePage,
+    RuleOf9sPage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -42,7 +44,8 @@ import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-s
     ProtocolGroupsPage,
     ProtocolPage,
     SettingsPage,
-    GlasgowComaScalePage
+    GlasgowComaScalePage,
+    RuleOf9sPage
   ],
   providers: [
     Agency,
