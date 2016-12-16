@@ -24,12 +24,19 @@ export class RuleOf9sPage {
     var renderer = new THREE.WebGLRenderer({alpha: true});
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.getElementById( "container" ).appendChild( renderer.domElement );
-    var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-    var cube = new THREE.Mesh( geometry, material );
-    scene.add( cube );
 
-    camera.position.z = 5;
+    var loader = new THREE.ObjectLoader();
+
+    loader.load('assets/standard-male-figure.json', function (obj) {
+      scene.add(obj);
+    });
+
+/*    var controls = new THREE.OrbitControls( camera, renderer.domElement );
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.25;
+    controls.enableZoom = false;*/ // need to figure out how to incldue orbitcontrols
+
+    camera.position.z = 25;
 
     function render() {
     	requestAnimationFrame( render );
