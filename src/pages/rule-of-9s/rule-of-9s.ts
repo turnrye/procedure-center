@@ -31,10 +31,10 @@ export class RuleOf9sPage {
       scene.add(obj);
     });
 
-/*    var controls = new THREE.OrbitControls( camera, renderer.domElement );
+    /*var controls = new THREE.OrbitControls( camera, renderer.domElement );
     controls.enableDamping = true;
     controls.dampingFactor = 0.25;
-    controls.enableZoom = false;*/ // need to figure out how to incldue orbitcontrols
+    controls.enableZoom = false;*/
 
     camera.position.z = 25;
 
