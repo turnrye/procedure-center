@@ -26,22 +26,31 @@ export class RuleOf9sPage {
     document.getElementById( "container" ).appendChild( renderer.domElement );
 
     var loader = new THREE.ObjectLoader();
-
+    var cube;
     loader.load('assets/standard-male-figure.json', function (obj) {
+      cube = obj;
+      obj.traverse( function ( child ) {
+        if ( child instanceof THREE.Mesh ) {
+          //child.material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );;
+        }
+      });
       scene.add(obj);
     });
 
-    /*var controls = new THREE.OrbitControls( camera, renderer.domElement );
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.25;
-    controls.enableZoom = false;*/
+    var dirLight = new THREE.DirectionalLight(0xffffff, 1);
+    dirLight.position.set(100, 100, 50);
+    scene.add(dirLight);
 
-    camera.position.z = 25;
+    camera.position.set(0,10,15);
 
-    function render() {
-    	requestAnimationFrame( render );
-    	renderer.render( scene, camera );
-    }
+    var render = function () {
+      requestAnimationFrame( render );
+
+      if(cube != null) cube.rotation.y += 0.025;
+
+      renderer.render(scene, camera);
+    };
+
     render();
   }
 
