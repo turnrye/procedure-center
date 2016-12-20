@@ -51,19 +51,35 @@
                   "type": "string"
                 },
                 "assessments": {
-                  "type": "string"
+                  "type": "string",
+                  "format": "html",
+                  "options": {
+                    "wysiwyg": true
+                  }
                 },
                 "standingOrders": {
                   "type": "object",
                   "properties": {
                     "basic": {
-                      "type": "string"
+                      "type": "string",
+                      "format": "html",
+                      "options": {
+                        "wysiwyg": true
+                      }
                     },
                     "intermediate": {
-                      "type": "string"
+                      "type": "string",
+                      "format": "html",
+                      "options": {
+                        "wysiwyg": true
+                      }
                     },
                     "paramedic": {
-                      "type": "string"
+                      "type": "string",
+                      "format": "html",
+                      "options": {
+                        "wysiwyg": true
+                      }
                     }
                   },
                   "required": [
@@ -73,10 +89,18 @@
                   ]
                 },
                 "PEARLS": {
-                  "type": "string"
+                  "type": "string",
+                  "format": "html",
+                  "options": {
+                    "wysiwyg": true
+                  }
                 },
                 "notes": {
-                  "type": "string"
+                  "type": "string",
+                  "format": "html",
+                  "options": {
+                    "wysiwyg": true
+                  }
                 }
               },
               "required": [
@@ -95,10 +119,33 @@
           "protocols"
         ]
       }
-    }
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string",
+            "format": "html",
+            "options": {
+              "wysiwyg": true
+            }
+          }
+        },
+        "required": [
+          "name",
+          "body"
+        ]
+      }
+    },
   },
   "required": [
     "contacts",
-    "protocolGroups"
+    "protocolGroups",
+    "resources"
   ]
 }
