@@ -99,6 +99,7 @@
 				},
 				"required": [
 					"name",
+					"id",
 					"protocols"
 				]
 			}
