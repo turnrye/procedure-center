@@ -32,13 +32,6 @@
 					"name": {
 						"type": "string"
 					},
-					"id": {
-						"type": "string"
-					},
-					"keywords": {
-						"type": "array",
-						"items": {}
-					},
 					"protocols": {
 						"type": "array",
 						"items": {
@@ -87,13 +80,7 @@
 										"intermediate",
 										"paramedic"
 									]
-								},
-								"PEARLS": {
-									"type": "string",
-									"format": "html",
-									"options": {
-										"wysiwyg": true
-									}
+								}
 								},
 								"notes": {
 									"type": "string",
@@ -106,16 +93,13 @@
 							"required": [
 								"id",
 								"name",
-								"standingOrders",
-								"PEARLS"
+								"standingOrders"
 							]
 						}
 					}
 				},
 				"required": [
 					"name",
-					"id",
-					"keywords",
 					"protocols"
 				]
 			}
