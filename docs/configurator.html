@@ -62,7 +62,7 @@
       // Hook up the submit button to log to the console
       document.getElementById('submit').addEventListener('click',function() {
         // Get the value from the editor
-        window.location.href = "data:text/csv;base64," + btoa(JSON.stringify(editor.getValue()));
+        window.location.href = "data:application/json;" + JSON.stringify(editor.getValue());
       });
 
       // Hook up the Restore to Default button
