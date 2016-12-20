@@ -10,10 +10,13 @@ import { ToolsPage } from '../pages/tools/tools';
 import { DrugsPage } from '../pages/drugs/drugs';
 import { LoginPage } from '../pages/login/login';
 import { Agency } from '../providers/agency';
+import { UnescapePipe } from '../providers/unescape.pipe';
 import { Storage } from '@ionic/storage';
 import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
+import { ResourcesPage } from '../pages/resources/resources';
+import { ResourcePage } from '../pages/resource/resource';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
     ProtocolPage,
     SettingsPage,
     GlasgowComaScalePage,
-    RuleOf9sPage
+    RuleOf9sPage,
+    ResourcesPage,
+    ResourcePage,
+    UnescapePipe
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -45,7 +51,9 @@ import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
     ProtocolPage,
     SettingsPage,
     GlasgowComaScalePage,
-    RuleOf9sPage
+    RuleOf9sPage,
+    ResourcesPage,
+    ResourcePage
   ],
   providers: [
     Agency,

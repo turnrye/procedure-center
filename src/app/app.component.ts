@@ -10,6 +10,8 @@ import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
 import { DrugsPage } from '../pages/drugs/drugs';
 import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
+import { ResourcesPage } from '../pages/resources/resources';
+import { ResourcePage } from '../pages/resource/resource';
 import { GoogleAnalytics } from 'ionic-native';
 
 @Component({
@@ -30,6 +32,7 @@ export class MyApp {
       { title: 'Protocol Groups', component: ProtocolGroupsPage },
       { title: 'Contacts', component: ContactsPage },
       { title: 'Tools', component: ToolsPage },
+      { title: 'Resources', component: ResourcesPage },
       { title: 'Settings', component: SettingsPage }
     ];
     this.platform.ready().then(() => {

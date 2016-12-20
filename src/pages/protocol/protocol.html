@@ -11,14 +11,14 @@
 <ion-content>
   <ion-list>
     <ion-list-header *ngIf="protocol.assessments && protocol.assessments.length != 0" class="assessments">Assessments</ion-list-header>
-    <ion-item *ngIf="protocol.assessments && protocol.assessments.length != 0" [innerHTML]="protocol.assessments|MarkdownToHtml"></ion-item>
+    <ion-item *ngIf="protocol.assessments && protocol.assessments.length != 0"><div [innerHTML]="protocol.assessments|unescape"></div></ion-item>
     <ion-list-header *ngIf="protocol.standingOrders.basic && protocol.standingOrders.basic.length != 0" class="emt">EMT</ion-list-header>
-    <ion-item *ngIf="protocol.standingOrders.basic && protocol.standingOrders.basic.length != 0" [innerHTML]="protocol.standingOrders.basic|MarkdownToHtml"></ion-item>
+    <ion-item *ngIf="protocol.standingOrders.basic && protocol.standingOrders.basic.length != 0"><div [innerHTML]="protocol.standingOrders.basic|unescape"></div></ion-item>
     <ion-list-header *ngIf="protocol.standingOrders.intermediate && protocol.standingOrders.intermediate.length != 0" class="emt-iv">EMT-IV</ion-list-header>
-    <ion-item *ngIf="protocol.standingOrders.intermediate && protocol.standingOrders.intermediate.length != 0" [innerHTML]="protocol.standingOrders.intermediate|MarkdownToHtml"></ion-item>
+    <ion-item *ngIf="protocol.standingOrders.intermediate && protocol.standingOrders.intermediate.length != 0"><div [innerHTML]="protocol.standingOrders.intermediate|unescape"></div></ion-item>
     <ion-list-header *ngIf="protocol.standingOrders.paramedic && protocol.standingOrders.paramedic.length != 0" class="paramedic">Paramedic</ion-list-header>
-    <ion-item *ngIf="protocol.standingOrders.paramedic && protocol.standingOrders.paramedic.length != 0" [innerHTML]="protocol.standingOrders.paramedic|MarkdownToHtml"></ion-item>
+    <ion-item *ngIf="protocol.standingOrders.paramedic && protocol.standingOrders.paramedic.length != 0"><div [innerHTML]="protocol.standingOrders.paramedic|unescape"></div></ion-item>
     <ion-list-header *ngIf="protocol.notes && protocol.notes.length != 0" class="note">Note</ion-list-header>
-    <ion-item *ngIf="protocol.notes && protocol.notes.length != 0" [innerHTML]="protocol.notes|MarkdownToHtml"></ion-item>
+    <ion-item *ngIf="protocol.notes && protocol.notes.length != 0"><div [innerHTML]="protocol.notes|unescape"></div></ion-item>
   </ion-list>
 </ion-content>
