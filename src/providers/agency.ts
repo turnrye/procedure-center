@@ -22,7 +22,7 @@ export class Agency {
   setData(data: any) {
     var parsedData: any;
     if (data == null || data.length == 0) {
-      parsedData = {"contacts":[],"protocolGroups":[{"name":"Example Protocol Group","protocols":[{"id":"1","name":"Example Protocol","assessments":"This is an example protocol showing the various fields that are possible.","standingOrders":{"basic":"Put steps here","intermediate":"For your team","paramedic":""},"notes":"To get started, load the procedures that you have in the settings dialog."}]}],"resources":[{"name":"Example Resource","body":"You can change this using our configuration tool, available on our website at www.procedure.center"}]};
+      parsedData = {"contacts":[{"name": "Poison Control","phone": "(800) 222-1222","address": ""}],"protocolGroups":[{"name":"Example Protocol Group","protocols":[{"id":"1","name":"Example Protocol","assessments":"This is an example protocol showing the various fields that are possible.","standingOrders":{"basic":"Put steps here","intermediate":"For your team","paramedic":""},"notes":"To get started, load the procedures that you have in the settings dialog."}]}],"resources":[{"name":"Example Resource","body":"You can change this using our configuration tool, available on our website at www.procedure.center"}]};
     } else {
       parsedData = JSON.parse(data);
     }
