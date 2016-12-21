@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Help</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <a (click)="launch('http://procedure.center/')">Visit our Website</a>
+    </ion-item>
+    <ion-item>
+      <a (click)="launch('http://procedure.center/configurator.html')">Create Your Configuration</a>
+    </ion-item>
+    <ion-item>
+      <a (click)="launch('https://github.com/ryanturner/procedure-center/issues')">Report a Bug</a>
+    </ion-item>
+  </ion-list>
+</ion-content>

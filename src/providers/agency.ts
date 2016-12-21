@@ -16,15 +16,19 @@ export class Agency {
 
   constructor(private storage: Storage) {
     console.log('Hello Agency Provider');
-    this.data = null;
     this.load();
   }
 
-  setData(data: string) {
-    var parsedData: any = JSON.parse(data);
+  setData(data: any) {
+    var parsedData: any;
+    if (data == null || data.length == 0) {
+      parsedData = {"contacts":[],"protocolGroups":[{"name":"Example Protocol Group","protocols":[{"id":"1","name":"Example Protocol","assessments":"This is an example protocol showing the various fields that are possible.","standingOrders":{"basic":"Put steps here","intermediate":"For your team","paramedic":""},"notes":"To get started, load the procedures that you have in the settings dialog."}]}],"resources":[{"name":"Example Resource","body":"You can change this using our configuration tool, available on our website at www.procedure.center"}]};
+    } else {
+      parsedData = JSON.parse(data);
+    }
     this.storage.set('agencyData', parsedData);
     this.data = parsedData;
-    this.originalData = JSON.parse(JSON.stringify(this.data));
+    this.originalData = JSON.parse(JSON.stringify(parsedData));
   }
 
   load() {
@@ -34,8 +38,7 @@ export class Agency {
     }
     return new Promise(resolve => {
       this.storage.get('agencyData').then((data) => {
-        this.data = data;
-        this.originalData = JSON.parse(JSON.stringify(this.data));
+        this.setData((!data) ? null : JSON.stringify(data));
         resolve(this.data);
       });
     });

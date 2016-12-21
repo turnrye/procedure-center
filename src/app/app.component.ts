@@ -12,6 +12,7 @@ import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
 import { ResourcesPage } from '../pages/resources/resources';
 import { ResourcePage } from '../pages/resource/resource';
+import { HelpPage } from '../pages/help/help';
 import { GoogleAnalytics } from 'ionic-native';
 
 @Component({
@@ -33,7 +34,8 @@ export class MyApp {
       { title: 'Contacts', component: ContactsPage },
       { title: 'Tools', component: ToolsPage },
       { title: 'Resources', component: ResourcesPage },
-      { title: 'Settings', component: SettingsPage }
+      { title: 'Settings', component: SettingsPage },
+      { title: 'Help', component: HelpPage }
     ];
     this.platform.ready().then(() => {
       GoogleAnalytics.debugMode();

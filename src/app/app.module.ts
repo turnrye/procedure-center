@@ -17,6 +17,7 @@ import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-s
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
 import { ResourcesPage } from '../pages/resources/resources';
 import { ResourcePage } from '../pages/resource/resource';
+import { HelpPage } from '../pages/help/help';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ResourcePage } from '../pages/resource/resource';
     RuleOf9sPage,
     ResourcesPage,
     ResourcePage,
-    UnescapePipe
+    UnescapePipe,
+    HelpPage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -53,7 +55,8 @@ import { ResourcePage } from '../pages/resource/resource';
     GlasgowComaScalePage,
     RuleOf9sPage,
     ResourcesPage,
-    ResourcePage
+    ResourcePage,
+    HelpPage
   ],
   providers: [
     Agency,
