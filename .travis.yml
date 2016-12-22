@@ -30,13 +30,12 @@ before_script:
 
 script:
   # install build dependecies
-  - npm run ionic:build
-  - cordova prepare
-  # - install plugins etc.
-  - ionic state restore
-
-  # build iOS packages
-  - ionic build ios --device --debug
+  - npm run ionic:build #Get the basic www dir in place
+  - ionic resources --icon #Make the icons
+  - ionic resources --splash #Make the splash
+  - cordova prepare #Install the platforms
+  - ionic state restore #Install the plugins
+  - ionic build ios --device --debug #Make the build
 
 after_success:
   # generate documentation
