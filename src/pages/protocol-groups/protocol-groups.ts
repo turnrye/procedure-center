@@ -26,8 +26,6 @@ searchQuery: string = '';
   });
  }
 
- ionViewDidLoad() {
- }
  getItems(ev: any) {
    // Reset items back to all of the items
    this.agency.load().then((data) => {
@@ -37,10 +35,12 @@ searchQuery: string = '';
      let val = ev.target.value;
 
      // if the value is an empty string don't filter the items
-     if (val && val.trim() != '') {
+     if (val && val.trim() !== '') {
        this.protocolGroups = this.protocolGroups.filter((item) => {
-         return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1) || (item.keywords.toString().toLowerCase().indexOf(val.toLowerCase()) > -1);
-       })
+         return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1) ||
+          (item.keywords.toString().toLowerCase().indexOf(val.toLowerCase()) >
+          -1);
+       });
      }
    });
  }

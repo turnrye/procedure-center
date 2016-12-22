@@ -34,10 +34,10 @@ searchQuery: string = '';
    let val = ev.target.value;
 
    // if the value is an empty string don't filter the items
-   if (val && val.trim() != '') {
+   if (val && val.trim() !== '') {
      this.protocolGroup.protocols = this.protocolGroup.protocols.filter((item) => {
        return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1) || (item.id.toLowerCase().indexOf(val.toLowerCase()) > -1);
-     })
+     });
    }
  }
  protocolTapped(event, protocol) {
