@@ -29,7 +29,8 @@ before_script:
 script:
   # install build dependecies
   - npm install cordova
-
+  - cordova prepare
+  - npm run ionic:build
   # - install plugins etc.
   - ionic state restore
 
@@ -41,4 +42,3 @@ after_success:
 
 deploy:
   # deploy build to s3, testflight etc.
-
