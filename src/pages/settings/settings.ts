@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Agency } from '../../providers/agency';
 import { GoogleAnalytics } from 'ionic-native';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { Md5 } from 'ts-md5/dist/md5';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -23,8 +23,13 @@ export class SettingsPage {
   definitionMd5: any;
   constructor(public navCtrl: NavController, public agency: Agency, private formBuilder: FormBuilder, public http: Http) {
     this.agencyForm = this.formBuilder.group({
-      'rawDefinition': [JSON.stringify(this.agency.data)]
+      'rawDefinition': []
     });
+    this.agency.configuration.subscribe(
+      configuration => {
+        (<FormControl>this.agencyForm.get('rawDefinition')).setValue(JSON.stringify(configuration));
+      }
+    );
     this.webFetchForm = this.formBuilder.group({
       'definitionUrl': []
     });
@@ -46,8 +51,11 @@ export class SettingsPage {
   }
 
   updateAgency() {
-    this.agency.setData(this.agencyForm.value.rawDefinition);
-    console.log('Got raw data');
+    try {
+      this.agency.update(JSON.parse(this.agencyForm.value.rawDefinition));
+    } catch(e) {
+      console.log(e); // error in the above string (in this case, yes)!
+    }
     GoogleAnalytics.trackEvent("configuration", "changed_definition_using_raw", "", 1, false);
   }
 

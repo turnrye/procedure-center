@@ -1,28 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
-
-
-/*
-  Generated class for the Agency provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
 @Injectable()
 export class Agency {
-  data: any;
-  originalData: any;
+
+  private _configuration: BehaviorSubject<any>;
+  private dataStore: {  // This is where we will store our data in memory
+    configuration: {}
+  };
 
   constructor(private storage: Storage) {
-    console.log('Hello Agency Provider');
-    this.load();
+    this.dataStore = { configuration: {} };
+    this._configuration = new BehaviorSubject(null);
   }
 
-  setData(data: any) {
-    var parsedData: any;
-    if (data === null || data.length === 0) {
-      parsedData = {
+  get configuration() {
+    return this._configuration.asObservable();
+  }
+
+  loadAll() {
+    this.storage.get('agencyData').then((data) => {
+      if (data === null || data.length === 0) {
+        data = {
                   "metadata": {
                     "title": "Example EMS Treatment Guidelines",
                     "author": "Procedure Center Authors",
@@ -52,24 +53,17 @@ export class Agency {
                     "body": "You can change this using our configuration tool, available on our website at www.procedure.center"
                   }]
                 };
-    } else {
-      parsedData = JSON.parse(data);
-    }
-    this.storage.set('agencyData', parsedData);
-    this.data = parsedData;
-    this.originalData = JSON.parse(JSON.stringify(parsedData));
+      }
+      this.dataStore.configuration = data;
+      this._configuration.next(Object.assign({}, this.dataStore).configuration);
+    });
   }
 
-  load() {
-    if (this.data) {
-      this.data = JSON.parse(JSON.stringify(this.originalData));
-      return Promise.resolve(this.data);
-    }
-    return new Promise(resolve => {
-      this.storage.get('agencyData').then((data) => {
-        this.setData((!data) ? null : JSON.stringify(data));
-        resolve(this.data);
-      });
+  update(configuration) {
+    console.log(configuration);
+    this.storage.set('agencyData', configuration).then((data) => {
+      this.dataStore.configuration = data;
+      this._configuration.next(Object.assign({}, this.dataStore).configuration);
     });
   }
 }

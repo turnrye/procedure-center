@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Agency } from '../../providers/agency';
 import { ProtocolsPage } from '../protocols/protocols';
 import { GoogleAnalytics } from 'ionic-native';
+import { Observable } from 'rxjs/Observable';
 
 /*
   Generated class for the ProtocolGroups page.
@@ -16,39 +17,19 @@ import { GoogleAnalytics } from 'ionic-native';
 })
 export class ProtocolGroupsPage {
 
-searchQuery: string = '';
- protocolGroups: any;
- protocolsPage: any;
+  searchQuery: string = '';
+  configuration$: Observable<any>;
 
- constructor(public navCtrl: NavController, public agency: Agency) {
-  this.agency.load().then((data) => {
-    this.protocolGroups = data.protocolGroups;
-  });
- }
+  constructor(public navCtrl: NavController, public agency: Agency) {
+    this.configuration$ = this.agency.configuration;
+  }
 
- getItems(ev: any) {
-   // Reset items back to all of the items
-   this.agency.load().then((data) => {
-     this.protocolGroups = data.protocolGroups;
-
-     // set val to the value of the searchbar
-     let val = ev.target.value;
-
-     // if the value is an empty string don't filter the items
-     if (val && val.trim() !== '') {
-       this.protocolGroups = this.protocolGroups.filter((item) => {
-         return (item.name.toLowerCase().indexOf(val.toLowerCase()) > -1) ||
-          (item.keywords.toString().toLowerCase().indexOf(val.toLowerCase()) >
-          -1);
-       });
-     }
-   });
- }
- protocolGroupTapped(event, protocolGroup) {
+  protocolGroupTapped(event, protocolGroup) {
      this.navCtrl.push(ProtocolsPage, {
-       protocolGroup: protocolGroup
+        protocolGroup: protocolGroup
      });
   }
+
   ionViewDidEnter() {
     GoogleAnalytics.trackView("protocol-groups");
   }

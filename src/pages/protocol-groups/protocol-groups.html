@@ -9,9 +9,8 @@
 
 
 <ion-content padding>
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
   <ion-list>
-    <ion-item *ngFor='let protocolGroup of protocolGroups'>
+    <ion-item *ngFor='let protocolGroup of (configuration$ | async)?.protocolGroups'>
       <a (click)="protocolGroupTapped($event, protocolGroup)">{{ protocolGroup.name }}</a>
     </ion-item>
   </ion-list>

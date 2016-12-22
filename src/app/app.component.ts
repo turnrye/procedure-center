@@ -10,6 +10,7 @@ import { ResourcesPage } from '../pages/resources/resources';
 import { HelpPage } from '../pages/help/help';
 import { GoogleAnalytics } from 'ionic-native';
 import { Agency } from '../providers/agency';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   templateUrl: 'app.html'
@@ -20,10 +21,11 @@ export class MyApp {
   rootPage: any = ProtocolGroupsPage;
 
   pages: Array<{title: string, component: any}>;
-  configuration$: Promise<any>;
+  configuration$: Observable<any>;
 
   constructor(public platform: Platform, public agency: Agency) {
-    this.configuration$ = this.agency.load();
+    this.configuration$ = this.agency.configuration;
+    this.agency.loadAll();
     this.initializeApp();
 
     // used for an example of ngFor and navigation
