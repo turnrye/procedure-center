@@ -1,0 +1,43 @@
+sudo: false
+
+language: objective-c
+os: osx
+osx_image: xcode8.0
+
+cache: false
+
+before_install:
+  - export LANG=en_US.UTF-8
+  - brew update
+
+install:
+  # install minimum set of dependencies to run tests and linters
+  - npm install npm
+  - npm install -g gulp
+  - npm install -g bower
+  - npm install -g ionic
+
+before_script:
+  # update npm and bower dependencies
+  - npm install
+  - bower update
+
+  # run linters and tests
+  # if fails then build process stops
+  # - gulp test
+
+script:
+  # install build dependecies
+  - npm install cordova
+
+  # - install plugins etc.
+  - ionic state restore
+
+  # build iOS packages
+  - ionic build ios --device --debug
+
+after_success:
+  # generate documentation
+
+deploy:
+  # deploy build to s3, testflight etc.
