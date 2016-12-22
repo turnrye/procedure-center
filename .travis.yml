@@ -17,6 +17,7 @@ install:
   - npm install -g bower
   - npm install -g ionic
   - npm install -g tslint typescript
+  - npm install -g cordova
 
 before_script:
   # update npm and bower dependencies
