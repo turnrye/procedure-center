@@ -30,7 +30,6 @@ before_script:
 
 script:
   # install build dependecies
-  - npm install cordova
   - cordova prepare
   - npm run ionic:build
   # - install plugins etc.
