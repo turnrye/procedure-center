@@ -46,4 +46,8 @@ searchQuery: string = '';
      });
   }
 
+  ionViewDidEnter() {
+    GoogleAnalytics.trackView("protocols");
+  }
+
 }

@@ -7,8 +7,6 @@ import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
 import { ContactsPage } from '../pages/contacts/contacts';
 import { SettingsPage } from '../pages/settings/settings';
 import { ToolsPage } from '../pages/tools/tools';
-import { DrugsPage } from '../pages/drugs/drugs';
-import { LoginPage } from '../pages/login/login';
 import { Agency } from '../providers/agency';
 import { UnescapePipe } from '../providers/unescape.pipe';
 import { Storage } from '@ionic/storage';
@@ -25,8 +23,6 @@ import { HelpPage } from '../pages/help/help';
     ToolsPage,
     ProtocolsPage,
     ContactsPage,
-    DrugsPage,
-    LoginPage,
     ProtocolGroupsPage,
     ProtocolPage,
     SettingsPage,
@@ -47,8 +43,6 @@ import { HelpPage } from '../pages/help/help';
     ToolsPage,
     ProtocolsPage,
     ContactsPage,
-    DrugsPage,
-    LoginPage,
     ProtocolGroupsPage,
     ProtocolPage,
     SettingsPage,

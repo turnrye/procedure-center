@@ -4,14 +4,9 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { ToolsPage } from '../pages/tools/tools';
 import { ContactsPage } from '../pages/contacts/contacts';
-import { ProtocolsPage } from '../pages/protocols/protocols';
-import { ProtocolPage } from '../pages/protocol/protocol';
 import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
-import { DrugsPage } from '../pages/drugs/drugs';
-import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
 import { ResourcesPage } from '../pages/resources/resources';
-import { ResourcePage } from '../pages/resource/resource';
 import { HelpPage } from '../pages/help/help';
 import { GoogleAnalytics } from 'ionic-native';
 import { Agency } from '../providers/agency';

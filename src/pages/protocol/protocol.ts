@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NavParams } from 'ionic-angular';
-import { ProtocolsPage } from '../protocols/protocols';
 import { GoogleAnalytics } from 'ionic-native';
 
 /*

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Agency } from '../../providers/agency';
 import { GoogleAnalytics } from 'ionic-native';
-import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Md5 } from 'ts-md5/dist/md5';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
