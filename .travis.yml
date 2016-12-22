@@ -16,12 +16,13 @@ install:
   - npm install -g gulp
   - npm install -g bower
   - npm install -g ionic
+  - npm install -g tslint typescript
 
 before_script:
   # update npm and bower dependencies
   - npm install
   - bower update
-
+  - tslint --project tslint.json
   # run linters and tests
   # if fails then build process stops
   # - gulp test
