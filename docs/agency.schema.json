@@ -2,6 +2,20 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"type": "object",
 	"properties": {
+		"metadata": {
+			"type": "object",
+			"properties": {
+				"title": {
+					"type": "string"
+				},
+				"author": {
+					"type": "string"
+				},
+				"date": {
+					"type": "string"
+				}
+			}
+		},
 		"contacts": {
 			"type": "array",
 			"items": {
@@ -129,6 +143,7 @@
 	"required": [
 		"contacts",
 		"protocolGroups",
-		"resources"
+		"resources",
+		"metadata"
 	]
 }

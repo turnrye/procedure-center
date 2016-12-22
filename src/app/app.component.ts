@@ -14,6 +14,7 @@ import { ResourcesPage } from '../pages/resources/resources';
 import { ResourcePage } from '../pages/resource/resource';
 import { HelpPage } from '../pages/help/help';
 import { GoogleAnalytics } from 'ionic-native';
+import { Agency } from '../providers/agency';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,8 +25,10 @@ export class MyApp {
   rootPage: any = ProtocolGroupsPage;
 
   pages: Array<{title: string, component: any}>;
+  configuration$: Promise<any>;
 
-  constructor(public platform: Platform) {
+  constructor(public platform: Platform, public agency: Agency) {
+    this.configuration$ = this.agency.load();
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -40,7 +43,6 @@ export class MyApp {
     this.platform.ready().then(() => {
       GoogleAnalytics.debugMode();
       GoogleAnalytics.startTrackerWithId("UA-88824090-1", 30);
-      console.log('Done loading');
     });
 
   }

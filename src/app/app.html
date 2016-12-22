@@ -11,6 +11,13 @@
         {{p.title}}
       </button>
     </ion-list>
+    <div padding class="author">
+      <h2>{{ (configuration$ | async)?.metadata?.title }}</h2>
+      <ion-note>
+        <span>{{ (configuration$ | async)?.metadata?.author }}</span>
+        <span>{{ (configuration$ | async)?.metadata?.date }}</span>
+      </ion-note>
+    </div>
   </ion-content>
 
 </ion-menu>
