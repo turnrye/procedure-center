@@ -9,7 +9,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { ResourcesPage } from '../pages/resources/resources';
 import { HelpPage } from '../pages/help/help';
 import { GoogleAnalytics } from 'ionic-native';
-import { Agency } from '../providers/agency';
+import { ConfigurationProvider } from '../providers/configuration-provider';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -23,9 +23,9 @@ export class MyApp {
   pages: Array<{title: string, component: any}>;
   configuration$: Observable<any>;
 
-  constructor(public platform: Platform, public agency: Agency) {
-    this.configuration$ = this.agency.configuration;
-    this.agency.loadAll();
+  constructor(public platform: Platform, public configurationProvider: ConfigurationProvider) {
+    this.configuration$ = this.configurationProvider.configuration;
+    this.configurationProvider.loadAll();
     this.initializeApp();
 
     // used for an example of ngFor and navigation

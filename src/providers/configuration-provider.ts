@@ -4,10 +4,10 @@ import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
-export class Agency {
+export class ConfigurationProvider {
 
   private _configuration: BehaviorSubject<any>;
-  private dataStore: {  // This is where we will store our data in memory
+  private dataStore: {
     configuration: {}
   };
 
@@ -21,7 +21,7 @@ export class Agency {
   }
 
   loadAll() {
-    this.storage.get('agencyData').then((data) => {
+    this.storage.get('configuration').then((data) => {
       if (data === null || data.length === 0) {
         data = {
                   "metadata": {
@@ -61,7 +61,7 @@ export class Agency {
 
   update(configuration) {
     console.log(configuration);
-    this.storage.set('agencyData', configuration).then((data) => {
+    this.storage.set('configuration', configuration).then((data) => {
       this.dataStore.configuration = data;
       this._configuration.next(Object.assign({}, this.dataStore).configuration);
     });

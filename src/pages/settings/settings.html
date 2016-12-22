@@ -18,9 +18,9 @@
         <ion-label stacked>Configuration URL</ion-label>
         <ion-input formControlName="definitionUrl" type="url" item-right></ion-input>
       </ion-item>
-      <button ion-button type="submit" [disabled]="!agencyForm.valid" color="secondary">Fetch</button>
+      <button ion-button type="submit" [disabled]="!webFetchForm.valid" color="secondary">Fetch</button>
     </form>
-    <form [formGroup]="agencyForm" (ngSubmit)="updateAgency()">
+    <form [formGroup]="configurationForm" (ngSubmit)="updateAgency()">
       <ion-item>
         <ion-label stacked>Raw Configuration</ion-label>
         <ion-textarea formControlName="rawDefinition" (change)="calculateMd5()" rows="6"></ion-textarea>
@@ -29,7 +29,7 @@
         <ion-label stacked>Version</ion-label>
         <ion-input type="text" disabled="true" value="{{ definitionMd5 }}"></ion-input>
       </ion-item>
-      <button ion-button type="submit" [disabled]="!agencyForm.valid" block>Save</button>
+      <button ion-button type="submit" [disabled]="!configurationForm.valid" block>Save</button>
     </form>
   </ion-list>
 </ion-content>

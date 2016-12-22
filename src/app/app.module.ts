@@ -7,7 +7,7 @@ import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
 import { ContactsPage } from '../pages/contacts/contacts';
 import { SettingsPage } from '../pages/settings/settings';
 import { ToolsPage } from '../pages/tools/tools';
-import { Agency } from '../providers/agency';
+import { ConfigurationProvider } from '../providers/configuration-provider';
 import { UnescapePipe } from '../providers/unescape.pipe';
 import { Storage } from '@ionic/storage';
 import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
@@ -53,7 +53,7 @@ import { HelpPage } from '../pages/help/help';
     HelpPage
   ],
   providers: [
-    Agency,
+    ConfigurationProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Storage
   ]
