@@ -54,4 +54,8 @@ export class SettingsPage {
     GoogleAnalytics.trackEvent("configuration", "changed_definition_using_raw", "", 1, false);
   }
 
+  launch(url) {
+    window.open(url, '_system');
+  }
+
 }

@@ -9,16 +9,16 @@
 
 
 <ion-content>
-  <ion-list inset>
+  <ion-list>
     <ion-item text-wrap>
-      Use this to set the content of the application. You can either manually paste the configuration in, or use a URL to download it from the web.
+      Most likely you'd receive this information from your manager or IT personnel. Get started on our <a (click)="launch('http://procedure.center/')">website</a>.
     </ion-item>
     <form [formGroup]="webFetchForm" (ngSubmit)="getWebFetchForm()">
       <ion-item>
         <ion-label stacked>Configuration URL</ion-label>
         <ion-input formControlName="definitionUrl" type="url" item-right></ion-input>
       </ion-item>
-      <button ion-button type="submit" [disabled]="!webFetchForm.valid" color="secondary">Fetch</button>
+      <button ion-button type="submit" [disabled]="!webFetchForm.valid" color="secondary" full>Fetch Configuration</button>
     </form>
     <form [formGroup]="configurationForm" (ngSubmit)="updateAgency()">
       <ion-item>
@@ -29,7 +29,7 @@
         <ion-label stacked>Version</ion-label>
         <ion-input type="text" disabled="true" value="{{ definitionMd5 }}"></ion-input>
       </ion-item>
-      <button ion-button type="submit" [disabled]="!configurationForm.valid" block>Save</button>
+      <button ion-button type="submit" [disabled]="!configurationForm.valid" full>Save</button>
     </form>
   </ion-list>
 </ion-content>
