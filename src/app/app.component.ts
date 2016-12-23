@@ -7,6 +7,7 @@ import { ContactsPage } from '../pages/contacts/contacts';
 import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
 import { SettingsPage } from '../pages/settings/settings';
 import { ResourcesPage } from '../pages/resources/resources';
+import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehospital-stroke-scale/cincinnati-prehospital-stroke-scale';
 import { HelpPage } from '../pages/help/help';
 import { GoogleAnalytics } from 'ionic-native';
 import { ConfigurationProvider } from '../providers/configuration-provider';
