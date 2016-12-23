@@ -15,6 +15,7 @@ export class SettingsPage {
   configurationForm: FormGroup;
   webFetchForm: FormGroup;
   definitionMd5: any;
+
   constructor(public navCtrl: NavController, public configurationProvider:
   ConfigurationProvider, private formBuilder: FormBuilder, public http: Http) {
     this.configurationForm = this.formBuilder.group({
@@ -52,6 +53,10 @@ export class SettingsPage {
       console.log(e); // error in the above string (in this case, yes)!
     }
     GoogleAnalytics.trackEvent("configuration", "changed_definition_using_raw", "", 1, false);
+  }
+
+  launch(url) {
+    window.open(url, '_system');
   }
 
 }

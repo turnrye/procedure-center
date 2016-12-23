@@ -15,6 +15,7 @@ import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-s
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
 import { ResourcesPage } from '../pages/resources/resources';
 import { ResourcePage } from '../pages/resource/resource';
+import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehospital-stroke-scale/cincinnati-prehospital-stroke-scale';
 import { HelpPage } from '../pages/help/help';
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HelpPage } from '../pages/help/help';
     ResourcesPage,
     ResourcePage,
     UnescapePipe,
-    HelpPage
+    HelpPage,
+    CincinnatiPrehospitalStrokeScalePage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -50,7 +52,8 @@ import { HelpPage } from '../pages/help/help';
     RuleOf9sPage,
     ResourcesPage,
     ResourcePage,
-    HelpPage
+    HelpPage,
+    CincinnatiPrehospitalStrokeScalePage
   ],
   providers: [
     ConfigurationProvider,

@@ -8,7 +8,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <ion-list>
     <ion-item *ngFor='let protocolGroup of (configuration$ | async)?.protocolGroups'>
       <a (click)="protocolGroupTapped($event, protocolGroup)">{{ protocolGroup.name }}</a>

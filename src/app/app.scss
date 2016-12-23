@@ -17,4 +17,5 @@
 div.author {
   position: absolute;
   bottom: 0;
+  z-index: -1; //put it on the bottom
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
+import { AppVersion } from 'ionic-native';
 
 /*
   Generated class for the Help page.
@@ -13,7 +14,11 @@ import { NavController, Platform } from 'ionic-angular';
 })
 export class HelpPage {
 
-  constructor(public navCtrl: NavController, public platform: Platform) {}
+  versionNumber$: Promise<any>;
+
+  constructor(public navCtrl: NavController, public platform: Platform) {
+    this.versionNumber$ = AppVersion.getVersionNumber();
+  }
 
   ionViewDidLoad() {
     console.log('Hello HelpPage Page');
