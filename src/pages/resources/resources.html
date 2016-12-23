@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-list>
     <ion-item *ngFor='let resource of (configuration$ | async)?.resources'>
       <a (click)="goToPage($event, resource)">{{ resource.name }}</a>

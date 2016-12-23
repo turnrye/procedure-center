@@ -9,7 +9,7 @@
 
 
 <ion-content padding>
- <ion-card *ngFor="let contact of agency.data.contacts">
+ <ion-card *ngFor="let contact of (configuration$ | async)?.contacts">
   <ion-card-header>
     {{ contact.name }}
   </ion-card-header>

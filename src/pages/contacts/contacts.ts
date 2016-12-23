@@ -2,30 +2,32 @@ import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 import { ConfigurationProvider } from '../../providers/configuration-provider';
 import { GoogleAnalytics } from 'ionic-native';
-/*
-  Generated class for the Contacts page.
+import { Observable } from 'rxjs/Observable';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-contaccts',
   templateUrl: 'contacts.html'
 })
 export class ContactsPage {
 
-  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider, public platform: Platform) {}
+  configuration$: Observable<any>;
+
+  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider, public platform: Platform) {
+    this.configuration$ = this.configurationProvider.configuration;
+  }
 
   ionViewDidEnter() {
     GoogleAnalytics.trackView("Contacts");
   }
+
   launch(url) {
     window.open(url, '_system');
   }
+
   call(number) {
-    console.log("called call with number: " + number);
     window.open('tel:' + number, '_system');
   }
+
   map(address) {
     window.open('geo:?daddr=' + address, '_system');
   }
