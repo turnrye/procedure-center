@@ -15,7 +15,8 @@ export class SettingsPage {
   configurationForm: FormGroup;
   webFetchForm: FormGroup;
   definitionMd5: any;
-  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider, private formBuilder: FormBuilder, public http: Http) {
+  constructor(public navCtrl: NavController, public configurationProvider:
+  ConfigurationProvider, private formBuilder: FormBuilder, public http: Http) {
     this.configurationForm = this.formBuilder.group({
       'rawDefinition': [null, Validators.required]
     });
