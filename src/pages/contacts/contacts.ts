@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
-import { Agency } from '../../providers/agency';
+import { ConfigurationProvider } from '../../providers/configuration-provider';
 import { GoogleAnalytics } from 'ionic-native';
 /*
   Generated class for the Contacts page.
@@ -14,7 +14,7 @@ import { GoogleAnalytics } from 'ionic-native';
 })
 export class ContactsPage {
 
-  constructor(public navCtrl: NavController, public agency: Agency, public platform: Platform) {}
+  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider, public platform: Platform) {}
 
   ionViewDidEnter() {
     GoogleAnalytics.trackView("Contacts");

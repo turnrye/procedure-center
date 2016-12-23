@@ -46,7 +46,7 @@ export class RuleOf9sPage {
     var render = function () {
       requestAnimationFrame( render );
 
-      if(cube != null) cube.rotation.y += 0.025;
+      if(cube !== null) cube.rotation.y += 0.025;
 
       renderer.render(scene, camera);
     };

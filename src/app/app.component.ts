@@ -4,17 +4,13 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { ToolsPage } from '../pages/tools/tools';
 import { ContactsPage } from '../pages/contacts/contacts';
-import { ProtocolsPage } from '../pages/protocols/protocols';
-import { ProtocolPage } from '../pages/protocol/protocol';
 import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
-import { DrugsPage } from '../pages/drugs/drugs';
-import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
 import { ResourcesPage } from '../pages/resources/resources';
-import { ResourcePage } from '../pages/resource/resource';
 import { HelpPage } from '../pages/help/help';
 import { GoogleAnalytics } from 'ionic-native';
-import { Agency } from '../providers/agency';
+import { ConfigurationProvider } from '../providers/configuration-provider';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,10 +21,11 @@ export class MyApp {
   rootPage: any = ProtocolGroupsPage;
 
   pages: Array<{title: string, component: any}>;
-  configuration$: Promise<any>;
+  configuration$: Observable<any>;
 
-  constructor(public platform: Platform, public agency: Agency) {
-    this.configuration$ = this.agency.load();
+  constructor(public platform: Platform, public configurationProvider: ConfigurationProvider) {
+    this.configuration$ = this.configurationProvider.configuration;
+    this.configurationProvider.loadAll();
     this.initializeApp();
 
     // used for an example of ngFor and navigation

@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ResourcePage } from '../resource/resource';
-import { Agency } from '../../providers/agency';
+import { ConfigurationProvider } from '../../providers/configuration-provider';
+import { GoogleAnalytics } from 'ionic-native';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'page-resources',
@@ -9,20 +11,19 @@ import { Agency } from '../../providers/agency';
 })
 export class ResourcesPage {
 
-  resources: any;
-  constructor(public navCtrl: NavController, public agency: Agency) {
-    this.agency.load().then((data) => {
-      this.resources = data.resources;
-    });
+  configuration$: Observable<any>;
+  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider) {
+    this.configuration$ = this.configurationProvider.configuration;
   }
 
-  ionViewDidLoad() {
-    console.log('Hello ResourcesPage Page');
-  }
   goToPage(event, resource) {
     this.navCtrl.push(ResourcePage, {
       resource: resource
     });
+  }
+
+  ionViewDidEnter() {
+    GoogleAnalytics.trackView("resources");
   }
 
 }
