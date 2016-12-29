@@ -11,7 +11,7 @@
 <ion-content>
   <ion-list>
     <ion-list-header *ngIf="protocol.assessments && protocol.assessments.length != 0" class="assessments">Assessments</ion-list-header>
-    <ion-item *ngIf="protocol.assessments && protocol.assessments.length != 0" text-wrap><div [innerHTML]="protocol.assessments|unescape"></div></ion-item>
+    <ion-item *ngIf="protocol.assessments && protocol.assessments.length != 0" text-wrap><div [innerHTML]="protocol.assessments|unescape" class="multi-col"></div></ion-item>
     <ion-list-header *ngIf="protocol.standingOrders.basic && protocol.standingOrders.basic.length != 0" class="emt">EMT</ion-list-header>
     <ion-item *ngIf="protocol.standingOrders.basic && protocol.standingOrders.basic.length != 0" text-wrap><div [innerHTML]="protocol.standingOrders.basic|unescape"></div></ion-item>
     <ion-list-header *ngIf="protocol.standingOrders.intermediate && protocol.standingOrders.intermediate.length != 0" class="emt-iv">EMT-IV</ion-list-header>
