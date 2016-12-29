@@ -29,7 +29,7 @@ export class SettingsPage {
       }
     );
     this.webFetchForm = this.formBuilder.group({
-      'definitionUrl': [decodeURIComponent(_params.get('url')), Validators.required]
+      'definitionUrl': [_params.get('url') ? decodeURIComponent(_params.get('url')) : null, Validators.required]
     });
     this.calculateMd5();
   }
