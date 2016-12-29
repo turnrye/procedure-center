@@ -1,0 +1,34 @@
+page-bls-cpr-components {
+  ion-row {
+    border-bottom: 1px solid map-get($colors, light);
+  }
+  h2 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  ion-col + ion-col {
+    border-left: 1px solid map-get($colors, light);
+  }
+  ion-col:first-child {
+    font-weight: bold;
+  }
+  .scroll-content {
+    display: flex;
+    flex-direction: column;
+  }
+  ion-scroll {
+    flex: 1;
+  }
+  ion-grid.headers {
+    padding-bottom: 0 !important;
+    background-color: map-get($colors, light);
+    font-size: 1em;
+    font-weight: bold;
+  }
+  ion-scroll ion-grid {
+    padding-top: 0 !important;
+  }
+  ul {
+    list-style: none;
+  }
+}

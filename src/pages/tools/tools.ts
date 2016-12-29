@@ -4,6 +4,7 @@ import { GlasgowComaScalePage } from '../glasgow-coma-scale/glasgow-coma-scale';
 import { RuleOf9sPage } from '../rule-of-9s/rule-of-9s';
 import { CincinnatiPrehospitalStrokeScalePage } from '../cincinnati-prehospital-stroke-scale/cincinnati-prehospital-stroke-scale';
 import { GoogleAnalytics } from 'ionic-native';
+import { BLSCPRComponentsPage } from '../bls-cpr-components/bls-cpr-components';
 
 @Component({
   selector: 'page-tools',
@@ -16,7 +17,8 @@ export class ToolsPage {
     this.pages = [
       { title: 'Glasgow Coma Scale', component: GlasgowComaScalePage },
       { title: 'Rule of 9s', component: RuleOf9sPage },
-      { title: 'Cincinnati Prehospital Stroke Scale', component: CincinnatiPrehospitalStrokeScalePage}
+      { title: 'Cincinnati Prehospital Stroke Scale', component: CincinnatiPrehospitalStrokeScalePage},
+      { title: 'Summary of High-Quality CPR Components for BLS Providers', component: BLSCPRComponentsPage }
     ];
 
   }

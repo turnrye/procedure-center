@@ -11,6 +11,6 @@ export class CincinnatiPrehospitalStrokeScalePage {
   constructor(public navCtrl: NavController) {}
 
   ionViewDidEnter() {
-    GoogleAnalytics.trackView("protocol-groups");
+    GoogleAnalytics.trackView("cincinnati-prehospital-stroke-scale");
   }
 }

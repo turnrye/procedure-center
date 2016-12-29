@@ -10,6 +10,7 @@ import { ResourcesPage } from '../pages/resources/resources';
 import { HelpPage } from '../pages/help/help';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
+import { BLSCPRComponentsPage } from '../pages/bls-cpr-components/bls-cpr-components';
 import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehospital-stroke-scale/cincinnati-prehospital-stroke-scale';
 import { GoogleAnalytics } from 'ionic-native';
 import { ConfigurationProvider } from '../providers/configuration-provider';
@@ -48,6 +49,7 @@ export class MyApp {
         '/tools': ToolsPage,
         '/tools/glasgow-coma-scale': GlasgowComaScalePage,
         '/tools/cincinnati-prehospital-stroke-scale': CincinnatiPrehospitalStrokeScalePage,
+        '/tools/bls-cpr-components': BLSCPRComponentsPage,
         '/tools/rule-of-9s': RuleOf9sPage,
         '/settings': SettingsPage,
         '/settings/url/:url': SettingsPage,
