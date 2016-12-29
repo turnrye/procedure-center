@@ -13,3 +13,25 @@ ion-list-header.paramedic {
 ion-list-header.assessments, ion-list-header.note {
   background-color: map-get($colors, light);
 }
+@media (min-width: 768px) {
+  dl dt {
+    float: left;
+    width: 160px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  dl dd {
+    margin-left: 180px;
+  }
+  .multi-col {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+  }
+}
+dt {
+    font-weight: 700;
+}

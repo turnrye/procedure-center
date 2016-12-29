@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 import { ConfigurationProvider } from '../../providers/configuration-provider';
 import { GoogleAnalytics } from 'ionic-native';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
@@ -17,7 +18,8 @@ export class SettingsPage {
   definitionMd5: any;
 
   constructor(public navCtrl: NavController, public configurationProvider:
-  ConfigurationProvider, private formBuilder: FormBuilder, public http: Http) {
+  ConfigurationProvider, private formBuilder: FormBuilder, public http: Http,
+  private _params: NavParams) {
     this.configurationForm = this.formBuilder.group({
       'rawDefinition': [null, Validators.required]
     });
@@ -27,7 +29,7 @@ export class SettingsPage {
       }
     );
     this.webFetchForm = this.formBuilder.group({
-      'definitionUrl': [null, Validators.required]
+      'definitionUrl': [_params.get('url') ? decodeURIComponent(_params.get('url')) : null, Validators.required]
     });
     this.calculateMd5();
   }

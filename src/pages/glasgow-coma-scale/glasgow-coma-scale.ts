@@ -17,7 +17,7 @@ export class GlasgowComaScalePage {
   }
 
   ionViewDidEnter() {
-    GoogleAnalytics.trackView("protocol-groups");
+    GoogleAnalytics.trackView("glasgow-coma-scale");
   }
 
 }

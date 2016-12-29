@@ -90,4 +90,9 @@
     <engine name="android" spec="~6.0.0" />
     <engine name="ios" spec="~4.3.1" />
     <plugin name="cordova-plugin-app-version" spec="~0.1.9" />
+    <plugin name="ionic-plugin-deeplinks" spec="~1.0.12">
+        <variable name="URL_SCHEME" value="procedure-center" />
+        <variable name="DEEPLINK_SCHEME" value="https" />
+        <variable name="DEEPLINK_HOST" value="deep.procedure.center" />
+    </plugin>
 </widget>
