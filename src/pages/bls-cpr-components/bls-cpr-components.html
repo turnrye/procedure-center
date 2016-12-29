@@ -98,5 +98,12 @@
     <p padding>*Compression depth should be no more than 2.4 inches (6 cm).</p>
     <p padding>Abbreviations: AED, automated external defibrillator; AP, anteroposterior; CPR, cardiopulmonary resuscitation</p>
   </ion-scroll>
+  <ion-fab right bottom>
+    <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab [innerHTML]="remainingTime" style="line-height: 100%;"></button>
+      <button ion-fab (click)="toggleMetronome()"><ion-icon name="timer"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
   <p padding class="attribution">Modied from Highlights of the 2015 AHA Guidelines Update for CPR and ECC.</p>
 </ion-content>
