@@ -4,8 +4,9 @@
   "homepage": "http://procedure.center/",
   "private": true,
   "scripts": {
-    "ionic:build": "cordova-icon --icon=resources/icon.png && cordova-splash --splash=resources/splash.png && ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve",
+    "make-resources": "cordova-icon --icon=resources/icon.png && cordova-splash --splash=resources/splash.png"
   },
   "dependencies": {
     "@angular/common": "2.1.1",
