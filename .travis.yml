@@ -5,40 +5,61 @@ os: osx
 osx_image: xcode8.0
 
 cache: false
-
 before_install:
   - export LANG=en_US.UTF-8
+  - gem update --system
+  - gem update pilot
+  - gem update supply
+  - gem update fastlane
   - brew update
+  - brew install android-sdk
+  - brew install imagemagick
+  - brew install gradle
+  - brew install ant
+  - brew install maven
 
 install:
   # install minimum set of dependencies to run tests and linters
+  - npm config set loglevel warn
   - npm install npm
   - npm install -g gulp
   - npm install -g bower
   - npm install -g ionic
   - npm install -g tslint typescript
   - npm install -g cordova
+  - echo y | android update sdk --no-ui --all --filter tools
+  - echo y | android update sdk --no-ui --all --filter platform-tools
+  - echo y | android update sdk --no-ui --all --filter build-tools-19.1.0
+  - echo y | android update sdk --no-ui --all --filter android-24
+  - echo y | android update sdk --no-ui --all --filter extra-google-m2repository
+  - export ANT_HOME=/usr/local/opt/ant
+  - export MAVEN_HOME=/usr/local/opt/maven
+  - export GRADLE_HOME=/usr/local/opt/gradle
+  - export ANDROID_HOME=/usr/local/opt/android-sdk
+  - export PATH=$ANT_HOME/bin:$PATH
+  - export PATH=$MAVEN_HOME/bin:$PATH
+  - export PATH=$GRADLE_HOME/bin:$PATH
+  - export PATH=$ANDROID_HOME/tools:$PATH
+  - export PATH=$ANDROID_HOME/platform-tools:$PATH
+  - export PATH=$ANDROID_HOME/build-tools/19.1.0:$PATH
+  - mkdir "$ANDROID_HOME/licenses" || true
+  - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
 
 before_script:
-  # update npm and bower dependencies
   - npm install
   - bower update
-  - tslint --project tslint.json
-  # run linters and tests
-  # if fails then build process stops
-  # - gulp test
-
-script:
-  # install build dependecies
   - npm run ionic:build #Get the basic www dir in place
-  - ionic resources --icon #Make the icons
-  - ionic resources --splash #Make the splash
   - cordova prepare #Install the platforms
   - ionic state restore #Install the plugins
-  - ionic build ios --device --debug #Make the build
+  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/iOS_Distribution.cer.enc -d -a -out scripts/iOS_Distribution.cer
+  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/iOS_Distribution.p12.enc -d -a -out scripts/iOS_Distribution.p12
+  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/iOS_Distribution.mobileprovision.enc -d -a -out scripts/iOS_Distribution.mobileprovision
+  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/android-release.keystore.enc -d -a -out scripts/android-release.keystore
+  - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/google-api-key.json.enc -d -a -out scripts/google-api-key.json
+  - sh ./scripts/add-key.sh
+  - tslint --project tslint.json #Lint it!
 
-after_success:
-  # generate documentation
+script:
+  - sh ./scripts/build-distribute.sh
 
 deploy:
-  # deploy build to s3, testflight etc.
