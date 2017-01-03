@@ -10,7 +10,10 @@ ion-list-header.emt-iv {
 ion-list-header.paramedic {
   background-color: #B39DDB;
 }
-ion-list-header.assessments, ion-list-header.note {
+ion-list-header.allLevels {
+  background-color: #FFCC80;
+}
+ion-list-header.assessments, ion-list-header.note, ion-list-header.preamble {
   background-color: map-get($colors, light);
 }
 @media (min-width: 768px) {

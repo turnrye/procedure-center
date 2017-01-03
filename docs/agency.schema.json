@@ -32,9 +32,7 @@
 					}
 				},
 				"required": [
-					"name",
-					"phone",
-					"address"
+					"name"
 				]
 			}
 		},
@@ -56,6 +54,13 @@
 								},
 								"name": {
 									"type": "string"
+								},
+								"preamble": {
+									"type": "string",
+									"format": "html",
+									"options": {
+										"wysiwyg": true
+									}
 								},
 								"assessments": {
 									"type": "string",
@@ -87,12 +92,16 @@
 											"options": {
 												"wysiwyg": true
 											}
+										},
+										"allLevels": {
+											"type": "string",
+											"format": "html",
+											"options": {
+												"wysiwyg": true
+											}
 										}
 									},
 									"required": [
-										"basic",
-										"intermediate",
-										"paramedic"
 									]
 								},
 								"notes": {
@@ -105,8 +114,7 @@
 							},
 							"required": [
 								"id",
-								"name",
-								"standingOrders"
+								"name"
 							]
 						}
 					}
