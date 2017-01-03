@@ -10,6 +10,8 @@
 
 <ion-content>
   <ion-list>
+    <ion-list-header *ngIf="protocol.preamble && protocol.preamble.length != 0" class="preamble">Preamble</ion-list-header>
+    <ion-item *ngIf="protocol.preamble && protocol.preamble.length != 0" text-wrap><div [innerHTML]="protocol.preamble|unescape" class="multi-col"></div></ion-item>
     <ion-list-header *ngIf="protocol.assessments && protocol.assessments.length != 0" class="assessments">Assessments</ion-list-header>
     <ion-item *ngIf="protocol.assessments && protocol.assessments.length != 0" text-wrap><div [innerHTML]="protocol.assessments|unescape" class="multi-col"></div></ion-item>
     <ion-list-header *ngIf="protocol?.standingOrders?.basic && protocol?.standingOrders?.basic.length != 0" class="emt">EMT</ion-list-header>
@@ -18,7 +20,9 @@
     <ion-item *ngIf="protocol?.standingOrders?.intermediate && protocol?.standingOrders?.intermediate.length != 0" text-wrap><div [innerHTML]="protocol?.standingOrders?.intermediate|unescape"></div></ion-item>
     <ion-list-header *ngIf="protocol?.standingOrders?.paramedic && protocol?.standingOrders?.paramedic.length != 0" class="paramedic">Paramedic</ion-list-header>
     <ion-item *ngIf="protocol?.standingOrders?.paramedic && protocol?.standingOrders?.paramedic.length != 0" text-wrap><div [innerHTML]="protocol?.standingOrders?.paramedic|unescape"></div></ion-item>
+    <ion-list-header *ngIf="protocol?.standingOrders?.allLevels && protocol?.standingOrders?.allLevels.length != 0" class="allLevels">All Levels</ion-list-header>
+    <ion-item *ngIf="protocol?.standingOrders?.allLevels && protocol?.standingOrders?.allLevels.length != 0" text-wrap><div [innerHTML]="protocol?.standingOrders?.allLevels|unescape"></div></ion-item>
     <ion-list-header *ngIf="protocol.notes && protocol.notes.length != 0" class="note">Note</ion-list-header>
-    <ion-item *ngIf="protocol.notes && protocol.notes.length != 0" text-wrap><div [innerHTML]="protocol.notes|unescape"></div></ion-item>
+    <ion-item *ngIf="protocol.notes && protocol.notes.length != 0" text-wrap><div [innerHTML]="protocol.notes|unescape" class="multi-col"></div></ion-item>
   </ion-list>
 </ion-content>

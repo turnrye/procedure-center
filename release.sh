@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-source private/vars.sh
-ionic build android --release -- --keystore=private/my-release-key.keystore --storePassword=$store_password --alias=alias_name --password=$alias_password
-supply --apk platforms/android/build/outputs/apk/android-release.apk --track rollout --json_key private/google-api-key.json --package_name center.procedure.app
