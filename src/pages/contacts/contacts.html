@@ -9,22 +9,26 @@
 
 
 <ion-content padding>
- <ion-card *ngFor="let contact of (configuration$ | async)?.contacts">
-  <ion-card-header>
-    {{ contact.name }}
-  </ion-card-header>
+  <ion-card *ngFor="let contact of (configuration$ | async)?.contacts">
+    <ion-card-header>
+      {{ contact.name }}
+    </ion-card-header>
 
-  <ion-list>
-    <button ion-item (click)="call(contact.phone)" *ngIf="contact.phone">
-      <ion-icon name="call" item-left></ion-icon>
-      {{ contact.phone }}
-    </button>
+    <ion-list>
+      <button ion-item (click)="call(contact.phone)" *ngIf="contact.phone">
+        <ion-icon name="call" item-left></ion-icon>
+        {{ contact.phone }}
+      </button>
 
-    <button ion-item (click)="map(contact.address)" *ngIf="contact.address">
-      <ion-icon name="map" item-left></ion-icon>
-      {{ contact.address }}
-    </button>
-
-  </ion-list>
-</ion-card>
+      <button ion-item (click)="map(contact.address)" *ngIf="contact.address">
+        <ion-icon name="map" item-left></ion-icon>
+        {{ contact.address }}
+      </button>
+    </ion-list>
+    <div padding [hidden]="!contact.tags || contact.tags.length > 0">
+      <ion-chip color="{{ tag.color ? tag.color : 'default' }}" *ngFor="let tag of contact.tags">
+        <ion-label>{{ tag.name }}</ion-label>
+      </ion-chip>
+    </div>
+  </ion-card>
 </ion-content>
