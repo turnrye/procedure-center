@@ -10,9 +10,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor='let protocolGroup of (configuration$ | async)?.protocolGroups'>
-      <a (click)="protocolGroupTapped($event, protocolGroup)">{{ protocolGroup.name }}</a>
-    </ion-item>
+    <a ion-item (click)="protocolGroupTapped($event, protocolGroup)" *ngFor='let protocolGroup of (configuration$ | async)?.protocolGroups'>{{ protocolGroup.name }}</a>
   </ion-list>
 
 </ion-content>

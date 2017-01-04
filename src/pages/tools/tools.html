@@ -9,9 +9,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor='let page of pages'>
-      <a (click)="goToPage($event, page.component)">{{ page.title }}</a>
-    </ion-item>
+    <a ion-item (click)="goToPage($event, page.component)" *ngFor='let page of pages'>{{ page.title }}</a>
   </ion-list>
 
 </ion-content>

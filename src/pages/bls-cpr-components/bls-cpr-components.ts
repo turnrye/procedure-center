@@ -19,6 +19,9 @@ export class BLSCPRComponentsPage {
   ionViewDidEnter() {
     GoogleAnalytics.trackView("bls-cpr-components");
   }
+  ionViewWillLeave() {
+    this.metronome.pause();
+  }
   toggleMetronome() {
     if(this.metronome.paused) {
       this.metronome.currentTime = 0.0;
