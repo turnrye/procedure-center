@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, Platform, PopoverController } from 'ionic-angular';
 import { ConfigurationProvider } from '../../providers/configuration-provider';
+import { ContactsPopoverPage } from '../contacts-popover/contacts-popover';
+import { Configuration } from '../../models/configuration';
+import { Contact } from '../../models/contact';
 import { GoogleAnalytics } from 'ionic-native';
 import { Observable } from 'rxjs/Observable';
 
@@ -10,9 +13,14 @@ import { Observable } from 'rxjs/Observable';
 })
 export class ContactsPage {
 
-  configuration$: Observable<any>;
+  configuration$: Observable<Configuration>;
+  filteredContacts: Contact[];
+  subscription: any;
+  tags: string[];
+  //private configuration: Configuration;
 
-  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider, public platform: Platform) {
+  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider, public popoverCtrl: PopoverController) {
+    this.tags = [];
     this.configuration$ = this.configurationProvider.configuration;
   }
 
@@ -30,6 +38,20 @@ export class ContactsPage {
 
   map(address) {
     window.open('geo:?daddr=' + address, '_system');
+  }
+
+  presentPopover(myEvent) {
+    let popover = this.popoverCtrl.create(ContactsPopoverPage, {
+      setFilterTags: (tags: string[]) =>  {
+        this.tags = tags;
+      },
+      getFilterTags: () => {
+        return this.tags;
+      }
+    });
+    popover.present({
+      ev: myEvent
+    });
   }
 
 }

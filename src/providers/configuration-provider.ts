@@ -2,25 +2,20 @@ import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Configuration } from '../models/configuration';
 
 @Injectable()
 export class ConfigurationProvider {
 
-  private _configuration: BehaviorSubject<any>;
-  private dataStore: {
-    configuration: {}
-  };
 
+  private _configuration: BehaviorSubject<Configuration> = new BehaviorSubject(new Configuration());
   constructor(private storage: Storage) {
-    this.dataStore = { configuration: {} };
-    this._configuration = new BehaviorSubject(null);
+    this.loadInitialData();
   }
-
-  get configuration() {
-    return this._configuration.asObservable();
+  get configuration(): Observable<Configuration> {
+    return new Observable(fn => this._configuration.subscribe(fn));
   }
-
-  loadAll() {
+  loadInitialData() {
     this.storage.get('configuration').then((data) => {
       if (data === null || data.length === 0) {
         data = {
@@ -54,16 +49,14 @@ export class ConfigurationProvider {
                   }]
                 };
       }
-      this.dataStore.configuration = data;
-      this._configuration.next(Object.assign({}, this.dataStore).configuration);
+      this._configuration.next(Object.assign(new Configuration(), data));
     });
   }
 
   update(configuration) {
     console.log(configuration);
     this.storage.set('configuration', configuration).then((data) => {
-      this.dataStore.configuration = data;
-      this._configuration.next(Object.assign({}, this.dataStore).configuration);
+      this._configuration.next(Object.assign(new Configuration(), configuration));
     });
   }
 }

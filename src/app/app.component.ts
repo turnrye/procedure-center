@@ -6,7 +6,6 @@ import { ToolsPage } from '../pages/tools/tools';
 import { ContactsPage } from '../pages/contacts/contacts';
 import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
 import { SettingsPage } from '../pages/settings/settings';
-import { ResourcesPage } from '../pages/resources/resources';
 import { HelpPage } from '../pages/help/help';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
@@ -16,6 +15,7 @@ import { GoogleAnalytics } from 'ionic-native';
 import { ConfigurationProvider } from '../providers/configuration-provider';
 import { Observable } from 'rxjs/Observable';
 import { Deeplinks } from 'ionic-native';
+import { Configuration } from '../models/configuration';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,11 +26,11 @@ export class MyApp {
   rootPage: any = ProtocolGroupsPage;
 
   pages: Array<{title: string, component: any}>;
-  configuration$: Observable<any>;
+  configuration$: Observable<Configuration>;
 
   constructor(public platform: Platform, public configurationProvider: ConfigurationProvider) {
+    this.configurationProvider.loadInitialData();
     this.configuration$ = this.configurationProvider.configuration;
-    this.configurationProvider.loadAll();
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -38,7 +38,6 @@ export class MyApp {
       { title: 'Protocol Groups', component: ProtocolGroupsPage },
       { title: 'Contacts', component: ContactsPage },
       { title: 'Tools', component: ToolsPage },
-      { title: 'Resources', component: ResourcesPage },
       { title: 'Settings', component: SettingsPage },
       { title: 'Help', component: HelpPage }
     ];
@@ -53,7 +52,6 @@ export class MyApp {
         '/tools/rule-of-9s': RuleOf9sPage,
         '/settings': SettingsPage,
         '/settings/url/:url': SettingsPage,
-        '/resources': ResourcesPage,
         '/protocol-groups': ProtocolGroupsPage,
         '/contacts': ContactsPage,
         '/help': HelpPage
