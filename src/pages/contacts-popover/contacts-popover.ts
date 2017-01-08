@@ -30,13 +30,12 @@ export class ContactsPopoverPage {
       }
       this.filterForm = this.formBuilder.group(formBuilderDefinition);
     });
+    this.filterForm.valueChanges.subscribe(data => {
+      var tags = Object.keys(this.filterForm.controls).filter(control => this.filterForm.get(control).value);
+      this.setFilterTags(tags);
+    });
   }
   ionViewDidLoad() {
     GoogleAnalytics.trackView("contacts-popover");
   }
-  performFilter() {
-    var tags = Object.keys(this.filterForm.controls).filter(control => this.filterForm.get(control).value);
-    this.setFilterTags(tags);
-  }
-
 }

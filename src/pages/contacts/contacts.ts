@@ -8,7 +8,7 @@ import { GoogleAnalytics } from 'ionic-native';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'page-contaccts',
+  selector: 'page-contacts',
   templateUrl: 'contacts.html'
 })
 export class ContactsPage {
@@ -17,7 +17,6 @@ export class ContactsPage {
   filteredContacts: Contact[];
   subscription: any;
   tags: string[];
-  //private configuration: Configuration;
 
   constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider, public popoverCtrl: PopoverController) {
     this.tags = [];
@@ -37,7 +36,7 @@ export class ContactsPage {
   }
 
   map(address) {
-    window.open('geo:?daddr=' + address, '_system');
+    window.open('geo:0,0?q=' + address, '_system');
   }
 
   presentPopover(myEvent) {
