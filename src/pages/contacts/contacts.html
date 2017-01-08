@@ -4,12 +4,17 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Contacts</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="presentPopover($event)">
+        <ion-icon name="options"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-card *ngFor="let contact of (configuration$ | async)?.contacts">
+  <ion-card *ngFor="let contact of (configuration$ | async)?.getFilteredContacts(this.tags)">
     <ion-card-header>
       {{ contact.name }}
     </ion-card-header>
@@ -25,9 +30,9 @@
         {{ contact.address }}
       </button>
     </ion-list>
-    <div padding [hidden]="!contact.tags || contact.tags.length > 0">
-      <ion-chip color="{{ tag.color ? tag.color : 'default' }}" *ngFor="let tag of contact.tags">
-        <ion-label>{{ tag.name }}</ion-label>
+    <div padding [hidden]="!contact.tags || contact.tags.length < 1">
+      <ion-chip [ngClass]="tag" *ngFor="let tag of contact.tags">
+        <ion-label>{{ tag }}</ion-label>
       </ion-chip>
     </div>
   </ion-card>

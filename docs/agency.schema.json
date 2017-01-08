@@ -38,7 +38,7 @@
 								"name": {
 									"type": "string"
 								},
-								"color": {
+								"cssClass": {
 									"type": "string"
 								}
 							},

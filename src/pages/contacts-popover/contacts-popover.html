@@ -1,0 +1,9 @@
+<ion-list>
+  <form [formGroup]="filterForm" (ngSubmit)="performFilter()">
+    <ion-item *ngFor="let tag of (configuration$ | async)?.getContactTagNames()">
+      <ion-label>{{ tag }}</ion-label>
+      <ion-checkbox formControlName="{{ tag }}"></ion-checkbox>
+    </ion-item>
+    <button ion-button type="submit" [disabled]="!filterForm.valid" full>Filter</button>
+  </form>
+</ion-list>

@@ -4,6 +4,7 @@ import { ConfigurationProvider } from '../../providers/configuration-provider';
 import { ProtocolsPage } from '../protocols/protocols';
 import { GoogleAnalytics } from 'ionic-native';
 import { Observable } from 'rxjs/Observable';
+import { Configuration } from '../../models/configuration';
 
 @Component({
   selector: 'page-protocol-groups',
@@ -12,7 +13,7 @@ import { Observable } from 'rxjs/Observable';
 export class ProtocolGroupsPage {
 
   searchQuery: string = '';
-  configuration$: Observable<any>;
+  configuration$: Observable<Configuration>;
 
   constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider) {
     this.configuration$ = this.configurationProvider.configuration;

@@ -1,3 +1,9 @@
-page-hospitals {
-
+page-contacts {
+}
+.trauma-center {
+  background-color: map-get($colors, red500);
+  color: map-get($colors, light);
+}
+.behavioral-health {
+  background-color: map-get($colors, blue100);
 }

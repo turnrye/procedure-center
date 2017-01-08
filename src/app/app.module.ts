@@ -13,11 +13,10 @@ import { Storage } from '@ionic/storage';
 import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
-import { ResourcesPage } from '../pages/resources/resources';
-import { ResourcePage } from '../pages/resource/resource';
 import { BLSCPRComponentsPage } from '../pages/bls-cpr-components/bls-cpr-components';
 import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehospital-stroke-scale/cincinnati-prehospital-stroke-scale';
 import { HelpPage } from '../pages/help/help';
+import { ContactsPopoverPage } from '../pages/contacts-popover/contacts-popover';
 
 @NgModule({
   declarations: [
@@ -30,12 +29,11 @@ import { HelpPage } from '../pages/help/help';
     SettingsPage,
     GlasgowComaScalePage,
     RuleOf9sPage,
-    ResourcesPage,
-    ResourcePage,
     UnescapePipe,
     HelpPage,
     CincinnatiPrehospitalStrokeScalePage,
-    BLSCPRComponentsPage
+    BLSCPRComponentsPage,
+    ContactsPopoverPage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -52,11 +50,10 @@ import { HelpPage } from '../pages/help/help';
     SettingsPage,
     GlasgowComaScalePage,
     RuleOf9sPage,
-    ResourcesPage,
-    ResourcePage,
     HelpPage,
     CincinnatiPrehospitalStrokeScalePage,
-    BLSCPRComponentsPage
+    BLSCPRComponentsPage,
+    ContactsPopoverPage
   ],
   providers: [
     ConfigurationProvider,
