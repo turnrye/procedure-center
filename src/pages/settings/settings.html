@@ -18,16 +18,17 @@
         <ion-label stacked>Configuration URL</ion-label>
         <ion-input formControlName="definitionUrl" type="url" item-right></ion-input>
       </ion-item>
-      <button ion-button type="submit" [disabled]="!webFetchForm.valid" color="secondary" full>Fetch Configuration</button>
-    </form>
-    <form [formGroup]="configurationForm" (ngSubmit)="updateAgency()">
-      <ion-item>
-        <ion-label stacked>Raw Configuration</ion-label>
-        <ion-textarea formControlName="rawDefinition" (change)="calculateMd5()" rows="6"></ion-textarea>
-      </ion-item>
       <ion-item>
         <ion-label stacked>Version</ion-label>
         <ion-input type="text" disabled="true" value="{{ definitionMd5 }}"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" [disabled]="!webFetchForm.valid" color="secondary" full>Fetch Configuration</button>
+    </form>
+    <ion-item *ngIf="hideAdvanced" text-center><button (click)="hideAdvanced = false" ion-button clear color="dark">Advanced...</button></ion-item>
+    <form [formGroup]="configurationForm" (ngSubmit)="updateAgency()" *ngIf="!hideAdvanced">
+      <ion-item>
+        <ion-label stacked>Raw Configuration</ion-label>
+        <ion-textarea formControlName="rawDefinition" rows="6"></ion-textarea>
       </ion-item>
       <button ion-button type="submit" [disabled]="!configurationForm.valid" full>Save</button>
     </form>

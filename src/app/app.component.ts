@@ -25,7 +25,7 @@ export class MyApp {
 
   rootPage: any = ProtocolGroupsPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{icon: string, title: string, component: any}>;
   configuration$: Observable<Configuration>;
 
   constructor(public platform: Platform, public configurationProvider: ConfigurationProvider) {
@@ -35,11 +35,11 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Protocol Groups', component: ProtocolGroupsPage },
-      { title: 'Contacts', component: ContactsPage },
-      { title: 'Tools', component: ToolsPage },
-      { title: 'Settings', component: SettingsPage },
-      { title: 'Help', component: HelpPage }
+      { icon: 'list', title: 'Protocols', component: ProtocolGroupsPage },
+      { icon: 'contacts', title: 'Contacts', component: ContactsPage },
+      { icon: 'heart', title: 'Tools', component: ToolsPage },
+      { icon: 'cog', title: 'Settings', component: SettingsPage },
+      { icon: 'help', title: 'Help', component: HelpPage }
     ];
     this.platform.ready().then(() => {
       GoogleAnalytics.debugMode();
