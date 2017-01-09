@@ -4,8 +4,8 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { ToolsPage } from '../pages/tools/tools';
 import { ContactsPage } from '../pages/contacts/contacts';
-import { ProtocolGroupsPage } from '../pages/protocol-groups/protocol-groups';
 import { SettingsPage } from '../pages/settings/settings';
+import { ProtocolsPage } from '../pages/protocols/protocols';
 import { HelpPage } from '../pages/help/help';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
@@ -23,7 +23,7 @@ import { Configuration } from '../models/configuration';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ProtocolGroupsPage;
+  rootPage: any = ProtocolsPage;
 
   pages: Array<{icon: string, title: string, component: any}>;
   configuration$: Observable<Configuration>;
@@ -35,7 +35,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { icon: 'list', title: 'Protocols', component: ProtocolGroupsPage },
+      { icon: 'list', title: 'Protocols', component: ProtocolsPage },
       { icon: 'contacts', title: 'Contacts', component: ContactsPage },
       { icon: 'heart', title: 'Tools', component: ToolsPage },
       { icon: 'cog', title: 'Settings', component: SettingsPage },
@@ -52,7 +52,7 @@ export class MyApp {
         '/tools/rule-of-9s': RuleOf9sPage,
         '/settings': SettingsPage,
         '/settings/url/:url': SettingsPage,
-        '/protocol-groups': ProtocolGroupsPage,
+        '/protocols': ProtocolsPage,
         '/contacts': ContactsPage,
         '/help': HelpPage
       }).subscribe((match) => {

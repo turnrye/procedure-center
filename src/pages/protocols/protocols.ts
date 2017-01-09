@@ -1,35 +1,32 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { NavParams } from 'ionic-angular';
+import { ConfigurationProvider } from '../../providers/configuration-provider';
 import { ProtocolPage } from '../protocol/protocol';
 import { GoogleAnalytics } from 'ionic-native';
+import { Observable } from 'rxjs/Observable';
+import { Configuration } from '../../models/configuration';
 
-/*
-  Generated class for the Protocols page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-protocols',
   templateUrl: 'protocols.html'
 })
 export class ProtocolsPage {
 
-  protocolGroup: any;
+  searchQuery: string = '';
+  configuration$: Observable<Configuration>;
+  search: string = '';
 
-  constructor(public navCtrl: NavController, navParams: NavParams) {
-    this.protocolGroup = navParams.get('protocolGroup');
+  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider) {
+    this.configuration$ = this.configurationProvider.configuration;
   }
 
- protocolTapped(event, protocol) {
-     this.navCtrl.push(ProtocolPage, {
-        protocol: protocol
-     });
-  }
+  protocolTapped(event, protocol) {
+      this.navCtrl.push(ProtocolPage, {
+         protocol: protocol
+      });
+   }
 
   ionViewDidEnter() {
     GoogleAnalytics.trackView("protocols");
   }
-
 }
