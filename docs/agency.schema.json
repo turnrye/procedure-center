@@ -33,18 +33,7 @@
 					"tags": {
 						"type": "array",
 						"items": {
-							"type": "object",
-							"properties": {
-								"name": {
-									"type": "string"
-								},
-								"cssClass": {
-									"type": "string"
-								}
-							},
-							"required": [
-								"name"
-							]
+							"type": "string"
 						}
 					}
 				},
@@ -118,8 +107,7 @@
 											}
 										}
 									},
-									"required": [
-									]
+									"required": []
 								},
 								"notes": {
 									"type": "string",
