@@ -16,7 +16,7 @@ export class ToolsPage {
   constructor(public navCtrl: NavController) {
     this.pages = [
       { title: 'Glasgow Coma Scale', component: GlasgowComaScalePage },
-      { title: 'Rule of 9s', component: RuleOf9sPage },
+      //{ title: 'Rule of 9s', component: RuleOf9sPage },
       { title: 'Cincinnati Prehospital Stroke Scale', component: CincinnatiPrehospitalStrokeScalePage},
       { title: 'Summary of High-Quality CPR Components for BLS Providers', component: BLSCPRComponentsPage }
     ];
