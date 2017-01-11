@@ -155,7 +155,8 @@
 					"notes": ""
 				}
 			]
-		}, {
+		},
+		{
 			"name": "Environmental Emergency",
 			"protocols": [{
 				"id": "#201",
@@ -259,7 +260,8 @@
 				},
 				"notes": "<ul><li>*Fetal hemoglobin has a greater attraction for CO than maternal hemoglobin. Females who are known to be pregnant or who could be pregnant should be advised that EMS measured SpCO levels reflect the adult’s level, and that fetal COHb levels may be higher. Recommend hospital evaluation for any CO exposed pregnant person.</li><li>The absence (or low detected levels) of COHb is not a reliable predictor of firefighter or victim exposure to other toxic byproducts of fire.</li><li>In obtunded fire victims, consider Haz-Mat Cyanide treatment protocol.</li><li>The differential list for CO toxicity is extensive. Attempt to evaluate other correctable causes when possible.</li><li>EMS Personnel and Rescue Companies have access to the CO Monitor; these should be utilized anytime a Carbon Monoxide Exposure is suspected.</li><li>Transport patients with CO/CN toxicity to the burn center for evaluation.</li></ul>"
 			}]
-		}, {
+		},
+		{
 			"name": "Medical Emergency",
 			"protocols": [
 				{
@@ -296,11 +298,243 @@
 						"paramedic": "<ol start=\"5\"><li>IV NS or LR, large bore @ TKO – if hypotensive 20 cc/kg bolus (<em>peds 20 cc/kg bolus</em>)</li><li>Epinephrine 1:1000 0.3 mg IM (<em>peds epinephrine 1:1000  0.01 mg/kg IM, max dose is 0.3 mg.)</em></li><li>EKG monitor</li><li>Pulse oximetry</li><li>Epinephrine 1:1000 0.3 – 0.5mg IM (<em>peds Epinephrine 1:1000 0.01 mg/kg IM, max dose is 0.3 mg</em>)</li><li>Diphenhydramine (Benadryl) 25-50 mg IV or deep IM (<em>peds 1 mg/kg IVP</em>)</li><li>Adult - Solumedrol 62.5 mg (if small in stature, sensitive to steroids, on chronic steroid therapy) 125 mg IV / IM (<em>peds contact Medical Control<) or if not available Dexamethazone (Decadron) 10-100 mg/IV. (peds 0.25 -1 mg/kg IV/IO, IM).</li><li>Albuterol inhalation treatment if wheezing is present and persists post epinephrine IM/IV.</li><li>Consider glucagon 1-2mg IM/IV/IN if unresponsive to epinephrine, especially if taking beta blockers.</li><li>PARAMEDIC STOP Ø</li></ol>"
 					},
 					"notes": "<h2>Treatment - Protocol</h2><p>Dopamine 400 mg/250cc D5W IV admin, begin @ 15 cc/hr (titrate) if patient is hypotensive and symptomatic. (Systolic pressure <90 mmHg)</p>"
+				},
+				{
+					"id": "#304",
+					"name": "Cerebrovascular Accident (CVA)",
+					"assessments": "<ul><li>Altered level of consciousness (coma, stupor, confusion, seizures, delirium)</li><li>Intense or unusually severe headache of sudden onset or any headache associated with decreased level of consciousness or neurological deficit unusual and severe neck or facial pain</li><li>Aphasia/Dysphasia (unable to speak, incoherent speech or difficulty speaking)</li><li>Facial weakness or asymmetry (Paralysis of the facial muscles, usually noted when the patient speaks or smiles); may be on the same side or opposite side from limb paralysis</li><li>In-coordination, weakness, paralysis, or sensory loss of one or more limbs; usually involves one half of the body particularly the hand</li><li>Ataxia (poor balance, clumsiness, or difficulty walking)</li><li>Visual loss (monocular or binocular); may be a partial loss of visual field</li><li>Intense vertigo, double vision, unilateral hearing loss, nausea, vomiting, photophobia, or phonophobia</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen at 2 – 6 Lpm BNC and airway maintenance appropriate to patient's condition</li><li>Continually monitor airway due to decreased gag reflex and increased secretions.</li><li>Conduct a brief targeted history and physical exam. Establish time of onset. Document witness to time of onset and contact information. Include the <a href=\"procedure-center://app/tools/cincinnati-prehospital-stroke-scale\">Cincinnati Pre-hospital Stroke Scale</a>.</li><li>Be prepared to manage airway.</li><li>Maintain body heat, protect affected limbs from injury, and anticipate seizures.</li><li>If seizure present, follow seizure protocol.</li><li>If shock signs present, follow shock protocol.</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"9\"><li>IV NS TKO (30 cc/hr) or INT</li><li>EKG monitor</li><li>Pulse oximetry</li><li> If trauma suspected, spinal stabilization. Elevate head 30 degrees.</li><li> If blood glucose is low, give oral glucose if patient can maintain their airway or 12.5-25 grams of dextrose 50&#37; IVP (<em>peds 2 cc/kg D25</em>)</li><li>Narcan 0.4 mg IVP (<em>peds 0.1 mg/kg slow IVP</em>) if narcotics suspected</li><li>Complete thrombolytic screening protocol</li><li>Complete stroke assessment scale</li><li>If positive for CVA, recommend transport to stroke center </li><li>Blood pressure should only be treated if SBP >220 mmHg or DBP >140 mmHg, then contact Medical Control for use of Nitro spray q 5 min. Goal is reduce initial blood pressure by 15&#37;.</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#305",
+					"name": "Croup",
+					"assessments": "<ul><li>Viral infections resulting in inflammation of larynx, trachea</li><li>Seasonal – Late fall / early winter</li><li>Children under 6 yrs old with cold symptoms for 1-3 days</li><li>Hoarseness</li><li>Barking, Seal-like cough</li><li>Stridor, NOT wheezes</li><li>Low grade fever</li><li>No history of obstruction, foreign body, trauma</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to the patient's condition.</li><li>Allow patient to assume comfortable position or place patient supine.</li><li>Supportive care</li><li>EMT STOP Ø</ol>",
+						"paramedic": "<ol start=\"5\"><li>Nebulized epinephrine 1:1,000<ol type=\"a\"><li>1mg diluted to 2.5 – 3 cc with saline flush, nebulized (mask or blow-by)</li><li>May repeat up to 3 total doses.</li><li>If the patient has significant distress, 3 ml (3mg) diluted with 2.5 to 3 cc saline flush may be administered as an initial aerosol.</li></ol></li><li>Contact Medical Control for subsequent aerosols.</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id":"#306",
+					"name": "Family Violence",
+					"assessments": "<ul><li>Fear of household member</li><li>Reluctance to respond when questioned</li><li>Unusual isolation, unhealthy, unsafe living environment</li><li>Poor personal hygiene / inappropriate clothing</li><li>Conflicting accounts of the incident</li><li>History inconsistent with an injury or illness</li><li>Indifferent or angry household member</li><li>Household member refused to permit transport</li><li>Household member prevents patient from interacting openly or privately</li><li>Concern about minor issues but not major ones</li><li>Household with previous violence</li><li>Unexplained delay in seeking treatment</li></ul>",
+					"standingOrders": {
+						"allLevels": "<h3>Direct questions to ask when alone with patient and if time available.</h3><ol><li>Has anyone at home ever hurt you?</li><li>Has anyone at home touched you without your consent?</li><li>Has anyone ever made you do things you didn’t want to?</li><li>Has anyone taken things that were yours without asking?</li><li>Has anyone scolded or threatened you?</li><li>Are you afraid of anyone at home?</li></ol><h3>Signs and Symptoms</h3><ul><li>Injury to soft tissue areas that are normally protected</li><li>Bruise or burn in the shape of an object</li><li>Bite marks</li><li>Rib fracture in the absence of major trauma</li><li>Multiple bruising in various stages of healing</li></ul><h3>Treatment - Standing Order</h3><ol><li>Patient care is first priority</li><li>If possible remove patient from situation and transport</li><li>Police assistance as needed</li><li>If sexual assault follow sexual assault protocol</li><li>Obtain information from patient and caregiver</li><li>Do not judge</li><li>Report suspected abuse to hospital after arrival. Make a verbal and written report.</li></ol>"
+					},
+					"notes": "National Domestic Violence Hotline 1-800-799-SAFE (7233)"
+				},
+				{
+					"id": "#307",
+					"name": "Hyperglycemia Associated with Diabetes",
+					"assessments": "<ul><li>History of onset</li><li>Altered level of consciousness</li><li>Pulse: tachycardia, thready pulse</li><li>Respirations (Kussmaul-Kien - air hunger)</li><li>Hypotension </li><li>Dry mucous membranes</li><li>Skin may be cool (consider hypothermia)</li><li>Ketone odor on breath (Acetone smell)</li><li>Abdominal pain, nausea and vomiting </li><li>History of polyuria, or polydipsia (excessive urination or thirst)</li><li>Blood glucose determination</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to patient's condition. Suction airway as needed.</li><li>Supportive care</li><li>EMT STOP Ø.</li></ol>",
+						"paramedic": "<ol start=\"4\"><li>IV NS TKO or INT.  Consider 250 – 500cc NS bolus only in patients with signs of dehydration, vomiting, or DKA</li><li>EKG monitor</li><li>Pulse oximetry</li><li>If BS >250 mg/DL, give 20cc/kg bolus of NS (<em>peds 4 cc/kg infusion max 150 cc/hr DO NOT BOLUS</em>), then reassess blood sugar</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#308",
+					"name": "Hypertensive Crisis",
+					"assessments": "<ul><li>Decreased / altered LOC</li><li>Headache, blurred vision, dizziness, weakness.</li><li>Elevated blood pressure (systolic and/or diastolic) {if systolic BP is greater than 220 mmHg and/or Diastolic BP is greater than 140 mmHg}.</li><li>Dyspnea, peripheral or pulmonary edema.</li><li>Cardiac dysrhythmia, Neurological deficits</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to patient's condition</li><li>Position of comfort, elevation of head is preferred.</li><li>Keep patient calm, reassure.</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"5\"><li>INT or IV NS TKO</li><li>Evaluate cardiac rhythm for dysrhythmia and treat appropriately with       medical direction (contact Medical Control prior to initiation of anti-arrhythmic therapy)</li><li>Pulse oximetry</li><li>Assess for hypoglycemia; if <80 mg/DL administer 12.5-25 grams dextrose 50&#37; (<em>peds 2cc/kg D25 IV/IO</em>) with NS flush or IVF</li><li>If motor/neuro deficits present, go to stroke protocol<p>If no motor/neuro deficits:</p><ol type=\"a\"><li>If systolic BP is less than 220mm/Hg, contact Medical Control, monitor patient changes</li><li>If systolic BP is greater than 220 mmHg and /or Diastolic BP is greater than 140 mmHg, Nitroglycerine one spray SL q 3 – 5 min until noted decrease in BP by 15&#37;. May use nitro Paste 1 inch to chest wall, remove if BP drops 15&#37; from the original reading.</li></ol></li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#309",
+					"name": "Hypoglycemia",
+					"assessments": "<ul><li>History of onset of event.</li><li>History of Insulin excess (overdose, missed meal, exercise, vomiting, or diarrhea)</li><li>Confusion, agitation, headaches, or comatose</li><li>Pulse Rate (normal to tachycardia)</li><li>Respirations (shallow, slow)</li><li>Skin (sweaty, often cool)</li><li>Flaccid muscle tone</li><li>Grand Mal seizures</li><li>Fecal, urinary incontinence</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to patient's condition (snoring respirations is a sign of an INADEQUATE airway)</li><li>Assist in Glucose check if patient is known diabetic</li><li>If patient is a known diabetic and is conscious with an intact gag reflex, administer one tube of instant glucose and reassess.</li><li>Supportive care</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"6\"><li>IV NS TKO<ol type=\"a\"><li>If patient is conscious and symptomatic, one tube instant glucose</li><li>If patient is unresponsive, IV, NS</li></ol></li><li>EKG monitor</li><li>Pulse oximetry</li><li>If blood sugar is less than 80 mg/DL and symptomatic:  administer 25 grams of dextrose 50&#37;, (peds 2cc/kg D25 IV/IO; if needed an admixture of D50&#37; and Normal Saline can be obtained through mixing 1cc to 1cc for the treatment of symptomatic hypoglycemia in pediatric patients) reassess blood sugar level q 15 min, administer 10 – 25 grams dextrose 50&#37; PRN.</li><li>If unable to establish IV access, glucagon 1-2mg IM or IN, (peds - glucagon 0.5 – 1 mg IM)</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#310",
+					"name": "Respiratory Distress (Asthma/COPD)",
+					"assessments": "<ul><li>Mild Attack - Slight increase in respiratory rate.  Mild wheezes. Good skin color.</li><li>Moderate Attack - Marked increase in respiratory rate. Wheezes easily heard. Accessory muscle breathing.</li><li>Severe Attack - Respiratory rate more than twice normal.  Loud wheezes or so tight no wheezes are heard, patient anxious.  Grey or ashen skin color.</li><li>Hx - COPD, emphysema, asthma, or other restrictive lung disease</li><li>Respiratory rate greater than 25 per minute or less than 10 per minute</li><li>Labored respiration, use of accessory muscles or tripoding</li><li>Breath Sounds:  Bilaterally diminished, dry crackles, wheezing</li><li>Cyanosis/Diaphoresis</li><li>Use of short sentences</li><li>Unilateral breath sounds</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate for patients condition</li><li>If the patient has a prescribed albuterol inhalation treatment, assist the patient with 2.5mg/ 3ml NS and start the oxygen flow rate at 6 lpm or until the appropriate mist is achieved.</li><li>If patient uses a MDI, assist patient with one dose.</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"5\"><li>INT or IV NS TKO</li><li>EKG monitor</li><li>Pulse oximetry and capnography</li><li>Albuterol inhalation treatment 2.5 mg / 3 ml NS q 5-15 min (<em>peds 2.5 mg / 3ml NS q 5-15 min</em>)</li><li>In severe cases consider Solumedrol 62.5 mg (if small in stature, sensitive to steroids, on chronic steroid therapy) or 125 mg IV (peds contact medical control) or if not available Dexamethasone (Decadron) 10-100 mg/IV (<em>peds 0.25-1 mg/kg IV/IO, IM</em>)</li><li>Epinephrine 1:1000, 0.3 – 0.5 mg IM (<em>peds epinephrine 1:1000  0.01 mg/kg IM, max dose is 0.3 mg</em>)</li><li>CPAP if no contraindications</li><li>PARAMEDIC STOP Ø</li></ol><p>Peds: consult Medical Control prior to administering Solumedrol</p>"
+					}
+				},
+				{
+					"id": "#311",
+					"name": "Seizures",
+					"assessments": "<ul><li>Seizure (onset, duration, type, post-seizure, level of consciousness)</li><li>Medical (diabetes, headaches, drugs, alcohol, seizure history)</li><li>Physical (seizure activity, level of consciousness, incontinence, head and mouth trauma, vital signs)</li><li>Trauma (head injury or hypoxia secondary to trauma)</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to patient's condition</li><li>Protect patient from injury during active seizures.</li><li>If patient is actively seizing, consider therapy if:<ol type=\"a\"><li>Unstable ABC's exist, patient has been actively seizing for 5 or more minutes.</li><li>Patient has underlying disease or condition that will be adversely affected if seizures continue (trauma, COPD, pregnancy, severely hypertensive).</li></ol></li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"5\"><li>IV NS TKO or INT</li><li><em>C-spine precaution if appropriate.</em></li><li>If febrile, cool as per hyperthermia protocol and monitor</li><li>EKG monitor </li><li>Pulse oximetry</li><li>If no IV available and blood glucose levels are <80 mg/dl, Glucagon 1 – 2 mg IM (<em>peds 0.5 – 1 mg IM</em>)</li><li>Adults – if actively seizing – Valium SLOW IVP 2 – 5 mg or Versed 2 – 5 mg IV/IO/IN/IM may repeat if seizure continues. If narcotic overdose, Narcan 0.4-2 mg IV/IO/IN</li><li>Peds:<ol type=\"a\"><li>Valium 0.2 mg/kg IV/IO or Versed 0.1 mg/kg IV/IO/IN</li><li>Valium 0.5 mg/kg rectal</li><li>If seizure persists for 4 minutes, repeat medication once </li><li>If seizure recurs repeat medication </li><li>Narcan 0.1 mg/kg up to 2 mg, titrated to effect if narcotic use is suspected</li></ol></li><li>PARAMEDIC STOP Ø</li></ol>"
+					},
+					"notes": "Specifically evaluate for: active bleeding, trauma, eye deviation, pupil equality, mouth or tongue bleeding, urinary or fecal incontinence, lack of arm or leg movement or tone."
+				},
+				{
+					"id": "#312",
+					"name": "Sexual Assault",
+					"assessments": "<ul><li>Traumatic injuries</li></ul>",
+					"standingOrders": {
+						"allLevels": "<ol><li>Oxygen 100&#37; and airway maintenance appropriate to patient's condition</li><li>Maintain a calm, reassuring and sensitive attitude toward patient</li><li>DO NOT make unnecessary physical contact with patient</li><li>If possible, have a witness of the same gender present with the witness at all times. </li><li>Wrap plastic sheet around victim if possible</li><li>DO NOT inspect genitals unless evidence of uncontrolled hemorrhage, trauma or severe pain is present</li><li>DO NOT allow patient to shower or douche</li><li>Collect patients clothing involved when possible<ol type=\"a\"><li>place clothing in plastic sheet or separate plastic/paper bags with ID labels and found location</li><li>leave all sheets placed in plastic/paper bag with patient at facility</li><li>notify staff of clothing samples</li></ol></li><li>Transport patient to appropriate facility for treatment and examination</li><li>Contact dispatch to notify police of possible sexual assault</li></ol>"
+					}
+				},
+				{
+					"id": "#313",
+					"name": "Sickle Cell Anemia",
+					"assessments": "<ul><li>History of Sickle Cell Anemia</li><li>Signs of infection</li><li>Hypoxia</li><li>Dehydration</li><li>Painful joint</li><li>Limited movement of joints</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to patient's condition</li><li>Supportive care</li><li>EMT STOP   Ø</li></ol>",
+						"paramedic": "<ol start=\"4\"><li>IV NS bolus 20 cc/kg (<em>peds 20 cc/kg bolus</em>)</li><li>EKG monitor</li><li>Pulse oximetry</li><li>If pain persists, administer pain medications per chart below. Use pulse oximetry. (Keep sats>94&#37;)</li><li>PARAMEDIC STOP Ø</li></ol>"
+					},
+					"notes": "<p>Use caution in administering narcotic to a patient with SpO2<95&#37;.</p><p>ALL PATIENTS WHO RECEIVE NARCOTIC MEDICATION MUST BE TRANSPORTED FOR FURTHER EVALUATION</p>"
+				},
+				{
+					"id": "#314",
+					"name": "Unconscious / Unresponsive / Altered Mental Status",
+					"assessments": "<ul><li>Unconscious or unresponsive with vital signs</li><li>Any patient not responding appropriately to verbal or painful stimulus</li><li>Altered level of consciousness with vital signs</li><li>Assess for head trauma</li><li>Assess for Hypo / Hyperthermia, hemiparesis, fever, OD, hypoglycemia</li><li>Peds – less commonly associated with intussusceptions (fold of one intestine into another), intracranial catastrophe, metabolic disorder</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to patient's condition</li><li>Assess for underlying causes: head trauma, hypovolemia, hypothermia, hemiparesis, and fever and treat accordingly</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"4\"><li>IV NS TKO or INT</li><li>EKG monitor</li><li>Pulse oximetry</li><li>Administer Narcan 0.4 - 2mg slow IVP/IN (<em>peds<5 yo– 0.1 mg/kg up to 2 mg IV, >5 yo – 2 mg IV</em>)</li><li>If hypoglycemia and unable to maintain airway, and CVA is not suspected and the patient has a history of diabetes:<ol type=\"a\"><li>12.5 – 25 grams dextrose 50&#37; IVP (<em>peds 2 cc/kg D25 IV/IO</em>) </li><li>If no IV access, glucagon 1 – 2 mg IM (<em>peds 0.5 – 1 mg IM</em>)</li></ol></li><li>Contact Medical Control for further orders; 20cc/kg NS fluid challenge (<em>peds 20 cc/kg</em>)</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#315",
+					"name": "Syncope",
+					"assessments": "<ul><li>Loss of consciousness with recovery</li><li>Lightheadedness, dizziness</li><li>Palpitations, slow or rapid pulse, irregular pulse</li><li>Decreased blood pressure</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen at 2-6 lpm and airway maintenance appropriate to patient's condition</li><li>Supportive care</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"4\"><li>INT or IV NS TKO – if hypotensive 20 cc/kg bolus (<em>peds 20 cc/kg bolus.</em>)</li><li>EKG monitor</li><li>Pulse oximetry</li><li>12-Lead EKG, treat any cardiac dysrhythmia per appropriate protocol</li><li>Assess neuro status; if abnormal refer to appropriate protocol</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#316",
+					"name": "Pain Control",
+					"assessments": "<h3>History:</h3><ul><li>Age</li><li>Location of pain</li><li>Duration</li><li>Drug allergies</li><li>SAMPLE</li></ul><h3>Signs and Symptoms:</h3><ul><li>Severity (pain scale)</li><li>Quality (sharp, dull, etc)</li><li>Radiation</li><li>Relation to movement, respiration increased with palpation of area</li><li>OPQRST</li></ul><h3>Differential:</h3><ul><li>Per specific protocol</li><li>Musculoskeletal</li><li>Visceral (abdominal)</li><li>Cardiac</li><li>Pleural/Respiratory</li><li>Neurogenic</li><li>Renal</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Universal Patient Care Protocol</li><li>Oxygen and airway maintenance appropriate to patient's condition</li><li>Patient positioning appropriate for condition</li><li>Supportive care</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"6\"><li>Cardiac monitor/12 lead</li><li>Patient care according to protocol based on specific complaint</li><li>Vital signs including pain measurement >6/10 OR other indications for IV/IM medication</li><li>IV procedure</li><li>Consider Morphine/Fentanyl for pain relief</li><li>Consider antiemetic</li><li>Contact online medical control PRN</li><li>PARAMEDIC STOP Ø</li></ol>"
+					},
+					"notes": "<h3>PEARLS:</h3><ul><li>Exam: Mental status, area of pain, neuro</li><li>Pain Severity: 0-10 is a vital sign to be recorded pre and post IV/IM delivery and at disposition</li><li>Vital signs are to be obtained and recorded pre, 15 minutes post, and at disposition with all pain medications</li><li>Contraindications to Morphine/Fentanyl include hypotension, head injury, respiratory distress or severe COPD</li><li>All patients should have drug allergies documented prior to administering pain medications</li><li>All patients who receive IM or IV medications should be ovserved for 15 minutes for drug reaction</li></ul>"
 				}
 			]
-		}, {
+		},
+		{
 			"name": "Shock/Trauma",
-			"protocols": []
+			"protocols": [
+				{
+					"id": "#401",
+					"name": "Air Ambulance Transport",
+					"standingOrders": {
+						"allLevels": "<p>In the absence of an on-scene Paramedic the most qualified FF/EMT-Basic shall have the responsibility of determining the need for an air ambulance transport. DO NOT call for air ambulance transport if the patient is in traumatic cardiopulmonary arrest.  Request for an Air Ambulance should be coordinated with the Incident Commander.</p><p>A scene flight by air ambulance MAY be indicated IF:</p><p>The Level - I trauma patient’s condition warrants immediate and extreme action and the extrication and/or transport time is greater than 30 minutes and if patient is not in trauma full arrest.</p><p>Transport time is defined as the length of time beginning when the emergency unit would leave the scene transporting until time of arrival at the trauma center.</p><p>The on-scene Paramedic shall have the authority to disregard the response of an air ambulance.</p><h3>Additional Criteria:</h3><ul><li>Multi-system blunt or penetrating trauma with unstable vital signs</li><li>Greater than 25&#37; TBSA burns</li><li>Paralysis or spinal injury</li><li>Amputation proximal to wrist or ankle</li><li>Flail or crushed chest</li></ul><h3>Situational Criteria:</h3><ul><li>High energy mechanisms</li><li>Prolonged entrapment</li><li>Multiple casualty incident</li></ul><p>Patients will be categorized according to the current Mississippi Trauma Destination Determinates.</p><p>DO NOT call for air ambulance transport if patient is in traumatic cardiopulmonary arrest. If the patient has no vital signs, they are a trauma full-arrest.</p><p>The Paramedic in charge of the patient shall have the authority to disregard the response of the air ambulance.</p><p>The Paramedic will coordinate with the Incident Commander to ensure the helicopter receives patient information and landing zone location.</p>"
+					},
+					"notes": "<p>Medical responsibility will be assumed by the medical flight crew personnel upon arrival at the scene.</p><p>Limitations of the helicopter:</p><ol type=\"a\"><li>adults who have a traction(s) splint applied</li><li>patients over 6’ 4” (relative limitation)</li><li>patients whose girth exceeds 27 inches</li><li>any splint or device that exceeds the boundary of the long spine board</li></ol>"
+				},
+				{
+					"id": "#402",
+					"name": "Abdominal / Pelvic Trauma",
+					"assessments": "<ul><li>Abdominal / retroperitoneal abrasions/contusions</li><li>Penetrating injuries</li><li>Hypotension</li><li>Abdominal evisceration(s)</li><li>Abdominal pain on palpation</li><li>Hematuria, bloody stool</li><li>Altered bowel sounds</li><li>Vomiting blood</li><li>History of abdominal injury/trauma</li><li>Suspected injury secondary to mechanism of trauma</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen 100&#37; and airway maintenance appropriate for the patient’s condition</li><li>C-Spine stabilization as appropriate</li><li>Attempt to control any life threatening hemorrhaging</li><li>Systolic BP or peds normal for age:<ol type=\"a\"><li>If systolic BP >90mmHg place patient supine with legs elevated and flexed at knees and hips if no c-spine concerns, contact Medical Control</li></ol></li><li>Patient pregnant:<ol type=\"a\"><li>If patient is not past 1st trimester: place patient supine with legs elevated and flexed at knees and hips if no c-spine concerns, contact Medical Control</li><li>If patient is past 1st trimester: place patient in left lateral recumbent position</li></ol></li><li>Penetrating object:<ol type=\"a\"><li>If no penetrating object: place patient supine with legs elevated and flexed at knees and hips if no c-spine concerns, contact Medical Control</li><li>If penetrating object present: stabilize object(s)</li></ol></li><li>Evisceration:<ol type=\"a\"><li>If present: place patient supine with legs elevated and flexed at knees and hips if no c-spine concerns, contact Medical Control, cover evisceration (s) with saline soaked trauma dressing</li></ol></li><li>Supportive care</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"10\"><li>10. IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>EKG monitor</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#403",
+					"name": "Avulsed Teeth",
+					"assessments": "<ul><li>Avulsed teeth may be handled in much the same manner as small parts; i.e. rinse in normal saline (do not rub or scrub) and place in gauze moistened with saline.</li><li>Do not cool tooth/teeth with ice. </li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to patient condition.</li><li>C-spine stabilization as appropriate.</li><li>Treat other associated injuries.</li><li>Pay attention to the airway, bleeding and avulsed teeth may cause airway obstruction.</li><li>Supportive care</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"7\"><li>Re-implantation is recommended if possible at the scene as this creates maximum possibility of reattachment as minutes count. The follow guidelines pertain to re-implantation at the scene:<ol type=\"a\"><li>Applicable only for permanent teeth (i.e., with patients over 6.5 years of age)</li><li>Applicable when only one or two teeth are cleanly avulsed and the entire root is present</li><li>Applicable only to anterior teeth (front 6, upper and lower)</li><li>The patient must be conscious</li><li>Should be attempted within the first 30 mins. (The sooner performed, the greater the success rate.)</li><li>Do not force re-implantation. Gentle insertion is all that is necessary. Slight incorrect positioning can be corrected later.</li></ol></li><li>If re-implantation is not feasible and the patient is a fully conscious adult, then the best procedure is to place the tooth in the mouth, either under the tongue or in the buccal vestibule. This is not recommended for children.</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#404",
+					"name": "Cardiogenic Shock",
+					"assessments": "<ul><li>Frequently associated with tachy/brady dysrhythmia, AMI, or blunt chest trauma</li><li>Neck vein distention in sitting position</li><li>Moist sounding lungs (rales, rhonchi)</li><li>Peripheral edema (if chronic heart failure)</li><li>Determine if cardiac dysrhythmia exists</li><li>Consider tension pneumothorax</li><li>Consider cardiac tamponade</li><li>Increased heart rate</li><li>Decreased BP</li><li>Altered LOC</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Semi-Fowlers or position of comfort</li><li>Oxygen and airway maintenance appropriate to patient’s condition</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"4\"><li>IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>Evaluate cardiac rhythm and treat appropriately </li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol><h3>Treatment - Protocol</h3><p>Contact Medical Control, consider:</p><ul><li>Dopamine 400 mg / 250 cc D5W IV admixture, begin 2-20ug/kg/min (peds 2 – 20 ug/kg/min)</li></ul>"
+					}
+				},
+				{
+					"id": "#405",
+					"name": "Eye Trauma",
+					"assessments": "<ul><li>Impaled object</li><li>Inability to open eye(s)</li><li>Swollen, edematous eye(s)</li><li>Photophobia</li><li>Visual defects, loss of vision</li><li>Redness</li></ul>",
+					"standingOrders": {
+						"allLevels": "<ol><li>Oxygen and airway maintenance appropriate for the patient’s condition.</li><li>C-Spine stabilization PRN</li><li>If thermal or chemical:<ol type=\"a\"><li>flush eye(s) with NS or water for 15 min</li><li>cover both eyes</li><li>transport</li></ol></li><li>Penetration:<ol type=\"a\"><li>Stabilize</li><li>cover unaffected eye</li><li>Transport</li></ol></li><li>Blunt trauma<ol type=\"a\"><li>Cover both eyes</li><li>Transport</li></ol></li><li>Is loss of vision present?<ol type=\"a\"><li>No – contact Medical Control</li><li>Yes – if loss of vision was sudden, painless and non-traumatic, consider Retinal Artery Occlusion:  Contact medical control and:<ol type=\"i\"><li>apply cardiac monitor and assess for changes</li><li>apply vigorous pressure using heel of hand to affected eye for 3-5 seconds, then release (patient may perform this procedure and may be repeated as necessary)</li></ol></li></ol></li></ol>"
+					}
+				},
+				{
+					"id": "#406",
+					"name": "Hypovolemic Shock",
+					"assessments": "<ul><li>Blood loss due to penetrating injuries to torso or other major vessel</li><li>Fracture of femur or pelvis</li><li>G.I. bleeding, vaginal bleeding, or ruptured ectopic pregnancy</li><li>Dehydration caused by vomiting, diarrhea, inadequate fluid intake, excessive fluid loss due to fever, uncontrolled diabetes, or burns</li><li>Pulse may be greater than 120 beats per minute</li><li>Blood pressure may be less than 90 mm Hg systolic</li><li>Orthostatic (Tilt) changes in vital signs (consider possible spinal injury) pulse increase of 20 beats per minute, B/P decrease of 10 mm Hg systolic</li><li>Severe shock (hypovolemia) is defined as decreased level of consciousness, absent radial pulse, capillary refill greater than 2 seconds, no palpable blood pressure</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to patient's condition.</li><li>Consider spinal stabilization and hemorrhage control, utilize tourniquets as indicated.</li><li>Control gross hemorrhage.</li><li>Trendelenburg patient if no suspected spinal injury</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"6\"><li>IV NS bolus (20cc/kg)</li><li>EKG monitor</li><li>Pulse oximetry</li><li>IV NS or LR x 2 large bore titrated to restore patients vital signs (in patients with ongoing blood loss maintain patient's systolic blood pressure 90 – 110mmHg).</li><li>Pediatrics –<ol type=\"a\"><li>IV/IO NS 20 cc/kg bolus</li><li>Reassess patient</li><li>Repeat fluid bolus 20 cc/kg if no improvement</li><li>Place a second IV as needed</li><li>Maintain temperature >97 degrees</li></ol></li><li>PARAMEDIC STOP Ø</li></ol><h3>Treatment - Protocol</h3><p>Contact Medical Control, consider:</p><ul><li>Adult &Peds - Dopamine 2 – 20 ug/kg/min </li></ul></li></ol>"
+					},
+					"notes": "Cervical spine immobilization is not necessary in patients suffering penetrating trauma (stab or gunshot wound) below the nipple line and no evidence of spinal or head injury.  Do not delay transport of patients meeting these criteria for immobilization."
+				},
+				{
+					"id": "#407",
+					"name": "Major Thermal Burn",
+					"preamble": "<h3>Major Burn:</h3><ul><li>Greater than 20&#37; BSA, partial thickness surface involvement</li><li>Greater than 10&#37; BSA, full thickness burn</li><li>Full thickness burns of the head, face, feet, or perineum</li><li>Inhalation burns or electrical burns</li><li>Burns complicated by fractures or other significant injury</li><li>Elderly, pediatric, or compromised patients</li></ul>",
+					"assessments": "<ul><li>Remove clothing from affected parts</li><li>DO NOT pull material out of the burn site: cut around it.</li><li>Look for burns of the nares, oropharyngeal mucosa, face or neck</li><li>Listen for abnormal breath sounds</li><li>Note if burn occurred in closed space</li><li>Determine extent of injury (including associated injuries)</li><li>Cardiac monitor for all major burn patients</li><li>Respiratory distress</li><li>ETOH / drug use</li><li>Associated injuries / trauma</li><li>Hypotension</li><li>Past medical history</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Stop the burn process with tepid water or normal saline solution and remove any smoldering clothing.</li><li>Oxygen and airway maintenance appropriate to patient's condition<ol type=\"a\"><li>Edema may cause patient's airway to close almost instantly without warning signs</li><li>Be prepared to assist ventilation with BVM</li></ol></li><li>Monitor all vital signs and continue reassessment with emphasis on the respiratory rate, peripheral pulses (circulation) and level of consciousness.</li><li>Remove any jewelry</li><li>Cover burned area with dry sterile dressing or burn sheet.  Attempt to keep blisters intact</li><li>DO NOT use Water-gel or any other commercially manufactured burn products. DO NOT remove if applied prior to arrival</li><li>Monitor to prevent hypothermia</li><li>Stabilize all associated injuries (e.g. chest, potential spine injury, fractures, dislocations, etc.)</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"10\"><li>IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>EKG monitor</li><li>Pulse oximetry</li><li>For Major Burns, administer pain medication per chart below (contact medical control in multi-system trauma/pregnancy), transport (all additional doses must be approved by Medical Control)</li><li>Consider cyanide poisoning, and smoke inhalation in all burn patients</li><li>If extremity injured, cover open fractures/lacerations/injuries with sterile dressing, splint fractures PRN, avoid unnecessary movement, transport</li><li> Consider contacting medical control for sedating agents especially in pediatric patients.<p>Administer IV fluids using the following guide:</p><ul><li>500 mL per hour for patients over 15 years old</li><li>250 mL per hour for patients 5 – 15 years old</li><li>125mL per hour for patients under 5 years old</li><li>Excessive or overly aggressive amounts of fluid administration may increase third-spacing shock</li></ul></li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#408",
+					"name": "Musculoskeletal Trauma",
+					"assessments": "<ul><li>Hypotension</li><li>Past medical history</li><li>Deformity, swelling, tenderness, crepitus, open or closed fractures</li><li>Hemorrhaging, lacerations, ecchymosis, instability</li><li>Decreased function, pulses</li><li>Loss of sensation of distal extremities</li><li>ETOH/drug use</li><li>Mechanism of injury</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate for the patient’s condition</li><li>C-spine stabilization PRN</li><li>Control any life threatening hemorrhaging</li><li>Consider applying MAST as splint</li><li>Splint PRN, stabilize penetrating objects</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol type=\"7\"><li>IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>EKG monitor</li><li>Pulse oximetry</li><li>Trauma:  Isolated extremity trauma only: consider tourniquet use<ol type=\"a\"><li>If systolic BP >90mmHg or peds normal range for age, Consider pain medications per chart below. Cover open fractures/lacerations, check distal motor/sensory/pulse pre/post splinting, avoid unnecessary movement</li><li>If systolic BP <90mmHg, IV NS/LR 20cc/kg (peds 20 cc/kg)</li></ol></li><li>If patient pregnant: Isolated extremity trauma only<ol type=\"a\"><li>If past 1st trimester contact and systolic BP >90mmHg contact Medical Control.</li><li>If systolic BP <90mmHg place patient in left lateral recumbent position, IV NS/LR 20cc/kg</li></ol></li><li>PARAMEDIC STOP Ø</li></ol>"
+					},
+					"notes": "<p>Cervical spine immobilization is not necessary in patients suffering penetrating trauma (stab or gunshot wound) below the nipple line and no evidence of spinal or head injury. Do not delay transport of patients meeting these criteria for immobilization.</p>"
+				},
+				{
+					"id": "#409",
+					"name": "Multi-System Trauma",
+					"standingOrders": {
+						"basic": "<ol><li>Initiate in-line C-spine stabilization while simultaneously evaluating and controlling the patients ABC’s. Incorporate the Mechanism of Injury into the patient care scheme.</li><li>Control any hemorrhage and simultaneously provide: oxygen 100&#37; at 12 – 15 lpm NRB and airway maintenance appropriate to patient’s condition.</li><li>Secure patient to LSB.</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"5\"><li>IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>EKG monitor</li><li>Pulse oximetry</li><li>Consider tourniquet use</li><li>PARAMEDIC STOP Ø</li></ol>"
+					},
+					"notes": "<p>Cervical spine immobilization is not necessary in patients suffering penetrating trauma (stab or gunshot wound) below the nipple line <em>and</em> no evidence of spinal or head injury. Do not delay transport of patients meeting these criteria for immobilization.</p>"
+				},
+				{
+					"id": "#410",
+					"name": "Neurogenic Shock",
+					"assessments": "<ul><li>Associated with spinal cord injuries, closed head injuries and overdoses</li><li>Signs of hypovolemic shock without pale diaphoretic skin (warm shock)</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to patient's condition.</li><li>Establish and maintain c-spine stabilization.</li><li>Hemorrhage control.</li><li>Supportive care</li><li>EMT STOP Ø</li></ul>",
+						"paramedic": "<ol start=\"6\"><li>IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>EKG monitor</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol><h3>Treatment – Protocol</h3><p>Contact Medical Control to consider:</p><ul><li>Adult & Pediatric – Dopamine at 2-20 ug/kg/min</li></ul>"
+					},
+					"note": "<p>Consider occult bleeding and treat as Hypovolemic Shock Protocol.</p>"
+				},
+				{
+					"id": "#411",
+					"name": "Septic Shock",
+					"assessments": "<ul><li>Hot & dry or cool & clammy skin</li><li>Poor capillary refill</li><li>Tachycardia / Hypotension</li><li>Potential for underlying infection</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to patient's condition.</li><li>Consider spinal stabilization appropriate to patient's condition.</li><li>Obtain and record an oral or axillary temperature if possible.</li><li>Maintain body temperature above 97 degrees F</li><li>EMT STOP Ø</li></ul>",
+						"paramedic": "<ol start=\"6\"><li>Glucose Check</li><li>IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>Administer Dextrose 50&#37; PRN</li><li>EKG monitor</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol><h3>Treatment - Protocol</h3><p>If no improvement after two boluses of IV fluids, contact Medical Control and consider Dopamine 2-20ug/kg/min (peds 2-20 ug/kg/min)</p>"
+					},
+					"note": "<p>Ensure Body Substance Isolation precautions.</p>"
+				},
+				{
+					"id": "#412",
+					"name": "Soft tissue / Crush Injuries",
+					"assessments": "<ul><li>Hypotension</li><li>Past medical history</li><li>Deformity, swelling, tenderness, crepitus, open or closed fractures</li><li>Hemorrhaging, lacerations, ecchymosis, instability</li><li>Decreased function, pulses</li><li>Loss of sensation of distal extremities</li><li>ETOH/drug use</li><li>Mechanism of injury</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate for the patient's condition</li><li>C-spine stabilization PRN.</li><li>Control any life threatening hemorrhaging</li><li>Consider applying MAST as a splint</li><li>Other splints PRN, stabilize penetrating objects </li><li>EMT STOP Ø</li></ul>",
+						"paramedic": "<ol start=\"7\"><li>IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>EKG monitor</li><li>Pulse oximetry</li><li>Trauma:  Isolated extremity trauma only: consider tourniquet use<ol type=\"a\"><li>If systolic BP >90mmHg or peds normal range for age, Consider Pain Medications per Chart below. Cover open fractures/lacerations, check distal motor/sensory/pulse pre/post splinting, avoid unnecessary movement</li><li>If systolic BP <90mmHg, IV NS/LR 20cc/kg (peds 20 cc/kg)</li></ol></li><li>If patient pregnant: Isolated extremity trauma only<ol type=\"a\"><li>If past 1st trimester and systolic BP >90mmHg, contact Medical Control.</li><li>If systolic BP <90mmHg, place patient in left lateral recumbent position, IV NS/LR 20cc/kg</li></ol></li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				}
+			]
 		}, {
 			"name": "Obstetrical Emergencies",
 			"protocols": []
