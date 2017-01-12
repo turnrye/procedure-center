@@ -533,6 +533,42 @@
 						"basic": "<ol><li>Oxygen and airway maintenance appropriate for the patient's condition</li><li>C-spine stabilization PRN.</li><li>Control any life threatening hemorrhaging</li><li>Consider applying MAST as a splint</li><li>Other splints PRN, stabilize penetrating objects </li><li>EMT STOP Ø</li></ul>",
 						"paramedic": "<ol start=\"7\"><li>IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>EKG monitor</li><li>Pulse oximetry</li><li>Trauma:  Isolated extremity trauma only: consider tourniquet use<ol type=\"a\"><li>If systolic BP >90mmHg or peds normal range for age, Consider Pain Medications per Chart below. Cover open fractures/lacerations, check distal motor/sensory/pulse pre/post splinting, avoid unnecessary movement</li><li>If systolic BP <90mmHg, IV NS/LR 20cc/kg (peds 20 cc/kg)</li></ol></li><li>If patient pregnant: Isolated extremity trauma only<ol type=\"a\"><li>If past 1st trimester and systolic BP >90mmHg, contact Medical Control.</li><li>If systolic BP <90mmHg, place patient in left lateral recumbent position, IV NS/LR 20cc/kg</li></ol></li><li>PARAMEDIC STOP Ø</li></ol>"
 					}
+				},
+				{
+					"id": "#413",
+					"name": "Spinal Cord Injuries",
+					"assessments": "<ul><li>Hypotension without actual volume loss</li><li>Warm/flushed skin despite hypotension</li><li>Paralysis</li><li>Loss of reflexes</li><li>Posturing</li><li>Priapism</li><li>Diaphragmatic breathing</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate for the patient’s condition</li><li>C-Spine stabilization</li><li>Control hemorrhaging</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"5\"><li>IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>EKG monitor</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol><h3>Treatment - Protocol</h3><p>Contact Medical Control</p><ul><li>Consider Dopamine 2 – 20 mcg/kg/min then titrated to effect</li></ul>"
+					}
+				},
+				{
+					"id": "#414",
+					"name": "Traumatic Cardiac Arrest",
+					"assessments": "<ul><li>Cardiac arrest secondary to trauma</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate for the patient’s condition</li><li>CPR</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"4\"><li>IV NS/LR give 20cc/kg bolus</li><li>EKG monitor</li><li>Pulse oximetry</li><li>Treat cardiac rhythms per specific guidelines</li><li>If suspected pneumothorax, perform needle chest decompression</li><li>Consider viability of patient prior to transport</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#415",
+					"name": "Traumatic Tension Pneumothorax",
+					"assessments": "<p>Patient must meet AT LEAST THREE of the below assessment findings to qualify for this standing order; otherwise, contact Medical Control.</p><ul><li>Acute respiratory distress, cyanosis</li><li>Unilaterally decreased breath sounds or absent breath sounds</li><li>Hyper-resonance of chest unilaterally</li><li>Jugular vein distention</li><li>Subcutaneous emphysema</li><li>Acute traumatic chest injury, ecchymosis or obvious rib fractures</li><li>History of COPD or other chronic lung disease which predisposes patient to spontaneous pneumothorax</li><li>Hypotension</li><li>Tracheal deviation away from the affected side</li><li>Arrhythmia</li><li>Oxygen saturation - <90&#37;</li><li>Mechanism of injury</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen 100&#37; 12 – 15 lpm NRB and airway maintenance appropriate to patient's condition.</li><li>Perform frequent evaluation of the breath sounds and blood pressure.</li><li>Consider institution of the multiple trauma protocol, if indicated. Remember this order may be indicated for the medical patient as well.</li><li>Follow the trauma treatment priority reference as needed. (page 164)</li><li>If the traumatic tension pneumothorax is secondary to a sucking chest wound, apply an occlusive dressing and treat appropriately.</li><li>Control any life threatening hemorrhaging</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"8\"><li>IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients.</li><li>EKG monitor</li><li>Pulse oximetry</li><li>If tension pneumothorax suspected, perform needle decompression.  Use 14g 3.5\" needle.</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#416",
+					"name": "Traumatic Amputation(s)",
+					"assessments": "<ul><li>Hypotension</li><li>Past medical history</li><li>Deformity, swelling, tenderness, crepitus, open or closed fractures</li><li>Hemorrhaging, lacerations, ecchymosis, instability</li><li>Decreased function, pulses</li><li>Loss of sensation of distal extremities</li><li>ETOH/drug use</li><li>Mechanism of injury</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen 100&#37; and airway maintenance appropriate for the patient's condition</li><li>C-spine stabilization PRN.</li><li>Control any life threatening hemorrhaging</li><li>Consider applying MAST as a splint</li><li>Other splints PRN</li><li>Amputated part: If recovered rinse with NS, wrap in moist dressing, place in plastic bag, and transport with patient.</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"8\"><li>8. IV NS/LR TKO. If systolic BP <90mm/Hg, IVNS/LR 20cc/kg bolus (peds 20 cc/kg bolus) target SBP is 90 – 110mmHg in adult trauma patients 10.</li><li>EKG monitor</li><li>Pulse oximetry</li><li>Consider tourniquet use for amputation<ol type=\"a\"><li>If systolic BP greater than 90 mmHg, consider pain medications per chart on next page.</li><li>Cover open fractures/lacerations, check distal motor/sensory/pulse pre/post splinting, avoid unnecessary movement.</li></ol></li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
 				}
 			]
 		}, {
