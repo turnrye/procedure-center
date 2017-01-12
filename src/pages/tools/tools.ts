@@ -6,6 +6,7 @@ import { CincinnatiPrehospitalStrokeScalePage } from '../cincinnati-prehospital-
 import { GoogleAnalytics } from 'ionic-native';
 import { BLSCPRComponentsPage } from '../bls-cpr-components/bls-cpr-components';
 import { ApgarScorePage } from '../apgar-score/apgar-score';
+import { FacesPainScalePage } from '../faces-pain-scale/faces-pain-scale';
 
 @Component({
   selector: 'page-tools',
@@ -20,7 +21,8 @@ export class ToolsPage {
       //{ title: 'Rule of 9s', component: RuleOf9sPage },
       { title: 'Cincinnati Prehospital Stroke Scale', component: CincinnatiPrehospitalStrokeScalePage},
       { title: 'Summary of High-Quality CPR Components for BLS Providers', component: BLSCPRComponentsPage },
-      { title: 'Apgar Score', component: ApgarScorePage }
+      { title: 'Apgar Score', component: ApgarScorePage },
+      { title: 'Faces Pain Scale', component: FacesPainScalePage }
     ];
 
   }

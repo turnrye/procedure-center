@@ -17,6 +17,7 @@ import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehos
 import { HelpPage } from '../pages/help/help';
 import { ContactsPopoverPage } from '../pages/contacts-popover/contacts-popover';
 import { ApgarScorePage } from '../pages/apgar-score/apgar-score';
+import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ApgarScorePage } from '../pages/apgar-score/apgar-score';
     BLSCPRComponentsPage,
     ContactsPopoverPage,
     ApgarScorePage,
+    FacesPainScalePage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -53,7 +55,8 @@ import { ApgarScorePage } from '../pages/apgar-score/apgar-score';
     CincinnatiPrehospitalStrokeScalePage,
     BLSCPRComponentsPage,
     ContactsPopoverPage,
-    ApgarScorePage
+    ApgarScorePage,
+    FacesPainScalePage
   ],
   providers: [
     ConfigurationProvider,

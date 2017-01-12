@@ -573,7 +573,27 @@
 			]
 		}, {
 			"name": "Obstetrical Emergencies",
-			"protocols": []
+			"protocols": [
+				{
+					"id": "#500",
+					"name": "Obstetrical / Gynecological Complaints (non-delivery or gynecological only)",
+					"assessments": "<ul><li>Patient Para (Number of births) & Gravida (Number of pregnancies)</li><li>Term of pregnancy in weeks, EDC, Multiple births expected or history</li><li>Vaginal bleeding (how long and approximate amount)</li><li>Possible miscarriage / products of conception</li><li>Pre-natal medications, problems, and care</li><li>Last menstrual cycle</li><li>Any trauma prior to onset?</li><li>Lower extremity edema</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate for the patient’s condition</li><li>Patient positioning appropriate for condition</li><li>Control hemorrhage as appropriate</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"5\"><li>INT or IV NS TKO unless signs of shock, then 20 cc/kg fluid bolus</li><li>Glucose check</li><li>EKG monitor PRN</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#501",
+					"name": "Normal Delivery",
+					"assessments": "<ul><li>Patient Para (Number of births) & Gravida (Number of pregnancies)</li><li>Term of pregnancy in weeks, EDC</li><li>Vaginal bleeding</li><li>Pre-natal medications, problems, and care</li><li>Membrane ruptured</li><li>Lower extremity edema</li></ul>",
+					"standingOrders": {
+						"basic": "<h3>Mother:</h3><ol><li>Oxygen and airway maintenance appropriate for the patient's condition</li><li>Check mother for crowning PRN</li><li>Use gentle pressure to control delivery. When head delivers, suction airway and check for cord around neck.</li><li>After delivery, keep mother and infant on same level, clamp cord @ 8 and 10 inches from the baby and cut between clamps.</li><li>Dry infant and wrap to keep warm. Maintain airway</li><li>Check APGAR at 1 and 5 minutes post-delivery.</li><li>DO NOT allow mother to nurse until both have been evaluated in the Emergency Department.</li><li>Allow placenta to deliver<ol type=\"a\"><li>massage uterine fundus (lower abdomen)</li><li>observe and treat signs of shock with increased delivery of oxygen</li><li>be alert to the possibility of multiple births</li></ol></li><li>Re-evaluate vaginal bleeding</li></ol><h3>Infant:</h3><ol><li>Protect against explosive delivery</li><li>When head delivers, suction airway (mouth first then nose) and check for cord around neck</li><li>After delivery, clamp cord @ 8 and 10 inches from baby and cut between clamps</li><li>Dry infant and wrap to keep warm (silver swaddler). Maintain airway, suction PRN</li><li>Oxygen and airway maintenance appropriate to patient's condition</li><li>Check APGAR Score at 1 and 5 minutes after delivery</li><li>DO NOT allow infant to nurse until both have been evaluated in the Emergency Department</li><li>Re-evaluate cord for bleeding, if bleeding, add additional clamp and re-evaluate</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"10\"><li>10. INT or IV LR TKO if patient in active labor defined as regular contractions q 3 – 5 min. with 30 - 60 second duration.</li><li>EKG monitor PRN</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol>"
+					},
+					"notes": "<h3>Considerations</h3><ol><li>The greatest risks to the newborn infant are airway obstruction and hypothermia. Keep the infant warm (silver swaddler), dry, covered, and the infant's airway maintained with a bulb syringe. Always remember to squeeze the bulb prior to insertion into the infant's mouth or nose.</li><li>The greatest risk to the mother is post-partum hemorrhage. Watch closely for signs of hypovolemic shock and excessive vaginal bleeding.</li><li>Spontaneous or induced abortions may result in copious vaginal bleeding. Reassure the mother, elevate legs, treat for shock, and transport.</li><li>Record a blood pressure and the presence or absence of edema in every pregnant woman you examine, regardless of chief complaint.</li></ol><p>**Note:  Complete individual patient care reports on BOTH mother and child.</p>"
+				}
+			]
 		}, {
 			"name": "Miscellaneous",
 			"protocols": []

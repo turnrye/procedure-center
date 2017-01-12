@@ -12,6 +12,7 @@ import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
 import { ApgarScorePage } from '../pages/apgar-score/apgar-score';
 import { BLSCPRComponentsPage } from '../pages/bls-cpr-components/bls-cpr-components';
 import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehospital-stroke-scale/cincinnati-prehospital-stroke-scale';
+import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
 import { GoogleAnalytics } from 'ionic-native';
 import { ConfigurationProvider } from '../providers/configuration-provider';
 import { Observable } from 'rxjs/Observable';
@@ -52,6 +53,7 @@ export class MyApp {
         '/tools/bls-cpr-components': BLSCPRComponentsPage,
         '/tools/rule-of-9s': RuleOf9sPage,
         '/tools/apgar-score': ApgarScorePage,
+        '/tools/faces-pain-scale': FacesPainScalePage,
         '/settings': SettingsPage,
         '/settings/url/:url': SettingsPage,
         '/protocols': ProtocolsPage,
