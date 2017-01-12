@@ -12,7 +12,8 @@ export class ApgarScorePage {
   constructor(public navCtrl: NavController) {}
 
   updateApgarScore() {
-    this.apgarScore.total = this.apgarScore.reflex + this.apgarScore.skinColor + this.apgarScore.muscleTone + this.apgarScore.respirations + this.apgarScore.heartRate;
+    this.apgarScore.total = this.apgarScore.reflex + this.apgarScore.skinColor
+    + this.apgarScore.muscleTone + this.apgarScore.respirations + this.apgarScore.heartRate;
   }
 
   ionViewDidEnter() {
