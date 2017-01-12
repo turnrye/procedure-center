@@ -9,7 +9,4 @@ export class FacesPainScalePage {
 
   constructor(public navCtrl: NavController) {}
 
-  ionViewDidLoad() {
-  }
-
 }
