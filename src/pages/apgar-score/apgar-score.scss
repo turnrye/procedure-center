@@ -1,0 +1,17 @@
+page-apgar-score {
+  .highlighted {
+    background: #FFF9C4;
+  }
+  ion-row {
+    border-bottom: 1px solid map-get($colors, light);
+  }
+
+  ion-row.headers {
+    background-color: map-get($colors, light);
+  }
+
+  .attribution {
+    font-size: 0.7em;
+  }
+
+}

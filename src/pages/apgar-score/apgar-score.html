@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Apgar Score</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Strength and regularity of heart rate
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.heartRate = 2;updateApgarScore();" [class.highlighted]="apgarScore.heartRate == 2">
+        <ion-col>100 beats/minute or more</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.heartRate = 1;updateApgarScore();" [class.highlighted]="apgarScore.heartRate == 1">
+        <ion-col>Less than 100</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.heartRate = 0;updateApgarScore();" [class.highlighted]="apgarScore.heartRate == 0">
+        <ion-col>Absent</ion-col>
+        <ion-col width-20>0</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Lung maturity
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.respirations = 2;updateApgarScore();"  [class.highlighted]="apgarScore.respirations == 2">
+        <ion-col>Regular breathing</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.respirations = 1;updateApgarScore();"  [class.highlighted]="apgarScore.respirations == 1">
+        <ion-col>Irregular</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.respirations = 0;updateApgarScore();"  [class.highlighted]="apgarScore.respirations == 0">
+        <ion-col>Absent</ion-col>
+        <ion-col width-20>0</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Muscle tone and movement
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.muscleTone = 2;updateApgarScore();"  [class.highlighted]="apgarScore.muscleTone == 2">
+        <ion-col>Active</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.muscleTone = 1;updateApgarScore();"  [class.highlighted]="apgarScore.muscleTone == 1">
+        <ion-col>Moderate</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.muscleTone = 0;updateApgarScore();"  [class.highlighted]="apgarScore.muscleTone == 0">
+        <ion-col>Limp</ion-col>
+        <ion-col width-20>0</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Skin color / oxygenation
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.skinColor = 2;updateApgarScore();"  [class.highlighted]="apgarScore.skinColor == 2">
+        <ion-col>Body and extremities pink</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.skinColor = 1;updateApgarScore();"  [class.highlighted]="apgarScore.skinColor == 1">
+        <ion-col>Blue at extremities; pink body</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.skinColor = 0;updateApgarScore();"  [class.highlighted]="apgarScore.skinColor == 0">
+        <ion-col>Completely blue</ion-col>
+        <ion-col width-20>0</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Reflex irritability to tactile stimulation
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.reflex = 2;updateApgarScore();"  [class.highlighted]="apgarScore.reflex == 2">
+        <ion-col>Cry/cough/sneeze</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.reflex = 1;updateApgarScore();"  [class.highlighted]="apgarScore.reflex == 1">
+        <ion-col>Grimace/feeble cry when stimulated</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="apgarScore.reflex = 0;updateApgarScore();"  [class.highlighted]="apgarScore.reflex == 0">
+        <ion-col>Silence; no response to stimulation</ion-col>
+        <ion-col width-20>0</ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  <p padding class="attribution">Apgar V. A proposal of a New Method of Evaluation of the Newborn Infant. <em>Current Researches in Anesthesia and Analgesia</em>. 1953, 32: 261-267. Apgar V, Holaday DA, James LS, et. al. Evaluation of the newborn infant. <em>JAMA</em>. 1958, 168: 1985-1988. Casey BM, McIntire DD, Leveno KJ. The continuing value of the Apgar score for the assessment of newborn infants. <em>N Engl J Med</em>. 2001 Feb 15;344(7):467-71.</p>
+  <ion-fab right bottom>
+    <button ion-fab mini color="light" [innerHTML]="apgarScore.total" [color]="(apgarScore.total > 6) ? 'green500': 'red500'"></button>
+  </ion-fab>
+</ion-content>
