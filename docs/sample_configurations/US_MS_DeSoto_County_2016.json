@@ -628,6 +628,16 @@
 						"basic": "<ol><li>Do not stimulate respiratory effort before suctioning the oropharynx</li><li>Suction the mouth then the nose (using a meconium aspirator) while simultaneously providing Oxygen 100% by blow-by method and while maintaining the airway appropriate to the patient’s condition</li><li>Obtain an APGAR score after airway treatment priorities. Score at one minute after delivery and at five minutes after delivery. (Time permitting)</li><li>Repeat initial assessment and complete vital signs until patient care is transferred to the appropriate ER staff</li><li>EMT STOP Ø</li></ol>",
 						"paramedic": "<ol start=\"6\"><li>IV NS TKO, if hypotensive 20 cc/kg (<em>peds 20 cc/kg</em>)</li><li>EKG monitor</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol>"
 					}
+				},
+				{
+					"id": "#506",
+					"name": "Placenta Previa",
+					"assessments": "<ul><li>Painless bleeding which may occur as spotting or recurrent hemorrhage</li><li>Bright red vaginal bleeding usually after 7th month</li><li>History</li><li>Multiparity</li><li>Increased maternal age</li><li>Recent sexual intercourse or vaginal exam</li><li>Patient Para (Number of births) & Gravida (Number of pregnancies)</li><li>Term of pregnancy in weeks</li><li>Pre-natal medications, problems, and care</li><li>History of bed rest</li><li>Placenta protruding through vagina</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to the patient's condition</li><li>Position of comfort</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"4\"><li>IV NS TKO, if hypotensive 20 cc/kg (peds 20 cc/kg)</li><li>EKG monitor</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol>"
+					},
+					"notes": "Any painless bleeding in the last trimester should be considered placenta previa until proven otherwise. If there are signs of eminent delivery membrane rupture is indicated followed by delivery of the baby. The diagnosis of eminent delivery depends on the visual presence of the baby’s body part through the membrane."
 				}
 			]
 		}, {
