@@ -592,6 +592,42 @@
 						"paramedic": "<ol start=\"10\"><li>10. INT or IV LR TKO if patient in active labor defined as regular contractions q 3 – 5 min. with 30 - 60 second duration.</li><li>EKG monitor PRN</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol>"
 					},
 					"notes": "<h3>Considerations</h3><ol><li>The greatest risks to the newborn infant are airway obstruction and hypothermia. Keep the infant warm (silver swaddler), dry, covered, and the infant's airway maintained with a bulb syringe. Always remember to squeeze the bulb prior to insertion into the infant's mouth or nose.</li><li>The greatest risk to the mother is post-partum hemorrhage. Watch closely for signs of hypovolemic shock and excessive vaginal bleeding.</li><li>Spontaneous or induced abortions may result in copious vaginal bleeding. Reassure the mother, elevate legs, treat for shock, and transport.</li><li>Record a blood pressure and the presence or absence of edema in every pregnant woman you examine, regardless of chief complaint.</li></ol><p>**Note:  Complete individual patient care reports on BOTH mother and child.</p>"
+				},
+				{
+					"id": "#502",
+					"name": "Abruptio Placenta",
+					"assessments": "<ul><li>Multiparity</li><li>Maternal hypertension</li><li>Trauma</li><li>Drug Use</li><li>Increased maternal age</li><li>History</li><li>Vaginal bleeding with no increase in pain</li><li>No bleeding with low abdominal pain</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to the patient's condition</li><li>Position patient in left lateral recumbent position</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"4\"><li>IV NS TKO, if hypotensive 20 cc/kg (<em>peds 20 cc/kg</em>)</li><li>EKG monitor</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#503",
+					"name": "Amniotic Sac Presentation",
+					"assessments": "<ul><li>Amniotic Sac visible</li><li>Membrane not broken</li><li>Fetus may or may not be visible</li><li>Pre-natal medications, problems, and care</li><li>Usually Third Trimester</li><li>Applies to greater than 20 weeks gestation</li><li>Abdominal pain</li><li>Indications of immediate delivery</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Oxygen and airway maintenance appropriate to the patient’s condition</li><li>Place patient in position of comfort</li><li>Amniotic Sac<ol type=\"a\"><li>if no fetus visible, cover presenting part with moist, sterile dressing</li><li>if head of the fetus has delivered, tear sac with fingers and continue steps for delivery</li></ol></li><li>Contact medical control ASAP</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"6\"><li>IV NS TKO, if hypotensive 20 cc/kg (<em>peds 20 cc/kg</em>)</li><li>EKG monitor</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#504",
+					"name": "Breech or Limb Presentation",
+					"assessments": "<ul><li>Patient Para (Number of births) & Gravida</li (Number of pregnancies)</li><li>Term of pregnancy in weeks, EDC</li><li>Vaginal bleeding</li><li>Pre-natal medications, problems, and care</li><li>Water broken</li><li>Buttock, arm or leg presentation</li></ul>",
+					"standingOrders": {
+						"basic": "<h3>Breech Presentation - Treatment – Standing Order – All EMTs</h3><ol><li>Oxygen and airway maintenance appropriate to patient's condition</li><li>Allow the delivery to progress spontaneously - DO NOT PULL!</li><li>Support the infant's body as it delivers</li><li>If the head delivers spontaneously, deliver the infant as noted in 'Normal Delivery'</li><li>If the head does not deliver within  3  minutes, insert a gloved hand into the vagina to create an airway for the infant</li><li>DO NOT remove your hand until relieved by a Higher Medical Authority.</li></ol><h3>Limb Presentation - Treatment - Standing Order – All EMTs</h3><ol start=\"7\"><li>Oxygen and airway maintenance appropriate to patient's condition</li><li>Position the mother in a supine position with head lowered and pelvis elevated</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"10\"><li>IV NS TKO, if hypotensive 20 cc/kg (<em>peds 20 cc/kg</em>)</li><li>EKG monitor</li><li>Pulse oximetry</li><li>Transport ASAP</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
+				},
+				{
+					"id": "#505",
+					"name": "Meconium Stain",
+					"assessments": "<ul><li>Patient Para (Number of births) & Gravida (Number of pregnancies)</li><li>Term of pregnancy in weeks, EDC</li><li>Vaginal bleeding</li><li>Pre-natal medications, problems, and care</li><li>Membrane Ruptured </li><li>Amniotic fluid that is greenish or brownish-yellow</li><li>Fecal material expelled with the amniotic fluid</li></ul>",
+					"standingOrders": {
+						"basic": "<ol><li>Do not stimulate respiratory effort before suctioning the oropharynx</li><li>Suction the mouth then the nose (using a meconium aspirator) while simultaneously providing Oxygen 100% by blow-by method and while maintaining the airway appropriate to the patient’s condition</li><li>Obtain an APGAR score after airway treatment priorities. Score at one minute after delivery and at five minutes after delivery. (Time permitting)</li><li>Repeat initial assessment and complete vital signs until patient care is transferred to the appropriate ER staff</li><li>EMT STOP Ø</li></ol>",
+						"paramedic": "<ol start=\"6\"><li>IV NS TKO, if hypotensive 20 cc/kg (<em>peds 20 cc/kg</em>)</li><li>EKG monitor</li><li>Pulse oximetry</li><li>PARAMEDIC STOP Ø</li></ol>"
+					}
 				}
 			]
 		}, {
