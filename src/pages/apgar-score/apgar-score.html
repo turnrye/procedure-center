@@ -117,6 +117,6 @@
   </ion-list>
   <p padding class="attribution">Apgar V. A proposal of a New Method of Evaluation of the Newborn Infant. <em>Current Researches in Anesthesia and Analgesia</em>. 1953, 32: 261-267. Apgar V, Holaday DA, James LS, et. al. Evaluation of the newborn infant. <em>JAMA</em>. 1958, 168: 1985-1988. Casey BM, McIntire DD, Leveno KJ. The continuing value of the Apgar score for the assessment of newborn infants. <em>N Engl J Med</em>. 2001 Feb 15;344(7):467-71.</p>
   <ion-fab right bottom>
-    <button ion-fab mini color="light" [innerHTML]="apgarScore.total" [color]="(apgarScore.total > 6) ? 'green500': 'red500'"></button>
+    <button ion-fab [innerHTML]="apgarScore.total" [color]="(apgarScore.total > 6) ? 'green500': 'red500'" text-wrap></button>
   </ion-fab>
 </ion-content>

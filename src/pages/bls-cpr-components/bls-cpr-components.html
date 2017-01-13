@@ -101,8 +101,8 @@
   <ion-fab right bottom>
     <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
     <ion-fab-list side="left">
-      <button ion-fab [innerHTML]="remainingTime" style="line-height: 100%; font-size: 0.8em;"></button>
-      <button ion-fab (click)="toggleMetronome()"><ion-icon name="timer"></ion-icon></button>
+      <button ion-fab [innerHTML]="remainingTime" text-wrap></button>
+      <button ion-fab (click)="toggleMetronome()" text-wrap><ion-icon name="timer"></ion-icon></button>
     </ion-fab-list>
   </ion-fab>
   <p padding class="attribution">Modified from Highlights of the 2015 AHA Guidelines Update for CPR and ECC.</p>
