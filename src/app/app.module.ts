@@ -16,6 +16,7 @@ import { BLSCPRComponentsPage } from '../pages/bls-cpr-components/bls-cpr-compon
 import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehospital-stroke-scale/cincinnati-prehospital-stroke-scale';
 import { HelpPage } from '../pages/help/help';
 import { ContactsPopoverPage } from '../pages/contacts-popover/contacts-popover';
+import { FacesPainScaleHelpPage } from '../pages/faces-pain-scale-help/faces-pain-scale-help';
 import { ApgarScorePage } from '../pages/apgar-score/apgar-score';
 import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
 
@@ -35,7 +36,8 @@ import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
     BLSCPRComponentsPage,
     ContactsPopoverPage,
     ApgarScorePage,
-    FacesPainScalePage
+    FacesPainScalePage,
+    FacesPainScaleHelpPage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -56,7 +58,8 @@ import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
     BLSCPRComponentsPage,
     ContactsPopoverPage,
     ApgarScorePage,
-    FacesPainScalePage
+    FacesPainScalePage,
+    FacesPainScaleHelpPage
   ],
   providers: [
     ConfigurationProvider,
