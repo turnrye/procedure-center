@@ -6,7 +6,9 @@ import { ProtocolPage } from '../pages/protocol/protocol';
 import { ContactsPage } from '../pages/contacts/contacts';
 import { SettingsPage } from '../pages/settings/settings';
 import { ToolsPage } from '../pages/tools/tools';
+import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { ConfigurationProvider } from '../providers/configuration-provider';
+import { UserProfileProvider } from '../providers/user-profile-provider';
 import { UnescapePipe } from '../providers/unescape.pipe';
 import { Storage } from '@ionic/storage';
 import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
@@ -37,7 +39,8 @@ import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
     ContactsPopoverPage,
     ApgarScorePage,
     FacesPainScalePage,
-    FacesPainScaleHelpPage
+    FacesPainScaleHelpPage,
+    OnboardingPage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -59,10 +62,12 @@ import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
     ContactsPopoverPage,
     ApgarScorePage,
     FacesPainScalePage,
-    FacesPainScaleHelpPage
+    FacesPainScaleHelpPage,
+    OnboardingPage
   ],
   providers: [
     ConfigurationProvider,
+    UserProfileProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Storage
   ]

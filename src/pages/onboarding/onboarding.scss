@@ -1,0 +1,31 @@
+page-onboarding {
+  .slide-zoom {
+    height: 100%;
+  }
+
+  .slide-title {
+    margin-top: 2.8rem;
+  }
+
+  .slide-image {
+    max-height: 50%;
+    max-width: 60%;
+    margin: 18px 0;
+    font-size: 25vw;
+    color: map-get($colors, blue500);
+  }
+  ion-slides div.swiper-pagination {
+    display: block !important;
+  }
+  .skipButton {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+  .button-separtor {
+    line-height: 34px;
+    vertical-align: bottom;
+    display: inline;
+    color: map-get($colors, light);
+  }
+}
