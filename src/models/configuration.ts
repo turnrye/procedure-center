@@ -1,6 +1,8 @@
 import { Contact } from './contact';
 import { ProtocolGroup } from './protocol-group';
+import { Protocol } from './protocol';
 import { Metadata } from './metadata';
+
 export class Configuration {
   contacts: Contact[];
   protocolGroups: ProtocolGroup[];
@@ -57,6 +59,20 @@ export class Configuration {
       return filteredContacts;
     } else {
       return this.contacts;
+    }
+  }
+
+  getProtocolById(id: string): Protocol {
+    if (id && id.trim() !== '') {
+      for (let protocolGroup of this.protocolGroups) {
+        for (let protocol of protocolGroup.protocols) {
+          if(protocol.id === id) {
+            return protocol;
+          }
+        }
+      }
+    } else {
+      return null;
     }
   }
 }

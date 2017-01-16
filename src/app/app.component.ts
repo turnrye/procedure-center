@@ -14,6 +14,7 @@ import { ApgarScorePage } from '../pages/apgar-score/apgar-score';
 import { BLSCPRComponentsPage } from '../pages/bls-cpr-components/bls-cpr-components';
 import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehospital-stroke-scale/cincinnati-prehospital-stroke-scale';
 import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
+import { ProtocolPage } from '../pages/protocol/protocol';
 import { GoogleAnalytics } from 'ionic-native';
 import { ConfigurationProvider } from '../providers/configuration-provider';
 import { UserProfileProvider } from '../providers/user-profile-provider';
@@ -74,7 +75,8 @@ export class MyApp {
         '/settings/url/:url': SettingsPage,
         '/protocols': ProtocolsPage,
         '/contacts': ContactsPage,
-        '/help': HelpPage
+        '/help': HelpPage,
+        '/protocol/:protocolId': ProtocolPage
       }).subscribe((match) => {
         console.log('Successfully matched route', match);
       }, (nomatch) => {
