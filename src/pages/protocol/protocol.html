@@ -14,6 +14,10 @@
     <ion-item *ngIf="protocol.preamble && protocol.preamble.length != 0" text-wrap><div [innerHTML]="protocol.preamble|unescape" class="multi-col"></div></ion-item>
     <ion-list-header *ngIf="protocol.assessments && protocol.assessments.length != 0" class="assessments">Assessments</ion-list-header>
     <ion-item *ngIf="protocol.assessments && protocol.assessments.length != 0" text-wrap><div [innerHTML]="protocol.assessments|unescape" class="multi-col"></div></ion-item>
+    <ion-list-header *ngIf="protocol.indications && protocol.indications.length != 0" class="assessments">Indications</ion-list-header>
+    <ion-item *ngIf="protocol.indications && protocol.indications.length != 0" text-wrap><div [innerHTML]="protocol.indications|unescape" class="multi-col"></div></ion-item>
+    <ion-list-header *ngIf="protocol.contraindications && protocol.contraindications.length != 0" class="assessments">Contraindications</ion-list-header>
+    <ion-item *ngIf="protocol.contraindications && protocol.contraindications.length != 0" text-wrap><div [innerHTML]="protocol.contraindications|unescape" class="multi-col"></div></ion-item>
     <ion-list-header *ngIf="protocol?.standingOrders?.allLevels && protocol?.standingOrders?.allLevels.length != 0" class="allLevels">All Levels</ion-list-header>
     <ion-item *ngIf="protocol?.standingOrders?.allLevels && protocol?.standingOrders?.allLevels.length != 0" text-wrap><div [innerHTML]="protocol?.standingOrders?.allLevels|unescape"></div></ion-item>
     <ion-list-header *ngIf="protocol?.standingOrders?.basic && protocol?.standingOrders?.basic.length != 0" class="emt">EMT</ion-list-header>

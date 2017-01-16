@@ -21,6 +21,7 @@ import { Observable } from 'rxjs/Observable';
 import { Deeplinks } from 'ionic-native';
 import { Configuration } from '../models/configuration';
 import { UserProfile } from '../models/user-profile';
+import { RevisedTraumaScorePage } from '../pages/revised-trauma-score/revised-trauma-score';
 
 @Component({
   templateUrl: 'app.html'

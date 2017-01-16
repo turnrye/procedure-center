@@ -21,6 +21,7 @@ import { ContactsPopoverPage } from '../pages/contacts-popover/contacts-popover'
 import { FacesPainScaleHelpPage } from '../pages/faces-pain-scale-help/faces-pain-scale-help';
 import { ApgarScorePage } from '../pages/apgar-score/apgar-score';
 import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
+import { RevisedTraumaScorePage } from '../pages/revised-trauma-score/revised-trauma-score';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
     ApgarScorePage,
     FacesPainScalePage,
     FacesPainScaleHelpPage,
-    OnboardingPage
+    OnboardingPage,
+    RevisedTraumaScorePage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -63,7 +65,8 @@ import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
     ApgarScorePage,
     FacesPainScalePage,
     FacesPainScaleHelpPage,
-    OnboardingPage
+    OnboardingPage,
+    RevisedTraumaScorePage
   ],
   providers: [
     ConfigurationProvider,

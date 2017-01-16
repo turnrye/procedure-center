@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Revised Trauma Score</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <a (click)="goToGcs();">Glasgow Coma Scale</a>
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.gcs = 4;updateRtsTotal();" [class.highlighted]="rtsRating.gcs == 4">
+        <ion-col>15-13</ion-col>
+        <ion-col width-20>4</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.gcs = 3;updateRtsTotal();" [class.highlighted]="rtsRating.gcs == 3">
+        <ion-col>12-9</ion-col>
+        <ion-col width-20>3</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.gcs = 2;updateRtsTotal();" [class.highlighted]="rtsRating.gcs == 2">
+        <ion-col>8-6</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.gcs = 1;updateRtsTotal();" [class.highlighted]="rtsRating.gcs == 1">
+        <ion-col>5-4</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.gcs = 0;updateRtsTotal();"  [class.highlighted]="rtsRating.gcs == 0">
+        <ion-col>3</ion-col>
+        <ion-col width-20>0</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Systolic Blood Pressure
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.systolic = 4;updateRtsTotal();"  [class.highlighted]="rtsRating.systolic == 4">
+        <ion-col>>89</ion-col>
+        <ion-col width-20>4</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.systolic = 3;updateRtsTotal();"  [class.highlighted]="rtsRating.systolic == 3">
+        <ion-col>76-89</ion-col>
+        <ion-col width-20>3</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.systolic = 2;updateRtsTotal();"  [class.highlighted]="rtsRating.systolic == 2">
+        <ion-col>50-75</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.systolic = 1;updateRtsTotal();"  [class.highlighted]="rtsRating.systolic == 1">
+        <ion-col>1-49</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.systolic = 0;updateRtsTotal();"  [class.highlighted]="rtsRating.systolic == 0">
+        <ion-col>0</ion-col>
+        <ion-col width-20>0</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Respiratory Rate
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.respiratory = 4;updateRtsTotal();"  [class.highlighted]="rtsRating.respiratory == 4">
+        <ion-col>10-29</ion-col>
+        <ion-col width-20>4</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.respiratory = 3;updateRtsTotal();"  [class.highlighted]="rtsRating.respiratory == 3">
+        <ion-col>>29</ion-col>
+        <ion-col width-20>3</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.respiratory = 2;updateRtsTotal();"  [class.highlighted]="rtsRating.respiratory == 2">
+        <ion-col>6-9</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.respiratory = 1;updateRtsTotal();"  [class.highlighted]="rtsRating.respiratory == 1">
+        <ion-col>1-5</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="rtsRating.respiratory = 0;updateRtsTotal();"  [class.highlighted]="rtsRating.respiratory == 0">
+        <ion-col>0</ion-col>
+        <ion-col width-20>0</ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  <p padding class="attribution">Adapted from "Trauma score" by Champion HR, Sacco WJ, Carnazzo AJ, Copes W, Fouty WJ (September 1981). Crit. Care Med.</p>
+  <ion-fab right bottom>
+    <button ion-fab color="light" [innerHTML]="rtsTotal" [color]="(rtsTotal > 11) ? 'green500': (rtsTotal > 10) ? 'yellow500': 'red500'" text-wrap></button>
+  </ion-fab>
+</ion-content>

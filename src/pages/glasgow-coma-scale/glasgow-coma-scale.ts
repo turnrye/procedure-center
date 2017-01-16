@@ -7,6 +7,7 @@ import { GoogleAnalytics } from 'ionic-native';
   templateUrl: 'glasgow-coma-scale.html'
 })
 export class GlasgowComaScalePage {
+
   gcsTotal: number = 0;
   gcsRating: any = {eye: 0, verbal: 0, motor: 0};
 
