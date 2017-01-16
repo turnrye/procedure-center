@@ -38,7 +38,7 @@ export class OnboardingPage {
 
   scanBarcode() {
     BarcodeScanner.scan({formats: 'QR_CODE'}).then((barcodeData) => {
-     this.configurationForm.value.definitionUrl = barcodeData;
+      this.configurationForm.patchValue({definitionUrl: barcodeData.text});
     }, (err) => {
       this.toastCtrl.create({
         message: 'There was an error scanning your barcode.',
