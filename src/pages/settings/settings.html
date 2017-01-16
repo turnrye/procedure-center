@@ -22,7 +22,10 @@
         <ion-label stacked>Version</ion-label>
         <ion-input type="text" disabled="true" value="{{ definitionMd5 }}"></ion-input>
       </ion-item>
-      <button ion-button type="submit" [disabled]="!webFetchForm.valid" color="secondary" full>Fetch Configuration</button>
+      <button ion-button icon-only outline (click)="scanBarcode()">
+        <ion-icon name="barcode"></ion-icon>
+      </button>
+      <button ion-button type="submit" [disabled]="!webFetchForm.valid" color="secondary">Fetch Configuration</button>
     </form>
     <ion-item *ngIf="hideAdvanced" text-center><button (click)="hideAdvanced = false" ion-button clear color="dark">Advanced...</button></ion-item>
     <form [formGroup]="configurationForm" (ngSubmit)="updateAgency()" *ngIf="!hideAdvanced">

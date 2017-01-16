@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Welcome to Procedure Center</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides>
+    <ion-slide>
+      <button ion-button clear small (click)="slides.slideTo(2, 500)" class="skipButton">skip</button>
+      <ion-icon name="options" class="slide-image"></ion-icon>
+      <h2 class="slide-title">Let's get started</h2>
+      <p>In order to show you the proper data, your supervisor or IT personnel should share the URL to your configuration.</p>
+      <ion-list>
+        <form [formGroup]="configurationForm" (ngSubmit)="submitConfiguration()">
+          <ion-item>
+            <ion-label floating>Configuration URL</ion-label>
+            <ion-input formControlName="definitionUrl" type="url" item-right></ion-input>
+          </ion-item>
+          <button ion-button icon-only outline (click)="scanBarcode()">
+            <ion-icon name="barcode"></ion-icon>
+          </button> 
+          <button ion-button type="submit" [disabled]="!configurationForm.valid" color="primary">Fetch</button>
+        </form>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <button ion-button clear small (click)="slides.slideTo(2, 500)" class="skipButton">skip</button>
+      <ion-icon name="calculator" class="slide-image"></ion-icon>
+      <h2 class="slide-title">Here's what we know</h2>
+      <p>You're configured with <b>{{ (configuration$ | async)?.metadata?.title }}</b> (<b>{{ (configuration$ | async)?.metadata?.date }}</b>) by <b>{{ (configuration$ | async)?.metadata?.author }}</b>. There are <b>{{ (configuration$ | async)?.contacts?.length }}</b> contacts, <b>{{ (configuration$ | async)?.protocolGroups?.length }}</b> protocol groups, and you have access to all of our tools.</p>
+    </ion-slide>
+    <ion-slide>
+        <h2 class="slide-title">One last thing...</h2>
+        <p>Remember that Procedure Center is simply a tool that reminds you what you already know. It is not a replacement for training, practice, or oversight. If you're uncertain of an instruction, contact your supervisor.</p><p>The Procedure Center authors accept no liability or responsibility for your actions and their results in using this application.</p>
+        <button ion-button large icon-right color="primary" (click)="goToProtocols()">
+          I agree, let's go
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-slide>
+    </ion-slides>
+</ion-content>

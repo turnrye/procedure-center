@@ -22,3 +22,10 @@
 .toolbar-background {
   background-color: #CDDC39;
 }
+ion-fab-list .fab-in-list, ion-fab {
+  width: 56px;
+  height: 56px;
+  text-overflow: clip;
+  font-size: 4vw;
+  line-height: 100%;
+}

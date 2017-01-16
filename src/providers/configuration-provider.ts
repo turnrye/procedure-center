@@ -13,7 +13,7 @@ export class ConfigurationProvider {
     this.loadInitialData();
   }
   get configuration(): Observable<Configuration> {
-    return new Observable(fn => this._configuration.subscribe(fn));
+    return new Observable(fn => this._configuration.subscribe(fn)) as Observable<Configuration>;
   }
   loadInitialData() {
     this.storage.get('configuration').then((data) => {

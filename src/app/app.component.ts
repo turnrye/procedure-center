@@ -6,6 +6,7 @@ import { ToolsPage } from '../pages/tools/tools';
 import { ContactsPage } from '../pages/contacts/contacts';
 import { SettingsPage } from '../pages/settings/settings';
 import { ProtocolsPage } from '../pages/protocols/protocols';
+import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { HelpPage } from '../pages/help/help';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
@@ -15,9 +16,11 @@ import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehos
 import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
 import { GoogleAnalytics } from 'ionic-native';
 import { ConfigurationProvider } from '../providers/configuration-provider';
+import { UserProfileProvider } from '../providers/user-profile-provider';
 import { Observable } from 'rxjs/Observable';
 import { Deeplinks } from 'ionic-native';
 import { Configuration } from '../models/configuration';
+import { UserProfile } from '../models/user-profile';
 
 @Component({
   templateUrl: 'app.html'
@@ -29,11 +32,23 @@ export class MyApp {
 
   pages: Array<{icon: string, title: string, component: any}>;
   configuration$: Observable<Configuration>;
+  userProfile$: Observable<UserProfile>;
 
-  constructor(public platform: Platform, public configurationProvider: ConfigurationProvider) {
+  constructor(public platform: Platform, public configurationProvider: ConfigurationProvider,
+  public userProfileProvider: UserProfileProvider) {
     this.configurationProvider.loadInitialData();
+    this.userProfileProvider.loadInitialData();
     this.configuration$ = this.configurationProvider.configuration;
+    this.userProfile$ = this.userProfileProvider.userProfile;
     this.initializeApp();
+    this.userProfile$.subscribe(userProfile => {
+      console.log(userProfile);
+      if(userProfile.completedOnboarding === true) {
+        this.rootPage = ProtocolsPage;
+      } else {
+        this.rootPage = OnboardingPage;
+      }
+    });
 
     // used for an example of ngFor and navigation
     this.pages = [

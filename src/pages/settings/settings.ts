@@ -7,6 +7,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 import { Md5 } from 'ts-md5/dist/md5';
 import { Http } from '@angular/http';
 import { ToastController } from 'ionic-angular';
+import { BarcodeScanner } from 'ionic-native';
 
 import 'rxjs/add/operator/map';
 
@@ -69,6 +70,18 @@ export class SettingsPage {
       }).present();
     }
     GoogleAnalytics.trackEvent("configuration", "changed_definition", "", 1, false);
+  }
+
+  scanBarcode() {
+    BarcodeScanner.scan({formats: 'QR_CODE'}).then((barcodeData) => {
+      this.webFetchForm.patchValue({definitionUrl: barcodeData.text});
+    }, (err) => {
+      this.toastCtrl.create({
+        message: 'There was an error scanning your barcode.',
+        duration: 3000,
+        showCloseButton: true
+      }).present();
+    });
   }
 
   launch(url) {

@@ -153,6 +153,6 @@
   </ion-list>
   <p padding class="attribution">Adapted from "Glasgow Coma Scale Assessment Aid", by Sir Graham Teasdale. Copyright 2015 Sir Graham Teasdale. "Glasgow Coma Scale" by University of Glasgow. Copyright 1974. Used with permission.</p>
   <ion-fab right bottom>
-    <button ion-fab mini color="light" [innerHTML]="gcsTotal" [color]="(gcsTotal > 12) ? 'green500': (gcsTotal > 8) ? 'yellow500': 'red500'"></button>
+    <button ion-fab color="light" [innerHTML]="gcsTotal" [color]="(gcsTotal > 12) ? 'green500': (gcsTotal > 8) ? 'yellow500': 'red500'" text-wrap></button>
   </ion-fab>
 </ion-content>
