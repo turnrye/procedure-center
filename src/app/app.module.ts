@@ -14,6 +14,7 @@ import { UnescapePipe } from '../providers/unescape.pipe';
 import { Storage } from '@ionic/storage';
 import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
+import { TraumaTriagePage } from '../pages/trauma-triage/trauma-triage';
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
 import { BLSCPRComponentsPage } from '../pages/bls-cpr-components/bls-cpr-components';
 import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehospital-stroke-scale/cincinnati-prehospital-stroke-scale';
@@ -44,7 +45,8 @@ import { RevisedTraumaScorePage } from '../pages/revised-trauma-score/revised-tr
     FacesPainScaleHelpPage,
     OnboardingPage,
     RevisedTraumaScorePage,
-    StartTriagePage
+    StartTriagePage,
+    TraumaTriagePage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -69,7 +71,8 @@ import { RevisedTraumaScorePage } from '../pages/revised-trauma-score/revised-tr
     FacesPainScaleHelpPage,
     OnboardingPage,
     RevisedTraumaScorePage,
-    StartTriagePage
+    StartTriagePage,
+    TraumaTriagePage
   ],
   providers: [
     ConfigurationProvider,

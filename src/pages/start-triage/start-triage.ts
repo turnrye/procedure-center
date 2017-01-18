@@ -10,7 +10,7 @@ export class StartTriagePage {
   previous: Array<any> = [];
   logic: any = {
     "type": "question",
-    "value": "Able to walk?",
+    "name": "Able to walk?",
     "answers": [
       {
         "type": "endpoint",
@@ -20,17 +20,17 @@ export class StartTriagePage {
       {
         "type": "question",
         "answer": "no",
-        "value": "Spontaneous breathing",
+        "name": "Spontaneous breathing",
         "answers": [
           {
             "type": "question",
             "answer": "yes",
-            "value": "Respiratory Rate",
+            "name": "Respiratory Rate",
             "answers": [
               {
                 "answer": "<30",
                 "type": "question",
-                "value": "Perfusion",
+                "name": "Perfusion",
                 "answers": [
                   {
                     "answer": "Radial pulse absent or<br>capillary refill > 2 sec",
@@ -40,7 +40,7 @@ export class StartTriagePage {
                   {
                     "answer": "Radial pulse present or<br>capillary refill < 2 sec",
                     "type": "question",
-                    "value": "Mental status",
+                    "name": "Mental status",
                     "answers": [
                       {
                         "answer": "Doesn't obey commands",
@@ -66,7 +66,7 @@ export class StartTriagePage {
           {
             "type": "question",
             "answer": "no",
-            "value": "Position airway",
+            "name": "Position airway",
             "answers": [
               {
                 "answer": "Spontaneous breathing",
@@ -89,22 +89,31 @@ export class StartTriagePage {
     "minor": {
       "color": "green500",
       "name": "Minor",
-      "message": "<ul><li>Victim with relatively minor injuries</li><li>Status unlikely to deteriorate over days</li><li>May be able to assist in own care: \"Walking Wounded\"</li></ul>"
+      "message": "<ul><li>Victim with relatively minor injuries</li><li>Status\
+       unlikely to deteriorate over days</li><li>May be able to assist in own\
+        care: \"Walking Wounded\"</li></ul>"
     },
     "delayed": {
       "color": "yellow500",
       "name": "Delayed",
-      "message": "<ul><li>Victim's transport can be delayed</li><li>Includes esrious and potentially life-threatening injuries, but status not expected to deteriorate significantly over several hours</li></ul>"
+      "message": "<ul><li>Victim's transport can be delayed</li><li>Includes\
+       esrious and potentially life-threatening injuries, but status not\
+        expected to deteriorate significantly over several hours</li></ul>"
     },
     "immediate": {
       "color": "red500",
       "name": "Immediate",
-      "message": "<ul><li>Victim can be helped by immediate intervention and transport</li><li>Requires medical attention with minutes for survival (up to 60)</li><li>Includes compromises to patient's Airway, Breathing, Circulation</li></ul>"
+      "message": "<ul><li>Victim can be helped by immediate intervention and\
+       transport</li><li>Requires medical attention with minutes for survival\
+        (up to 60)</li><li>Includes compromises to patient's Airway, Breathing,\
+         Circulation</li></ul>"
     },
     "expectant": {
       "color": "black",
       "name": "Expectant",
-      "message": "<ul><li>Victim unlikely to survive given severity of injuries, level of available care, or both</li><li>Palliative care and pain relief should be provided</li></ul>"
+      "message": "<ul><li>Victim unlikely to survive given severity of\
+       injuries, level of available care, or both</li><li>Palliative care and\
+        pain relief should be provided</li></ul>"
     }
   };
 
