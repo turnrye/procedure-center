@@ -829,6 +829,17 @@
 						"standingOrders": {
 							"allLevels": "<ol><li>Use contact, droplet and airborne PPE precautions</li><li>Obtain orthostatic blood pressure</li><li>Using your IV standing order, start a normal saline bolus</li><li>For a temperature greater than 100.4°F (38°C): administer 600mg ibuprophen PO (Peds>6 months 5 mg/kg PO) if available or acetaminophen 1000 mg PO (peds>3 months 15mg/kg PO) if available</li><li>Notify destination or contact medical control</li></ol>"
 						}
+					},
+					{
+						"id": "P8",
+						"name": "THERAPEUTIC INDUCED HYPOTHERMIA",
+						"preamble": "<p>The goal is to begin cooling the patient who meets criteria as soon as possible. You may initiate resuscitation with cold saline as your IVF of choice if the patient appears to be a candidate for IH. Therefore, if you have cold saline available when the first IV is started, begin cold fluids immediately.  If IV access is already established, change to cold saline when ROSC is achieved. If ROSC is not achieved, proceed as you would with any nonresponsive cardiac arrest, and document that cold saline was initiated. This will assist the medical examiner in determining times of death. Complete the remainder of the protocol.</p>",
+						"indications": "<ul><li>Age greater than 18 years old</li><li>Any cardiac arrest with resuscitation efforts</li><li>Return Of Spontaneous Circulation (regardless of blood pressure) following cardiac arrest (all non-traumatic causes)</li><li>Patient remains comatose (GCS<8 and/or no purposeful responses to pain)</li><li>Intubated or needs airway management (King Airway is acceptable) ETCO2 >20 mm/Hg</li><li>Systolic blood pressure can be maintained at 90 mmHg spontaneously or with fluids and pressors.</li></ul>",
+						"contraindications": "<ul><li>Pregnant female with obviously gravid uterus</li><li>Systolic blood pressure cannot be maintained at 90 mmHg or greater spontaneously or with fluids and pressors</li><li>Coagulopathy or thrombocytopenia.</li></ul>",
+						"standingOrders": {
+							"paramedic": "<ol><li>Patient meets criteria for Induced Hypothermia?<ol type=\"a\"><li>If No, proceed to Post-Resuscitation protocol</li><li>If Yes, Is the ET Tube placed?<ol type=\"i\"><li>If No, proceed with Intubation. King Airway is acceptable.</li></ol></li></ol>(Once airway is controlled, follow remaining steps)</li><li>Perform neuro exam to confirm meets criteria</li><li>Expose patient – Apply ice packs to axilla, neck, and groin</li><li>Administer cold saline bolus 30 mL/kg to max of 2 liters</li><li>Administer Versed 0.15 mg/kg to max 10 mg, if needed to control agitation or shivering.</li><li>If necessary, administer dopamine 10-20 mcg/kg/min for MAP 90-100</li></ol>"
+						},
+						"notes": "<ol><li>If patient meets other criteria for induced hypothermia and is not intubated, then intubate according to protocol before inducing cooling. If unable to intubate, use of King Airway is acceptable.</li><li>When exposing patient for purpose of cooling, undergarments may remain in place. Be mindful of your environment and take steps to preserve the patient’s modesty.</li><li>Do not delay transport for the purpose of cooling.</li><li>Reassess airway frequently and with every patient move.</li><li>Patients develop metabolic alkalosis with cooling. Do not hyperventilate.</li><li>Transport patient to hypothermia capable center.</li></ol>"
 					}
 				]
 			},

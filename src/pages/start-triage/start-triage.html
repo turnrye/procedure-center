@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>START Triage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button icon-only outline small (click)="startOver()" [disabled]="this.previous?.length < 1"><ion-icon name="skip-backward"></ion-icon></button>
+  <button ion-button icon-only outline small (click)="back()" [disabled]="this.previous?.length < 1"><ion-icon name="rewind"></ion-icon></button>
+  <ion-card text-center>
+    <div *ngIf="logic.type == 'question'">
+    <ion-card-header>
+      {{ logic.value }}
+    </ion-card-header>
+    <ion-icon name="help" class="card-image"></ion-icon>
+    <ion-card-content>
+      <button ion-button *ngFor="let answer of logic.answers" (click)="getNextNode(answer)" [innerHTML]="answer.answer"></button>
+    </ion-card-content>
+  </div>
+  <div *ngIf="logic.type == 'endpoint'">
+    <ion-card-header [ngClass]="endpoints[logic.id].color">
+      {{ endpoints[logic.id].name }}
+    </ion-card-header>
+    <ion-icon name="medkit" class="card-image"></ion-icon>
+    <ion-card-content text-left><div [innerHTML]="endpoints[logic.id].message"></div>
+    </ion-card-content>
+  </div>
+  </ion-card>
+</ion-content>

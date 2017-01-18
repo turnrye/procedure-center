@@ -9,6 +9,7 @@ import { ToolsPage } from '../pages/tools/tools';
 import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { ConfigurationProvider } from '../providers/configuration-provider';
 import { UserProfileProvider } from '../providers/user-profile-provider';
+import { StartTriagePage } from '../pages/start-triage/start-triage';
 import { UnescapePipe } from '../providers/unescape.pipe';
 import { Storage } from '@ionic/storage';
 import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
@@ -42,7 +43,8 @@ import { RevisedTraumaScorePage } from '../pages/revised-trauma-score/revised-tr
     FacesPainScalePage,
     FacesPainScaleHelpPage,
     OnboardingPage,
-    RevisedTraumaScorePage
+    RevisedTraumaScorePage,
+    StartTriagePage
   ],
   imports: [
     MarkdownToHtmlModule,
@@ -66,7 +68,8 @@ import { RevisedTraumaScorePage } from '../pages/revised-trauma-score/revised-tr
     FacesPainScalePage,
     FacesPainScaleHelpPage,
     OnboardingPage,
-    RevisedTraumaScorePage
+    RevisedTraumaScorePage,
+    StartTriagePage
   ],
   providers: [
     ConfigurationProvider,

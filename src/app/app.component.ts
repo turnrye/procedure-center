@@ -7,6 +7,7 @@ import { ContactsPage } from '../pages/contacts/contacts';
 import { SettingsPage } from '../pages/settings/settings';
 import { ProtocolsPage } from '../pages/protocols/protocols';
 import { OnboardingPage } from '../pages/onboarding/onboarding';
+import { StartTriagePage } from '../pages/start-triage/start-triage';
 import { HelpPage } from '../pages/help/help';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
@@ -43,14 +44,6 @@ export class MyApp {
     this.configuration$ = this.configurationProvider.configuration;
     this.userProfile$ = this.userProfileProvider.userProfile;
     this.initializeApp();
-    this.userProfile$.subscribe(userProfile => {
-      console.log(userProfile);
-      if(userProfile.completedOnboarding === true) {
-        this.rootPage = ProtocolsPage;
-      } else {
-        this.rootPage = OnboardingPage;
-      }
-    });
 
     // used for an example of ngFor and navigation
     this.pages = [
@@ -71,6 +64,7 @@ export class MyApp {
         '/tools/rule-of-9s': RuleOf9sPage,
         '/tools/apgar-score': ApgarScorePage,
         '/tools/faces-pain-scale': FacesPainScalePage,
+        '/tools/start-triage': StartTriagePage,
         '/settings': SettingsPage,
         '/settings/url/:url': SettingsPage,
         '/protocols': ProtocolsPage,
@@ -88,8 +82,15 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      StatusBar.styleDefault();
-      Splashscreen.hide();
+      this.userProfile$.subscribe(userProfile => {
+        if(userProfile.completedOnboarding === true) {
+          this.rootPage = ProtocolsPage;
+        } else {
+          this.rootPage = OnboardingPage;
+        }
+        StatusBar.styleDefault();
+        Splashscreen.hide();
+      });
     });
   }
 
