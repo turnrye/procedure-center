@@ -15,7 +15,6 @@
     <ion-card-header>
       <div [innerHTML]="logic.name"></div>
     </ion-card-header>
-    <ion-icon name="help" class="card-image"></ion-icon>
     <ion-card-content text-left>
       <div [innerHTML]="logic.value"></div>
       <button ion-button *ngFor="let answer of logic.answers" (click)="getNextNode(answer)" [innerHTML]="answer.answer"></button>
