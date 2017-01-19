@@ -40,4 +40,11 @@ page-protocol {
     margin-top: 0;
     margin-bottom: 0;
   }
+  p {
+    color: #000 !important;
+    margin: 0.5em 0 !important;
+  }
+  p:first-child {
+    margin-top: 0 !important;
+  }
 }

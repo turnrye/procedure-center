@@ -13,7 +13,7 @@
   <ion-list>
     <div *ngFor='let protocolGroup of (configuration$ | async)?.getProtocolGroupsWithFilter(this.search)'>
       <ion-item-divider color="light" *ngIf="protocolGroup?.protocols.length > 0">{{ protocolGroup.name }}</ion-item-divider>
-      <a ion-item *ngFor='let protocol of protocolGroup.protocols' (click)="protocolTapped($event, protocol)">{{ protocol.name }}</a>
+      <a ion-item *ngFor='let protocol of protocolGroup.protocols' (click)="protocolTapped($event, protocol.id)">{{ protocol.name }}</a>
     </div>
   </ion-list>
 

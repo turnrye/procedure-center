@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Trauma Triage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button icon-left outline small (click)="startOver()" [disabled]="this.previous?.length < 1"><ion-icon name="skip-backward"></ion-icon>Start Over</button>
+  <button ion-button icon-left outline small (click)="back()" [disabled]="this.previous?.length < 1"><ion-icon name="rewind"></ion-icon>Back</button>
+  <ion-card text-center>
+    <div *ngIf="logic.type == 'question'">
+    <ion-card-header>
+      <div [innerHTML]="logic.name"></div>
+    </ion-card-header>
+    <ion-icon name="help" class="card-image"></ion-icon>
+    <ion-card-content text-left>
+      <div [innerHTML]="logic.value"></div>
+      <button ion-button *ngFor="let answer of logic.answers" (click)="getNextNode(answer)" [innerHTML]="answer.answer"></button>
+    </ion-card-content>
+  </div>
+  <div *ngIf="logic.type == 'endpoint'">
+    <ion-card-header [ngClass]="endpoints[logic.id].color">
+      <div [innerHTML]="endpoints[logic.id].name"></div>
+    </ion-card-header>
+    <ion-icon name="medkit" class="card-image"></ion-icon>
+    <ion-card-content text-left><div [innerHTML]="endpoints[logic.id].message"></div>
+    </ion-card-content>
+  </div>
+  </ion-card>
+  <p padding class="attribution">Adapted from "Morbidity and Mortality Weekly Report (MMWR)". Centers for Disease Control and Prevention, January 13, 2012.</p>
+</ion-content>

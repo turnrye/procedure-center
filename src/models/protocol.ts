@@ -7,4 +7,6 @@ export class Protocol {
   preamble: string;
   standingOrders: StandingOrders;
   notes: string;
+  indications: string;
+  contraindications: string;
 }

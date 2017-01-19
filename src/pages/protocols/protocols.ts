@@ -20,9 +20,9 @@ export class ProtocolsPage {
     this.configuration$ = this.configurationProvider.configuration;
   }
 
-  protocolTapped(event, protocol) {
+  protocolTapped(event, protocolId: string) {
       this.navCtrl.push(ProtocolPage, {
-         protocol: protocol
+         protocolId: protocolId
       });
    }
 

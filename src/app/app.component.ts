@@ -7,13 +7,16 @@ import { ContactsPage } from '../pages/contacts/contacts';
 import { SettingsPage } from '../pages/settings/settings';
 import { ProtocolsPage } from '../pages/protocols/protocols';
 import { OnboardingPage } from '../pages/onboarding/onboarding';
+import { StartTriagePage } from '../pages/start-triage/start-triage';
 import { HelpPage } from '../pages/help/help';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
 import { RuleOf9sPage } from '../pages/rule-of-9s/rule-of-9s';
 import { ApgarScorePage } from '../pages/apgar-score/apgar-score';
+import { TraumaTriagePage } from '../pages/trauma-triage/trauma-triage';
 import { BLSCPRComponentsPage } from '../pages/bls-cpr-components/bls-cpr-components';
 import { CincinnatiPrehospitalStrokeScalePage } from '../pages/cincinnati-prehospital-stroke-scale/cincinnati-prehospital-stroke-scale';
 import { FacesPainScalePage } from '../pages/faces-pain-scale/faces-pain-scale';
+import { ProtocolPage } from '../pages/protocol/protocol';
 import { GoogleAnalytics } from 'ionic-native';
 import { ConfigurationProvider } from '../providers/configuration-provider';
 import { UserProfileProvider } from '../providers/user-profile-provider';
@@ -21,6 +24,7 @@ import { Observable } from 'rxjs/Observable';
 import { Deeplinks } from 'ionic-native';
 import { Configuration } from '../models/configuration';
 import { UserProfile } from '../models/user-profile';
+import { RevisedTraumaScorePage } from '../pages/revised-trauma-score/revised-trauma-score';
 
 @Component({
   templateUrl: 'app.html'
@@ -41,14 +45,6 @@ export class MyApp {
     this.configuration$ = this.configurationProvider.configuration;
     this.userProfile$ = this.userProfileProvider.userProfile;
     this.initializeApp();
-    this.userProfile$.subscribe(userProfile => {
-      console.log(userProfile);
-      if(userProfile.completedOnboarding === true) {
-        this.rootPage = ProtocolsPage;
-      } else {
-        this.rootPage = OnboardingPage;
-      }
-    });
 
     // used for an example of ngFor and navigation
     this.pages = [
@@ -69,11 +65,14 @@ export class MyApp {
         '/tools/rule-of-9s': RuleOf9sPage,
         '/tools/apgar-score': ApgarScorePage,
         '/tools/faces-pain-scale': FacesPainScalePage,
+        '/tools/start-triage': StartTriagePage,
+        '/tools/trauma-triage': TraumaTriagePage,
         '/settings': SettingsPage,
         '/settings/url/:url': SettingsPage,
         '/protocols': ProtocolsPage,
         '/contacts': ContactsPage,
-        '/help': HelpPage
+        '/help': HelpPage,
+        '/protocol/:protocolId': ProtocolPage
       }).subscribe((match) => {
         console.log('Successfully matched route', match);
       }, (nomatch) => {
@@ -85,8 +84,15 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      StatusBar.styleDefault();
-      Splashscreen.hide();
+      this.userProfile$.subscribe(userProfile => {
+        if(userProfile.completedOnboarding === true) {
+          this.rootPage = ProtocolsPage;
+        } else {
+          this.rootPage = OnboardingPage;
+        }
+        StatusBar.styleDefault();
+        Splashscreen.hide();
+      });
     });
   }
 
