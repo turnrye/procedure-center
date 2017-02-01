@@ -1,0 +1,143 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pediatric Trauma Score</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Weight
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.weight = 2;updatePtsTotal();" [class.highlighted]="pts.weight == 2">
+        <ion-col>> 20 kg (44 lbs.)</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.weight = 1;updatePtsTotal();" [class.highlighted]="pts.weight == 1">
+        <ion-col>10-22 kg (22-44 lbs.)</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.weight = -1;updatePtsTotal();" [class.highlighted]="pts.weight == -1">
+        <ion-col>< 10 kg (22 lbs.)</ion-col>
+        <ion-col width-20>-1</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Airway
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.airway = 2;updatePtsTotal();"  [class.highlighted]="pts.airway == 2">
+        <ion-col>Patent</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.airway = 1;updatePtsTotal();"  [class.highlighted]="pts.airway == 1">
+        <ion-col>Maintainable</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.airway = -1;updatePtsTotal();"  [class.highlighted]="pts.airway == -1">
+        <ion-col>Unmaintainable</ion-col>
+        <ion-col width-20>-1</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Systolic B/P
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.systolic = 2;updatePtsTotal();"  [class.highlighted]="pts.systolic == 2">
+        <ion-col>> 90 mm Hg</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.systolic = 1;updatePtsTotal();"  [class.highlighted]="pts.systolic == 1">
+        <ion-col>50-90 mm Hg</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.systolic = -1;updatePtsTotal();"  [class.highlighted]="pts.systolic == -1">
+        <ion-col>< 50 mm Hg</ion-col>
+        <ion-col width-20>-1</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      CNS
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.cns = 2;updatePtsTotal();"  [class.highlighted]="pts.cns == 2">
+        <ion-col>Awake</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.cns = 1;updatePtsTotal();"  [class.highlighted]="pts.cns == 1">
+        <ion-col>+ LOC</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.cns = -1;updatePtsTotal();"  [class.highlighted]="pts.cns == -1">
+        <ion-col>Unresponsive</ion-col>
+        <ion-col width-20>-1</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Fractures
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.fractures = 2;updatePtsTotal();"  [class.highlighted]="pts.fractures == 2">
+        <ion-col>None</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.fractures = 1;updatePtsTotal();"  [class.highlighted]="pts.fractures == 1">
+        <ion-col>Closed or suspected</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.fractures = -1;updatePtsTotal();"  [class.highlighted]="pts.fractures == -1">
+        <ion-col>Multiple closed or open</ion-col>
+        <ion-col width-20>-1</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-list-header>
+      Wounds
+    </ion-list-header>
+    <ion-item text-wrap>
+      <ion-row class="headers">
+        <ion-col>Criterion</ion-col>
+        <ion-col width-20>Score</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.wounds = 2;updatePtsTotal();"  [class.highlighted]="pts.wounds == 2">
+        <ion-col>None</ion-col>
+        <ion-col width-20>2</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.wounds = 1;updatePtsTotal();"  [class.highlighted]="pts.wounds == 1">
+        <ion-col>Minor</ion-col>
+        <ion-col width-20>1</ion-col>
+      </ion-row>
+      <ion-row (tap)="pts.wounds = -1;updatePtsTotal();"  [class.highlighted]="pts.wounds == -1">
+        <ion-col>Major, penetrating or burns</ion-col>
+        <ion-col width-20>-1</ion-col>
+      </ion-row>
+    </ion-item>
+  </ion-list>
+  <p padding class="attribution">Adapted from Tepas (1987) J Pediatr Surg 22:14-18 [PubMed].</p>
+  <ion-fab right bottom>
+    <button ion-fab color="light" [innerHTML]="ptsTotal" [color]="(ptsTotal > 8) ? 'green500': (ptsTotal > 0) ? 'yellow500': 'red500'" text-wrap></button>
+  </ion-fab>
+</ion-content>
