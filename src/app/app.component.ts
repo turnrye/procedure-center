@@ -25,6 +25,7 @@ import { Deeplinks } from 'ionic-native';
 import { Configuration } from '../models/configuration';
 import { UserProfile } from '../models/user-profile';
 import { RevisedTraumaScorePage } from '../pages/revised-trauma-score/revised-trauma-score';
+import { PediatricTraumaScorePage } from '../pages/pediatric-trauma-score/pediatric-trauma-score';
 
 @Component({
   templateUrl: 'app.html'
@@ -67,6 +68,7 @@ export class MyApp {
         '/tools/faces-pain-scale': FacesPainScalePage,
         '/tools/start-triage': StartTriagePage,
         '/tools/trauma-triage': TraumaTriagePage,
+        '/tools/pediatric-trauma-score': PediatricTraumaScorePage,
         '/settings': SettingsPage,
         '/settings/url/:url': SettingsPage,
         '/protocols': ProtocolsPage,

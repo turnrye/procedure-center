@@ -10,6 +10,7 @@ import { FacesPainScalePage } from '../faces-pain-scale/faces-pain-scale';
 import { StartTriagePage } from '../start-triage/start-triage';
 import { TraumaTriagePage } from '../trauma-triage/trauma-triage';
 import { RevisedTraumaScorePage } from '../revised-trauma-score/revised-trauma-score';
+import { PediatricTraumaScorePage } from '../pediatric-trauma-score/pediatric-trauma-score';
 
 @Component({
   selector: 'page-tools',
@@ -28,7 +29,8 @@ export class ToolsPage {
       { title: 'Faces Pain Scale', component: FacesPainScalePage },
       { title: 'Revised Trauma Score', component: RevisedTraumaScorePage },
       { title: 'START Triage', component: StartTriagePage },
-      { title: 'Trauma Triage', component: TraumaTriagePage }
+      { title: 'Trauma Triage', component: TraumaTriagePage },
+      { title: 'Pediatric Trauma Score', component: PediatricTraumaScorePage }
     ];
 
   }
