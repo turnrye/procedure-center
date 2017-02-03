@@ -3,11 +3,11 @@ page-glasgow-coma-scale {
     background: #FFF9C4;
   }
   ion-row {
-    border-bottom: 1px solid map-get($colors, light);
+    border-bottom: 1px solid map-get($myColors, light);
   }
 
   ion-row.headers {
-    background-color: map-get($colors, light);
+    background-color: map-get($myColors, light);
   }
 
   .attribution {
