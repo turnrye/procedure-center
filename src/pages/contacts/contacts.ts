@@ -19,7 +19,8 @@ export class ContactsPage {
   subscription: any;
   tags: string[];
 
-  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider, public popoverCtrl: PopoverController, public platform: Platform) {
+  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider,
+  public popoverCtrl: PopoverController, public platform: Platform) {
     this.tags = [];
     this.configuration$ = this.configurationProvider.configuration;
   }
