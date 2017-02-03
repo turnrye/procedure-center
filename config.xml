@@ -1,10 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="center.procedure.app" version="0.0.22" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="center.procedure.app" version="0.0.23" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Procedure Center</name>
     <description>Easy protocols and SOP access for your agency.</description>
     <author email="hello@procedure.center" href="http://procedure.center/">Procedure Center Team</author>
     <content src="index.html" />
     <access origin="*" />
+    <access launch-external="yes" origin="tel:*" />
+    <access launch-external="yes" origin="geo:*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" launch-external="yes" />
@@ -98,4 +100,5 @@
     <engine name="ios" spec="~4.3.1" />
     <plugin name="cordova-plugin-ios-no-export-compliance" spec="https://github.com/mikaoelitiana/cordova-plugin-ios-no-export-compliance.git" />
     <plugin name="phonegap-plugin-barcodescanner" spec="~6.0.5" />
+    <plugin name="cordova-plugin-inappbrowser" spec="~1.6.1" />
 </widget>

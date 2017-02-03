@@ -85,16 +85,17 @@ export class MyApp {
   }
 
   initializeApp() {
+    this.rootPage = ProtocolsPage;
+    StatusBar.styleDefault();
     this.platform.ready().then(() => {
       this.userProfile$.subscribe(userProfile => {
-        if(userProfile.completedOnboarding === true) {
-          this.rootPage = ProtocolsPage;
-        } else {
+        if(userProfile.completedOnboarding === false) {
           this.rootPage = OnboardingPage;
+        } else {
+          this.rootPage = ProtocolsPage;
         }
-        StatusBar.styleDefault();
-        Splashscreen.hide();
       });
+      Splashscreen.hide();
     });
   }
 

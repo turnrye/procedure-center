@@ -6,7 +6,7 @@ if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; th
   xcrun xcodebuild -exportArchive -archivePath "platforms/ios/Procedure Center.xcarchive" -exportPath "Procedure Center.ipa" -exportProvisioningProfile "iOS Distribution"
   ionic build android --release -- --keystore=scripts/android-release.keystore --storePassword=$store_password --alias=alias_name --password=$alias_password 2>&1 >/dev/null
   fastlane supply --apk platforms/android/build/outputs/apk/android-release.apk --track beta --json_key scripts/google-api-key.json --package_name center.procedure.app
-  fastlane pilot upload --changelog "various changes -- check github"
+  fastlane pilot upload --skip_submission --changelog "various changes -- check github"
 else
   ionic build ios
   ionic build android
