@@ -85,6 +85,8 @@ export class MyApp {
   }
 
   initializeApp() {
+    this.rootPage = ProtocolsPage;
+    StatusBar.styleDefault();
     this.platform.ready().then(() => {
       this.userProfile$.subscribe(userProfile => {
         if(userProfile.completedOnboarding === true) {
@@ -92,7 +94,6 @@ export class MyApp {
         } else {
           this.rootPage = OnboardingPage;
         }
-        StatusBar.styleDefault();
         Splashscreen.hide();
       });
     });
