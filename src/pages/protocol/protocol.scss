@@ -12,7 +12,7 @@ page-protocol {
     background-color: #FFCC80;
   }
   ion-list-header.assessments, ion-list-header.note, ion-list-header.preamble {
-    background-color: map-get($colors, light);
+    background-color: map-get($myColors, light);
   }
   @media (min-width: 768px) {
     dl dt {

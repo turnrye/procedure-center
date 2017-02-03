@@ -1,10 +1,10 @@
 page-contacts {
   .trauma-center-level {
-    background-color: map-get($colors, red500);
-    color: map-get($colors, light);
+    background-color: map-get($myColors, red500);
+    color: map-get($myColors, light);
   }
   .behavioral-health {
-    background-color: map-get($colors, blue100);
+    background-color: map-get($myColors, blue100);
   }
 
 }

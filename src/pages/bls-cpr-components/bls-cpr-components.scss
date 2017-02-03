@@ -1,13 +1,13 @@
 page-bls-cpr-components {
   ion-row {
-    border-bottom: 1px solid map-get($colors, light);
+    border-bottom: 1px solid map-get($myColors, light);
   }
   h2 {
     font-size: 1em;
     font-weight: bold;
   }
   ion-col + ion-col {
-    border-left: 1px solid map-get($colors, light);
+    border-left: 1px solid map-get($myColors, light);
   }
   ion-col:first-child {
     font-weight: bold;
@@ -21,7 +21,7 @@ page-bls-cpr-components {
   }
   ion-grid.headers {
     padding-bottom: 0 !important;
-    background-color: map-get($colors, light);
+    background-color: map-get($myColors, light);
     font-size: 1em;
     font-weight: bold;
   }

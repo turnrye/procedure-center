@@ -30,8 +30,7 @@ export class ContactsPage {
   }
 
   launch(url) {
-    let browser = new InAppBrowser(url, '_system');
-    browser.show();
+    new InAppBrowser(url, '_system', 'location=yes');
   }
 
   call(number) {
