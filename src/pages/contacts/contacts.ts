@@ -6,6 +6,7 @@ import { Configuration } from '../../models/configuration';
 import { Contact } from '../../models/contact';
 import { GoogleAnalytics } from 'ionic-native';
 import { Observable } from 'rxjs/Observable';
+import { InAppBrowser } from 'ionic-native';
 
 @Component({
   selector: 'page-contacts',
@@ -18,7 +19,7 @@ export class ContactsPage {
   subscription: any;
   tags: string[];
 
-  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider, public popoverCtrl: PopoverController) {
+  constructor(public navCtrl: NavController, public configurationProvider: ConfigurationProvider, public popoverCtrl: PopoverController, public platform: Platform) {
     this.tags = [];
     this.configuration$ = this.configurationProvider.configuration;
   }
@@ -28,15 +29,16 @@ export class ContactsPage {
   }
 
   launch(url) {
-    window.open(url, '_system');
+    let browser = new InAppBrowser(url, '_system');
+    browser.show();
   }
 
   call(number) {
-    window.open('tel:' + number, '_system');
+    this.launch('tel:' + number);
   }
 
   map(address) {
-    window.open('geo:0,0?q=' + address, '_system');
+    this.launch('geo:0,0?q=' + address);
   }
 
   presentPopover(myEvent) {
