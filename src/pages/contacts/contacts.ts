@@ -6,7 +6,6 @@ import { Configuration } from '../../models/configuration';
 import { Contact } from '../../models/contact';
 import { GoogleAnalytics } from 'ionic-native';
 import { Observable } from 'rxjs/Observable';
-import { InAppBrowser } from 'ionic-native';
 
 @Component({
   selector: 'page-contacts',
@@ -30,7 +29,7 @@ export class ContactsPage {
   }
 
   launch(url) {
-    new InAppBrowser(url, '_system', 'location=yes');
+    window.open(url, '_system');
   }
 
   call(number) {
@@ -38,7 +37,11 @@ export class ContactsPage {
   }
 
   map(address) {
-    this.launch('geo:0,0?q=' + address);
+    if (this.platform.is('ios')) {
+      this.launch('http://maps.apple.com/?address=' + address);
+    } else {
+      this.launch('geo:0,0?q=' + address);
+    }
   }
 
   presentPopover(myEvent) {

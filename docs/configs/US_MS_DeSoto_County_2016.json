@@ -6,6 +6,34 @@
 		},
 		"contacts": [
 			{
+				"name": "Baptist Memphis",
+				"tags": ["cardiac-CPI", "stroke", "neurotrauma", "behavioral-health", "trauma-level:2"]
+			}, {
+				"name": "Baptist Womens",
+				"tags": ["OB", "trauma-level:3"]
+			}, {
+				"name": "Baptist Collierville",
+				"tags": ["stroke", "trauma-level:3", "behavioral-health"]
+			}, {
+				"name": "Methodist University",
+				"tags": ["cardiac-CPI", "stroke", "neurotrauma", "trauma-level:2", "behavioral-health"]
+			}, {
+				"name": "Methodist North",
+				"tags": ["cardiac-CPI", "stroke", "trauma-level:3", "behavioral-health"]
+			}, {
+				"name": "Methodist South",
+				"tags": ["cardiac-CPI", "stroke", "OB", "trauma-level:3", "behavioral-health"]
+			}, {
+				"name": "Methodist Germantown",
+				"phone": "(901) 516-6970",
+				"address": "7691 Poplar Ave, Germantown, TN 38138",
+				"tags": ["cardiac-CPI", "stroke", "OB", "trauma-level:3", "behavioral-health"]
+			}, {
+				"name": "St. Francis",
+				"address": "7691 Poplar Ave, Germantown, TN 38138",
+				"tags": ["cardiac-CPI", "stroke", "neurotrauma", "OB", "trauma-level:2", "behavioral-health"]
+			},
+			{
 				"name": "Regional One Health",
 				"address": "877 Jefferson Ave, Memphis, TN 38103",
 				"tags": ["trauma-level:1", "behavioral-health"]
@@ -16,7 +44,18 @@
 			}, {
 				"name": "Baptist Memorial Hospital Desoto",
 				"address": "7601 Southcrest Pkwy, Southaven, MS 38671",
+				"phone": "(662) 349-9911",
 				"tags": ["trauma-level:3"]
+			}, {
+				"name": "Baptist Memorial Hospital Desoto EKG",
+				"phone": "(662) 996-7864"
+			}, {
+				"name": "Methodist Olive Branch",
+				"phone": "(662) 932-9110",
+				"address": "4250 Bethel Rd, Olive Branch, MS 38654"
+			}, {
+				"name": "Memphis Medcom",
+				"phone": "(901) 545-8181"
 			}
 		],
 		"protocolGroups": [
@@ -922,7 +961,7 @@
 				]
 			},
 			{
-				"name": "Refrence",
+				"name": "Reference",
 				"protocols": [
 					{
 						"id": "R1",
@@ -930,182 +969,6 @@
 						"assessments": "<p>Pulse Oximetry is not without limits and must NOT be used to supersede other assessments.</p><p>The Paramedic shall treat the patient and NOT the pulse oximeter’s display. The patient’s other key signs and symptoms must be assessed and evaluated so that the oximeter’s readings are interpreted within the context of the patient’s overall condition.</p>",
 						"standingOrders": {
 							"paramedic": "<p>The percentage of oxygen saturation measured by an oximeter only reflects the supplied pulmonary oxygenation and is not an indicator or measure of cellular oxygenation. Furthermore, it is useful both in the assessment of the patient and as an adjunct for evaluating the effectiveness of the airway management, ventilation, and oxygen enrichment provided.</p><p>Oxygen saturation pressure (SpO2) is a different measurement than the partial pressure of oxygen (PaO2) which is commonly measured by laboratory blood gas analysis.</p><p>Pulse Oximetry should be deferred until more urgent assessment and care priorities have first been resolved.</p><p>Pulse oximetry is a diagnostic tool that, along with the patient’s vital signs, chief complaint, mental status, and other considerations, may assist us in determining the patient’s respiratory status.</p><p>The pulse rate determined by the pulse oximeter is not an accurate indicator of the patient’s pulse rate.</p><h3>Falsely low readings may occur in the following:</h3><ol type=\"a\"><li>patients with cold extremities or hypothermic patients</li><li>patients with hemoglobin abnormalities</li><li>patients without a pulse</li><li>hypovolemic patients</li><li>hypotensive patients</li></ol><h3>Falsely normal or high oxygen saturation readings may occur in the following patients:</h3><ol type=\"a\"><li>anemic patients, carbon monoxide poisoning</li><li>cyanide toxicity which is being treated with the antidote</li><li>very bright lighting (direct sunlight or nearby strong lamp)</li></ol><h3>Other factors affecting accurate readings:</h3><ol type=\"a\"><li>patient movement</li><li>action of vasoagressor drug</li><li>peripheral vascular disease</li><li>elevated bilirubin levels</li><li>abnormal hemoglobin values</li><li>IV diagnostic die has been administered in the last 24 hours</li></ol><h3>Pulse Oximetry Values</h3><ol type=\"a\"><li>Normal<ol type=\"i\"><li>96 - 100&#37;</li><li>Treatment - non-rebreather mask (12-15 Lpm) or nasal cannula (4-6 Lpm) if patient cannot tolerate a mask and based on patient’s’ chief complaint</li></ol></li><li>Mild Hypoxia<ol type=\"a\"><li>91 – 95&#37;</li><li>Immediate need to increase the FiO2</li><li>Treatment - non-rebreather mask, 12 – 15 Lpm</li><li>Consider use of CPAP if available</li></ol></li><li>Moderate Hypoxia<ol type=\"i\"><li>86 – 90&#37;</li><li>Immediate need to increase the FiO2</li><li>Consider possible loss of airway patency</li><li>Treatment - non-rebreather mask, 12 – 15 Lpm, consider airway adjunct and bag-valve-mask @15 Lpm, on assist</li><li>Consider use of CPAP if available</li></ol></li><li>Severe Hypoxia<ol type=\"i\"><li><85 &#37;</li><li>Treatment - assist ventilations with adjunct and bag-valve-mask @15 Lpm.  Airway management as appropriate.</li><li>Consider use of CPAP if available</li></ol></li></ol>"
-						}
-					},
-					{
-						"id": "R2",
-						"name": "Quality Improvement Documentation Criteria",
-						"standingOrders": {
-							"allLevels": "<P>Documentation on all patients must include the following and any other information pertinent to patient care:</p><p>OPQRST and SAMPLE are the acronyms for the United States DOT EMS and Paramedic patient assessment curriculum</p><dl><dt>O</dt><dd>Circumstances surrounding the onset of complaint</dd><dt>P</dt><dd>What provoked (or provokes) the complaint?</dd><dt>Q</dt><dd>Describe the quality (sharp, burning, stabbing	etc.) of the complaint?</dd><dt>R</dt><dd>Where does the pain radiate?</dd><dt>S</dt><dd>Describe the severity of the pain on a 1-10 scale, 1(minimal) – 10 (maximum)</dd><dt>T</dt><dd>Time of onset?</dd></dl><dl><dt>S</dt><dd>Signs, symptoms, physical exam findings</dd><dt>A</dt><dd>Allergies to medications or the environment</dd><dt>M</dt><dd>Medications, prescription or over the counter</dd><dt>P</dt><dd>Past medical history</dd><dt>L</dt><dd>Last oral intake</dd><dt>E</dt><dd>Event, what happened to the patient?</dd></dl><p>All patients transported by EMS should have at least two sets of vital signs assessed and documented. Initial set of vitals will include blood pressure (systolic/diastolic), pulse rate, respiratory rate, pulse oximetry and blood glucose if indicated, and the time they were assessed must be recorded.</p><ol type=\"a\"><li>All medications taken by the patient should be listed on the report. If medications are taken to ER, document in narrative with whom the medications were left with.</li><li>When documenting the presumed presence of alcohol that is based solely upon breath odor, do so in the following manner: “Patients breath has the odor that is commonly associated with the consumption of alcohol.”</li></ol><h3>ABDOMINAL PAIN/PROBLEMS</h3><ol><li>Location of pain</li><li>Distension</li><li>Tenderness / Radiation</li><li>Nausea / Vomiting / Diarrhea</li><li>Urinary complaints</li><li>LMP if applicable</li><li>Vaginal bleeding / discharge if applicable</li><li>Treatment / reassessments</li><li>Report given and Signature of RN</li><li>Patient Signature</li></ol><h3>AIRWAY OBSTRUCTION</h3><ol><li>Can patient speak / forcibly cough</li><li>Is patient moving air?</li><li>Inspiratory stridor</li><li>What caused obstruction</li><li>Duration of obstruction</li><li>Treatment / reassessments</li><li>Report given and Signature of RN</li><li>Patient Signature</li></ol><h3>ALCOHOL INTOXICATION</h3><ol><li>Patients breath has odor of ETOH</li><li>Patient admits to drinking (type, amount, and time frame)</li><li>Speech (normal, slurred)</li><li>	Gait (normal, unsteady)</li><li>Any obvious injuries noted</li><li>Blood glucose level</li><li>Level of consciousness</li><li>Treatment / reassessments</li><li>Report given and Signature of RN</li><li>Patient Signature</li></ol><h3>ALLERGIC REACTION</h3><ol><li>Cause of reaction</li><li>Dyspnea</li><li>Facial / airway edema</li><li>Chest Pain</li><li>Rash / itching</li><li>Urticaria / hives</li><li>Treatment / reassessments</li><li>Report given and Signature of RN</li><li>Patient Signature</li></ol><h3>ALTERED MENTAL STATUS</h3><ol><li>OPQRST, Sample as appropriate</li><li>ETOH / Substance use</li><li>Any obvious injuries noted</li><li>Blood glucose level</li><li>Normal mental status</li><li>EKG and strip attached</li><li>Treatment / reassessments</li><li>Report given and Signature of RN</li><li>Patient Signature</li></ol><h3>ANIMAL BITE / STING</h3><ol><li>Type of animal or insect</li><li>Location of bite(s) / sting</li><li>Edema at site</li><li>Rabies / immunization status of animal if appropriate</li><li>Treatment / reassessments</li><li>Report given and Signature of RN</li><li>Patient Signature</li></ol><h3>ASSAULT / FIGHT</h3><ol><li>OPQRST, Sample as appropriate</li><li>Method of assault</li><li>Any obvious injuries or pain</li><li>Loss of consciousness   How long?</li><li>Treatment / reassessments</li><li>Report given and Signature of RN</li><li>Patient Signature</li></ol><h3>ATRAUMATIC GI BLEED</h3><ol><li>Nausea, vomiting, diarrhea, constipation</li><li>Active bleeding</li><li>Bloody emesis / stool How long?</li><li>Color of emesis / stool</li><li>Abdominal pain, location and quality</li><li>Treatment / reassessments</li><li>Report given and Signature of RN</li><li>Patient Signature</li></ol><h3>BURN</h3><ol><li>Burn source (flame, chemical, electricity)</li><li>Environment (enclosed, outside)</li><li>Entrance / exit wounds if appropriate</li><li>Burn surface area and thickness)</li><li>Facial, oral, nasal area singed</li><li>Chest pain / dyspnea</li><li>Treatment / reassessments</li><li>Consider Cyanide Antidote</li><li>Report given and Signature of RN</li><li>Patient Signature</li></ol><h3>CARDIAC ARREST</h3><ol><li>Events prior to onset</li><li>Description / location of patient on arrival</li><li>Estimated down time</li><li>Treatment / reassessments</li><li>Report given and Signature of RN</li><li>Patient Signature</li></ol><h3>CHEST PAIN</h3><ol><li>OPQRST and Sample as appropriate
-2.  	Factors reliving or increasing pain
-3.  	Dyspnea, cough
-4.  	Nausea, vomiting
-5.  	Diaphoresis
-6.  	Aspirin within past 12 hours
-7.  	Treatments / reassessments
-8.  	Report given and Signature of RN
-9.	Patient Signature
-
-CHF / PULMONARY EDEMA/SOB
-1.  	Chest pain
-2.  	Dyspnea
-3.  	Nausea, vomiting
-4.  	Diaphoresis
-5.  	JVD / lower extremity edema
-6.  	Treatment / reassessments
-7.  	Report given and Signature of RN
-8.	Patient Signature
-
-
-
-DEATH
-1.  	Last time patient seen or talked to
-2.  	Position / location of body
-3.  	Any movement of body made by EMS
-4.  	Any injuries noted
-5.  	Dependant lividity / rigor mortis
-6.  	EKG strip in two leads attached
-7.  	Released to whom and Signature
-
-DIABETIC
-1.  	OPQRST and Sample as appropriate
-2.  	Nausea / vomiting / recent illness
-3.  	Pre/Post treatment of blood glucose level
-4.  	Treatment / reassessments
-5.  	Report given and Signature of RN
-6.	Patient Signature
-
-HYPERTENSION
-1.  	Chest pain / dyspnea
-2.  	Nausea / vomiting
-3.  	Headache / mental status
-4.  	Neuro Assessment
-5.  	Treatments / reassessments
-6.  	Report given and Signature of RN
-7.	Patient Signature
-
-HYPER / HYPO THERMIA
-1.  	Approximate ambient air temperature
-2.  	Estimate exposure time
-3.  	Type of environment (inside, outside, wet)
-4.  	Loss of consciousness
-5.  	Fluid intake
-6.  	Skin turgor / condition
-7.  	ETOH / substance abuse
-8.  	Treatments / reassessments
-9.  	Report given and Signature of RN
-10.	Patient Signature
-
-
-INHALATION INJURY (TOXIC GAS/SMOKE)
-1.  	Type of gas
-2.  	Duration of exposure
-3.  	Area of exposure (enclosed room)
-4.  	Heated environment
-5.  	Burns / singing (oral, nasal, facial area)
-6.  	Treatments / reassessments
-7.  	Report given and Signature of RN
-8.	Patient Signature
-
-POISONING / DRUG INGESTION
-1.  	Name of substance
-2.  	Amount
-3.  	Route of intake
-4.  	How long ago
-5.  	Vomiting since ingestion as appropriate
-6.  	Intentional vs. Unintentional
-7.  	ETOH / substance use
-8.  	Oral mucosa burns if appropriate
-9.  	Treatments / reassessments
-10.	Report given and Signature of RN
-11.	Patient Signature
-
-PREGNANCY / OB DELIVERY
-Separate report required for mother and each delivery
-
-Non-Delivery
-1.  	Abdominal pain, contractions (duration & frequency)
-2.  	Gravida / Para / Abortion
-3.  	Length of gestation / estimated due date
-4.  	Edema (pedal) / BP / Headache / Visual disturbance
-5.  	Vaginal bleeding / discharge   If yes describe
-6.  	Treatments / reassessments
-7.  	Report given and Signature of RN
-8.  	Time last fetal Movement
-9.	Patient Signature
-
-Delivery
-1.  	Multiple fetuses
-2.  	Mucous plug resented
-3.  	Membranes ruptured / if yes is amniotic fluid clear
-4.  	Crowning as appropriate
-
-NEONATE
-1.  	Time of birth
-2.  	Thoroughly dried and warmed
-3.  	Oral and nasal suctioning
-4.  	Meconium present
-5.  	APGAR at 1 and 5 minutes
-6.  	General appearance
-7.  	Treatments / reassessments
-8.  	Report given and Signature of RN
-9.	Signature of Mother of Patient
-
-REFUSALS
-Documentation of:
-1.  	Competency
-2. 	MMSE
-3.  	Lack of Trauma
-4.  	Situation
-5.  	Ability to make good decisions
-6.  	Safety of patient is assured by caretakers, family, etc.
-
-SEIZURES
-1.  	OPQRST and Sample as appropriate
-2.  	Obvious injuries (mouth, head, tongue)
-3.  	Duration and number of events
-4.  	Incontinence
-5.  	Level of Consciousness (post-ictal)
-6.  	Treatments / reassessments
-7.  	Report given and Signature of RN
-8.	Signature of Patient
-
-STROKE / CVA / TIA
-1.  	OPQRST and Sample as appropriate
-2.  	Onset and duration of symptoms
-3.  	Headache / vision disturbances
-4.  	Thrombolytic screening and stroke screen
-5.  	Treatments / reassessments
-6.  	Report given and Signature of RN
-7.	Signature of Patient
-SYNCOPE/FAINTING/WEAKNESS
-1.  	OPQRST and Sample as appropriate
-2.  	Injuries, chest pain, dyspnea, nausea
-3.  	Vertigo / postural / TILT changes
-4.  	New or changed medications
-5.  	Last meal
-6.  	Blood glucose level
-7.  	EKG
-8.  	ETOH / Substance use
-9.  	Treatments / reassessments
-10.	Report given and Signature of RN
-11.	Signature of Patient
-
-TRAUMA
-1.  	OPQRST and Sample as appropriate
-2.  	Description of event
-3.  	Weapon (size, caliber, depth of penetration) if applicable
-4.  	Description of damage, estimated speed, airbag deployment as applicable
-5.  	Patient protection as applicable
-6.  	Level of or Loss of consciousness
-7.  	Obvious Injuries and area of pain
-8.  	Palpation / assessment of injured areas
-9.  	Disability (PMS/SMC intact)
-10.	Consider use of tourniquet
-11. 	Treatments / reassessments
-12. 	Report given and Signature of RN
-13.	Signature of Patient
-"
 						}
 					}
 				]
