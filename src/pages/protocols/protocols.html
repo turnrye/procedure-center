@@ -12,8 +12,14 @@
   <ion-searchbar [(ngModel)]="search" debounce="500"></ion-searchbar>
   <ion-list>
     <div *ngFor='let protocolGroup of (configuration$ | async)?.getProtocolGroupsWithFilter(this.search)'>
-      <ion-item-divider color="light" *ngIf="protocolGroup?.protocols.length > 0">{{ protocolGroup.name }}</ion-item-divider>
-      <a ion-item *ngFor='let protocol of protocolGroup.protocols' (click)="protocolTapped($event, protocol.id)">{{ protocol.name }}</a>
+      <ion-item-divider color="light" *ngIf="protocolGroup?.protocols.length > 0" (click)="protocolGroup.show = !protocolGroup.show">
+        {{ protocolGroup.name }}
+        <ion-icon name="arrow-dropdown" item-right *ngIf="!protocolGroup?.show && !this.search"></ion-icon>
+        <ion-icon name="arrow-dropup" item-right *ngIf="protocolGroup?.show || this.search"></ion-icon>
+      </ion-item-divider>
+      <div *ngIf="protocolGroup?.show || this.search">
+        <a ion-item *ngFor='let protocol of protocolGroup.protocols' (click)="protocolTapped($event, protocol.id)">{{ protocol.name }}</a>
+      </div>
     </div>
   </ion-list>
 
