@@ -28,6 +28,7 @@ export class ContactsPopoverPage {
       for(let tag of configuration.getContactTagNames()) {
         formBuilderDefinition[tag] = this.getFilterTags().indexOf(tag) !== -1;
       }
+      console.log(formBuilderDefinition);
       this.filterForm = this.formBuilder.group(formBuilderDefinition);
     });
     this.filterForm.valueChanges.subscribe(data => {
