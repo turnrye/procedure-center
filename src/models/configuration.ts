@@ -14,7 +14,7 @@ export class Configuration {
       tags = tags.concat(contact.tags);
     }
     var uniqueTags = tags.filter(function(item, pos, self) {
-      return self.indexOf(item) === pos;
+      return (item !== undefined && self.indexOf(item) === pos);
     });
     return uniqueTags;
   }
@@ -52,9 +52,13 @@ export class Configuration {
     if(tags.length > 0) {
       var filteredContacts = this.contacts;
       for (let tag of tags) {
-        filteredContacts = filteredContacts.filter(function(item, pos, self) {
-          return item.tags.indexOf(tag) !== -1;
-        });
+        if(tag !== undefined) {
+          filteredContacts = filteredContacts.filter(function(item, pos, self) {
+            if(item.tags !== undefined) {
+              return item.tags.indexOf(tag) !== -1;
+            }
+          });
+        }
       }
       return filteredContacts;
     } else {
