@@ -11,9 +11,8 @@ before_install:
   - gem update pilot
   - gem update supply
   - gem update fastlane
-  - brew tap caskroom/cask
   - brew update
-  - brew install android-sdk
+  - brew install Caskroom/cask/android-sdk
   - brew install imagemagick
   - brew install gradle
   - brew install ant
