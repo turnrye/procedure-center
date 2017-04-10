@@ -1,5 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { ProtocolsPage } from '../pages/protocols/protocols';
 import { ProtocolPage } from '../pages/protocol/protocol';
@@ -11,7 +13,7 @@ import { ConfigurationProvider } from '../providers/configuration-provider';
 import { UserProfileProvider } from '../providers/user-profile-provider';
 import { StartTriagePage } from '../pages/start-triage/start-triage';
 import { UnescapePipe } from '../providers/unescape.pipe';
-import { Storage } from '@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage';
 import { MarkdownToHtmlModule } from 'markdown-to-html-pipe';
 import { GlasgowComaScalePage } from '../pages/glasgow-coma-scale/glasgow-coma-scale';
 import { TraumaTriagePage } from '../pages/trauma-triage/trauma-triage';
@@ -52,7 +54,10 @@ import { PediatricTraumaScorePage } from '../pages/pediatric-trauma-score/pediat
   ],
   imports: [
     MarkdownToHtmlModule,
-    IonicModule.forRoot(MyApp)
+    BrowserModule,
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -80,8 +85,7 @@ import { PediatricTraumaScorePage } from '../pages/pediatric-trauma-score/pediat
   providers: [
     ConfigurationProvider,
     UserProfileProvider,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Storage
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
