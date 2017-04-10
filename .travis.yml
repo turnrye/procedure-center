@@ -16,7 +16,6 @@ before_install:
   - brew install imagemagick
   - brew install gradle
   - brew install ant
-  - brew install maven
 
 install:
   # install minimum set of dependencies to run tests and linters
