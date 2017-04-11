@@ -34,13 +34,16 @@ install:
   - export ANT_HOME=/usr/local/opt/ant
   - export MAVEN_HOME=/usr/local/opt/maven
   - export GRADLE_HOME=/usr/local/opt/gradle
-  - export ANDROID_HOME=/usr/local/opt/android-sdk
+  - export ANDROID_HOME=/usr/local/share/android-sdk
   - export PATH=$ANT_HOME/bin:$PATH
   - export PATH=$MAVEN_HOME/bin:$PATH
   - export PATH=$GRADLE_HOME/bin:$PATH
   - export PATH=$ANDROID_HOME/tools:$PATH
   - export PATH=$ANDROID_HOME/platform-tools:$PATH
   - export PATH=$ANDROID_HOME/build-tools/19.1.0:$PATH
+  - echo y | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;19.1.0" "tools" "platform-tools" "platforms:android-24"
+  - echo y | $ANDROID_HOME/tools/bin/sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-beta4"
+  - echo y | $ANDROID_HOME/tools/bin/sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.0-beta"
   - mkdir "$ANDROID_HOME/licenses" || true
   - echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_HOME/licenses/android-sdk-license"
 
